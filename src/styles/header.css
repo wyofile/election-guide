@@ -1,0 +1,57 @@
+
+.header {
+  background-color: #070707;
+  padding: 5px;
+  padding-top: 10px;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+h1 h2 {
+  margin: 0;
+  margin-top: 0px !important;
+}
+
+.site-title {
+  text-align: center;
+  color: white;
+  font-weight:400;
+  font-size: 4rem;
+  margin: 0;
+  margin-top: 0px !important;
+}
+
+
+
+
+.subtitle {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+.election-guide-title{
+  text-align:center;
+  margin: 0;
+
+}
+
+.election-guide-title a {
+  text-align:center;
+  text-decoration: none;
+  color: var(--goldenrod);
+}
+
+.election-guide-title a:hover {
+  text-decoration: underline;
+}
+
+.update {
+  color: #888;
+  text-align: center;
+  font-size: 0.75rem;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+}

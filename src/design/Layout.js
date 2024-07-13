@@ -9,16 +9,7 @@ import Script from 'next/script'
 
 import { metaData } from "@/config";
 
-const bodyStyle = css`
-    position: relative;
-`
-
-const contentStyle = css`
-    padding: 10px;
-    padding-top: 0;
-    max-width: 800px;
-    margin: auto;
-`
+import '../styles/base.css'
 
 export default function Layout({
   pageTitle,
@@ -29,7 +20,6 @@ export default function Layout({
   socialTitle, // TODO
   socialDescription, // TODO
   relativePath,
-  pageCss,
   children,
 }) {
   const {
@@ -39,7 +29,7 @@ export default function Layout({
   const pageUrl = relativePath === '/' ? `${baseUrl}/` : `${baseUrl}/${relativePath}/`
   // const featureImage = pageFeatureImage || `${baseUrl}/election-guide-2024-feature-art.jpg`
   return (
-    <div>
+    <>
       <Head>
         <meta charSet="utf-8" />
         <title>{siteSeoTitle}</title>
@@ -61,21 +51,11 @@ export default function Layout({
         <meta name="twitter:title" content={socialTitle} />
         {/* <meta name="twitter:image" content={featureImage} /> */}
         <meta name="twitter:description" content={socialDescription} />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet"></link>
-
       </Head>
-
-      <div css={[bodyStyle]}>
-        <Header />
-        <Nav />
-        <main css={[contentStyle, pageCss]}>{children}</main>
-        <Footer />
-      </div>
-
-
-    </div>
+      <Header />
+      <Nav />
+      <main>{children}</main>
+      <Footer />
+    </>
   );
 }
