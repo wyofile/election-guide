@@ -62,6 +62,7 @@ h5,
 h6 {
     font-family: "Roboto Slab", serif;
     font-weight: 400;
+    text-align:center;
     margin-bottom: 0.2em;
 }
 
@@ -194,5 +195,7 @@ main {
     padding: 10px;
     padding-top: 0;
     max-width: 800px;
+    width: 100%;
     margin: auto;
+    background-color: #c8c8c8;
 }

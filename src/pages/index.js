@@ -1,6 +1,8 @@
 import React from 'react'
 import Layout from '../design/Layout'
 
+import DistrictMap from '../components/DistrictMap'
+
 export async function getStaticProps() {
   return {
     props: {
@@ -23,7 +25,49 @@ export default function Home() {
       socialTitle={"The WyoFile 2024 Election Guide"}
       socialDescription={"Federal and state candidates seeking Wyoming office in 2024."}
     >
-    <h2>Content</h2>
+    <h2>Select Your House District</h2>
+    <DistrictMap />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+
 
     </Layout>
   )
