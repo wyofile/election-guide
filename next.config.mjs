@@ -10,8 +10,8 @@ const nextConfig = {
     compiler: {
         emotion: true,
     },
-    images: {
-        unoptimized: true,
+    // images: {
+    //     unoptimized: true,
         remotePatterns: [
             {
                 protocol: 'https',
@@ -20,7 +20,7 @@ const nextConfig = {
                 pathname: '/maps/legislative-districts/**',
             }
         ]
-    },
+    // },
 };
 
 export default nextConfig;

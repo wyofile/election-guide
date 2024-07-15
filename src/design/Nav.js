@@ -22,7 +22,7 @@ const Nav = ({ location }) => {
     const isActiveStyle = null
 
     const links = PAGE_LINKS.map(l => {
-        return (<li className="nav-menu-item"><Link key={l.path} href={l.path}>{l.label}</Link></li>)
+        return (<li className="nav-menu-item" key={l.path}><Link key={l.path} href={l.path}>{l.label}</Link></li>)
     })
 
     return <div className="nav">
