@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
+import Markdown from 'react-markdown'
 
 import Layout from '../design/Layout'
-
 import DistrictMap from '../components/DistrictMap'
 
 import houseDistricts from '../data/house-districts.json'
 import senateDistricts from '../data/senate-districts.json'
+import textContent from '../data/static-text.json'
 
 export async function getStaticProps() {
   return {
@@ -33,52 +34,20 @@ const Home = () => {
       socialTitle={"The WyoFile 2024 Election Guide"}
       socialDescription={"Federal and state candidates seeking Wyoming office in 2024."}
     >
-    <h2>Select Your House District</h2>
-    <span onClick={()=>setChamber('senate')}>Senate</span><span onClick={()=>setChamber('house')}>House</span>
-    <h2>Active: {chamber}</h2>
-    <DistrictMap chamber='house' geoData={houseDistricts} setActiveDistrict={setActiveHouseDistrict} />
-    <br />
-    <DistrictMap chamber='senate' geoData={senateDistricts} setActiveDistrict={setActiveSenateDistrict} />
-    <h2>Active House District: {activeHouseDistrict}</h2>
-    <h2>Active Senate District: {activeSenateDistrict}</h2>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
 
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    <section>
+      <a className="link-anchor" id="legislature"></a>
+        <h2>Wyoming State Legislature</h2>
+        <Markdown>{textContent.wyomingLegislatureIntro}</Markdown>
+
+        <DistrictMap chamber='house' geoData={houseDistricts} setActiveDistrict={setActiveHouseDistrict} />
+        <br />
+        <DistrictMap chamber='senate' geoData={senateDistricts} setActiveDistrict={setActiveSenateDistrict} />
+    </section>
+
+
+
+
 
 
 
