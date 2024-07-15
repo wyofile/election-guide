@@ -1,4 +1,14 @@
+
+
 .map-container {
   margin:auto;
-  min-width: 380px;
+  /* min-width: 380px; */
+  width: 80%;
+  height: 200px;
+}
+
+@media only screen and (min-device-width: 480px){
+  .map-container {
+    height: 400px;
+  }
 }

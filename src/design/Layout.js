@@ -51,6 +51,7 @@ export default function Layout({
         <meta name="twitter:title" content={socialTitle} />
         {/* <meta name="twitter:image" content={featureImage} /> */}
         <meta name="twitter:description" content={socialDescription} />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
       <Header />
       <Nav />

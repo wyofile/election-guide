@@ -96,7 +96,7 @@ const DistrictMap = ({chamber, geoData, setActiveDistrict}) => {
 
   return (
     <>
-      <div style={{height:'400px',width:'70%'}} id={`${chamber}-map`} className="map-container" />
+      <div id={`${chamber}-map`} className="map-container" />
     </>
   );
 }

@@ -37,6 +37,7 @@ const Home = () => {
     <span onClick={()=>setChamber('senate')}>Senate</span><span onClick={()=>setChamber('house')}>House</span>
     <h2>Active: {chamber}</h2>
     <DistrictMap chamber='house' geoData={houseDistricts} setActiveDistrict={setActiveHouseDistrict} />
+    <br />
     <DistrictMap chamber='senate' geoData={senateDistricts} setActiveDistrict={setActiveSenateDistrict} />
     <h2>Active House District: {activeHouseDistrict}</h2>
     <h2>Active Senate District: {activeSenateDistrict}</h2>
