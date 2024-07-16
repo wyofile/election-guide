@@ -15,5 +15,5 @@
 npm run build
 
 # Deploy
-aws s3 sync build s3://wyofile-guide-dev/election-guide-2024 --delete
-aws cloudfront create-invalidation --distribution-id E3C2P1TKDSMCKE --paths "/election-guide-2024/*"
+aws s3 sync build s3://projects.wyofile.com/election-guide --profile wyofile --delete
+aws cloudfront create-invalidation --profile wyofile --distribution-id E1LSUP0GLMODKL --paths "/election-guide/*"
