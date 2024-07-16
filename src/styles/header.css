@@ -3,10 +3,25 @@
   background-color: #070707;
   padding: 5px;
   padding-top: 10px;
+  display:block;
 }
 
 .header a {
   text-decoration: none;
+}
+
+.header-interior {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.header-center{
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  margin: auto;
 }
 
 h1 h2 {
@@ -15,7 +30,6 @@ h1 h2 {
 }
 
 .site-title {
-  text-align: center;
   color: white;
   font-weight:400;
   font-size: 4rem;
@@ -23,8 +37,50 @@ h1 h2 {
   margin-top: 0px !important;
 }
 
+.header-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap:wrap;
+}
 
+.button {
+  font-family: "Roboto Slab", serif;
+  color: #FFF;
+  text-decoration: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 2px 10px;
+  text-align: center;
+  display:inline-block;
+  min-width: 155px;
+}
 
+.donate-button {
+  background-color: rgb(174,37,18);
+}
+
+.donate-button:hover {
+  background-color: rgb(133,29,8);
+  color: rgb(192, 164, 162);
+}
+
+.subscribe-button {
+  background-color: rgb(218, 156, 53);
+}
+
+.subscribe-button:hover {
+  background-color: rgb(160, 118, 40);
+  color: rgb(200, 184, 161);
+}
+
+.header-buttons {
+  color: #FFF;
+  margin-top: 15px;
+}
 
 .subtitle {
   color: white;

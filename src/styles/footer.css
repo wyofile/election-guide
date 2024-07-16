@@ -2,12 +2,13 @@ footer {
   background-color: #070707;
   padding: 20px;
   padding-top: 10px;
-  display: flex;
-  justify-content: center;
+  display:block;
 }
 
 .footer-interior {
-  max-width: 1920px;
+  margin: auto;
+  width: 100%;
+  max-width: 1280px;
 }
 
 .footer-menu {

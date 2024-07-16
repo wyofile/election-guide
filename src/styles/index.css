@@ -1,0 +1,28 @@
+section {
+  display: block;
+  padding: 0 0.5em;
+}
+
+.section-header {
+  text-align: center;
+  padding: 0.3em 0.5em;
+  padding-bottom: 0.2em;
+  background-color: var(--wheat);
+  color: var(--tan6);
+  border-top: 4px solid var(--goldenrod);
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  margin-left: -1em;
+  margin-right: -1em;
+}
+
+.race-header {
+  text-align: center;
+  margin-top: 0.2em;
+  background-color: var(--goldenrod);
+  padding: 0.3em 0.5em;
+  color: black;
+  text-transform: uppercase;
+}

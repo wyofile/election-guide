@@ -8,13 +8,7 @@ import houseDistricts from '../data/house-districts.json'
 import senateDistricts from '../data/senate-districts.json'
 import textContent from '../data/static-text.json'
 
-export async function getStaticProps() {
-  return {
-    props: {
-
-    }
-  }
-}
+import '../styles/index.css'
 
 const Home = () => {
 
@@ -37,12 +31,18 @@ const Home = () => {
 
     <section>
       <a className="link-anchor" id="legislature"></a>
-        <h2>Wyoming State Legislature</h2>
-        <Markdown>{textContent.wyomingLegislatureIntro}</Markdown>
+      <h2 className='section-header'>Wyoming State Legislature</h2>
 
-        <DistrictMap chamber='house' geoData={houseDistricts} setActiveDistrict={setActiveHouseDistrict} />
-        <br />
-        <DistrictMap chamber='senate' geoData={senateDistricts} setActiveDistrict={setActiveSenateDistrict} />
+      <Markdown>{textContent.wyomingLegislatureIntro}</Markdown>
+
+      <h3 className='race-header'>Wyoming House of Representatives</h3>
+      <p>Select a district from the map to view House of Representatives candidates</p>
+      <DistrictMap chamber='house' geoData={houseDistricts} setActiveDistrict={setActiveHouseDistrict} />
+      <br />
+      <h3 className='race-header'>Wyoming Senate</h3>
+      <p>Select a district from the map to view Senate candidates</p>
+
+      <DistrictMap chamber='senate' geoData={senateDistricts} setActiveDistrict={setActiveSenateDistrict} />
     </section>
 
 

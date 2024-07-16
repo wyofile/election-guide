@@ -112,6 +112,7 @@ h4 {
     margin-top: 0.3em;
 }
 
+/* 
 button {
     display: inline-block;
     font-weight: bold;
@@ -126,19 +127,18 @@ button {
     line-height: 1.5;
     cursor: pointer;
     letter-spacing: 0.1em;
-    /* margin-right: 0.2rem; */
-    /* border-radius: 0.25rem; */
-}
+} 
+*/
 
-button:hover {
+/* button:hover {
     background-color: #000;
     border: 1px solid var(#666);
     color: #666;
-}
+} */
 
-a.button-link {
+/* a.button-link {
     text-decoration: none;
-}
+} */
 
 hr {
     border-top: 1px solid #666;

@@ -11,13 +11,21 @@ import "../styles/header.css"
 const Header = () => {
   const { webSubtitle } = metaData
   return <div className="header">
-    <Link href="https://wyofile.com"><h1 className="site-title">WyoFile</h1></Link>
-    <h1 className="election-guide-title"><Link href="/">
-      2024 Election Guide
-    </Link></h1>
-    <h2 className="subtitle">{webSubtitle}</h2>
-    <div className="update">
-      Last update: {formatDate(new Date(updateTime.updateTime))}
+    <div className="header-interior">
+      <div className="header-center">
+        <Link href="https://wyofile.com"><h1 className="site-title">WyoFile</h1></Link>
+        <h1 className="election-guide-title"><Link href="/">
+          2024 Election Guide
+        </Link></h1>
+        <div className="header-buttons">
+          <Link href=""><div className="button subscribe-button">Subscribe for free</div></Link>
+          <Link href=""><div className="button donate-button">Donate</div></Link>
+        </div>
+        <h2 className="subtitle">{webSubtitle}</h2>
+        <div className="update">
+          Last update: {formatDate(new Date(updateTime.updateTime))}
+        </div>
+      </div>
     </div>
   </div>
 }
