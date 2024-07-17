@@ -1,0 +1,117 @@
+
+.search-box {
+    border: 1px solid var(--dimgray);
+    background-color: var(--dark-sea-green);
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.ledein {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+input {
+    margin: -1px;
+    flex: 4 1 15rem;
+    height: 2em;
+    padding: 0.25em;
+}
+
+button {
+    margin: -1px;
+    flex: 1 1 auto;
+    background-color: var(--tan5);
+    color: white;
+    font-weight: normal;
+}
+
+button:hover {
+    background-color: var(--link);
+}
+
+.candidate-tile {
+    margin: 0.5em auto;
+    margin-top: 0.5em;
+    border: 1px solid var(--tan5);
+    box-shadow: 2px 2px 3px #aaa;
+    max-width: 400px;
+}
+
+/* a {
+    min-height: 40px;
+    display: flex;
+    align-items: stretch;
+    background-color: var(--tan1);
+    
+    
+    color: black;
+}
+a:hover {
+    opacity: 0.8;
+    text-decoration: none;
+    color: var(--link);
+} */
+
+
+.party {
+    width: 40px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: white;
+}
+.info-col {
+    flex: 1 1 100px;
+    padding: 0.5em 0.5em;
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+}
+.name {
+    font-size: 1.2em;
+    margin-bottom: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.tag-line {
+    font-size: 0.8em;
+    margin-top: 0.2em;
+}
+
+.tag:not(:last-child):after {
+    content: ' •'
+}
+.status {
+    /* color: white; */
+    margin: 0.3em 0;
+    background: var(--tan2);
+    border: 1px solid var(--tan4);
+    padding: 0.5em 0.5em;
+    width: 100%
+}
+.current {
+    font-size: 0.9em;
+    font-style: italic;
+    color: var(--gray3);
+}
+.summary-line {
+    font-style: italic;
+    font-size: 0.9em;
+}
+.fakelink {
+    position: absolute;
+    bottom: 3px;
+    right: 8px;
+    color: var(--tan4);
+}

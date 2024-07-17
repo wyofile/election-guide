@@ -83,16 +83,24 @@ const DistrictMap = ({chamber, geoData, setActiveDistrict}) => {
       layers: [osmLayer, districtsLayer],
       view: new View({
           center: [-11971873.22771757, 5311971.846945472],
-          minZoom: 6.5,
-          zoom: 6.5,
+          minZoom: 6.9,
+          zoom: 6.9,
         }),
     });
+
     map.addInteraction(selectDistrict)
+
     selectDistrict.on('select', (e) => {
-      if(e.selected[0]) setActiveDistrict(districtPrefix + e.selected[0].get(districtNumberIdentifier).substring(1))
+      if(e.selected[0]){
+        setActiveDistrict(e.selected[0].get(districtNumberIdentifier).substring(1))
+      } else {
+        setActiveDistrict(null)
+      }
+      console.log(selectDistrict.getFeatures())
     })
+
     return () => map.setTarget(null)
-  }, [chamber]);
+  }, []);
 
   return (
     <>

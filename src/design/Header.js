@@ -17,11 +17,8 @@ const Header = () => {
         <h1 className="election-guide-title"><Link href="/">
           2024 Election Guide
         </Link></h1>
-        <div className="header-buttons">
-          <Link href=""><div className="button subscribe-button">Subscribe for free</div></Link>
-          <Link href=""><div className="button donate-button">Donate</div></Link>
-        </div>
         <h2 className="subtitle">{webSubtitle}</h2>
+        <Link href=""><div className="button">Support this work</div></Link>
         <div className="update">
           Last update: {formatDate(new Date(updateTime.updateTime))}
         </div>

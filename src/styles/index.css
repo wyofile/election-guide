@@ -8,7 +8,6 @@ section {
   padding: 0.3em 0.5em;
   padding-bottom: 0.2em;
   background-color: var(--wheat);
-  color: var(--tan6);
   border-top: 4px solid var(--goldenrod);
   font-weight: normal;
   text-transform: uppercase;
@@ -16,6 +15,7 @@ section {
   margin-top: 1em;
   margin-left: -1em;
   margin-right: -1em;
+  font-weight:bold;
 }
 
 .race-header {
@@ -23,6 +23,11 @@ section {
   margin-top: 0.2em;
   background-color: var(--goldenrod);
   padding: 0.3em 0.5em;
-  color: black;
+  color: #e4e3e2;
   text-transform: uppercase;
+  font-weight:bold;
+}
+
+.guide-intro {
+  padding-top:15px;
 }

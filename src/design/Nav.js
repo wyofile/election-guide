@@ -11,8 +11,8 @@ const PAGE_LINKS = [
     { path: '/', label: 'All Races' },
     { path: '/#federal-delegation', label: 'Federal Delegation' },
     { path: '/#legislature', label: 'Wyoming Legislature' },
-    { path: '/#ballot-initiatives', label: 'Ballot Initiatives' },
-    { path: '/#judge-retention', label: 'Judge Retention'},
+    // { path: '/#ballot-initiatives', label: 'Ballot Initiatives' },
+    // { path: '/#judge-retention', label: 'Judge Retention'},
     { path: '/#voter-faq', label: 'Voting Info' }
 ]
 

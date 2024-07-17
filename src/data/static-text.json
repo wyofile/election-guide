@@ -1,3 +1,38 @@
 {
-  "wyomingLegislatureIntro": "Lorem markdownum deorum terribilesque primus aequor sed quoque lege tectum flumina, sua [furiosaque convertit ignava](http://ecce.net/guttura)? Retentis parenti vident in regia nec trahere auro inpendere quod, ignis. Traxere amisso [differt festumque](http://foret.net/) crimine Euboicas **Nereides** rabieque vidit, vulnusque et ingemuit nondum, imagine sum aura sparsas.\nVesti meis solio horum recessit retinet ut uni versum ni adfore parentis, et neve et dumque hinc miserrimus Ida."
+  "guideIntro": "Welcome to WyoFile's guide to the 2024 election. This year Wyoming voters select candidates to fill two federal offices, as well as 62 House seats and 15 open Senate seats in the state Legislature. \n\nThe 2024 primary election is Tuesday, Aug. 20. The 2024 general election will be held Tuesday, Nov. 5.\n\nTo help voters prepare to cast informed votes, WyoFile — a statewide, independent, nonprofit, public-interest newsroom — put together this guide to the federal and state legislative races Wyoming voters will be asked to decide. Participating candidates answered questions crafted by WyoFile reporters and editors about the key issues facing Wyoming.",
+  "wyomingLegislatureIntro": "In the 2024 election, Wyoming elects 62 state representatives to two-year terms and 15 senators from the even-numbered districts to four-year terms. (16 senators from odd-numbered districts will be up for election in 2026.)",
+  "usSenateIntro": "One of Wyoming's two U.S. Senate seats, elected with a statewide vote to serve a six-year term.",
+  "usHouseIntro": "Wyoming's one seat in the U.S. House, elected with a statewide vote to serve a two-year term.",
+  "questionnaireIntro": "The answers below were solicited from legislative candidates via a written questionnaire in June 2024 created by WyoFile reporters and editors. Responses here are presented exactly as submitted, without fact-checking or editing for minor punctuation or spelling errors.\n\nLegislative candidates were invited to respond to the questionnaire several times by email and by phone. Out of fairness to the candidates who met the deadline, WyoFile will not add responses after the guide's publication.",
+  "voterFAQ": [
+    {
+      "question":"WHEN ARE WYOMING'S 2024 ELECTIONS?",
+      "answer":"The primary election is scheduled for Tuesday, Aug. 20 and the general election is set for Tuesday, Nov. 5."
+    },
+    {
+      "question":"WHAT'S THE DIFFERENCE BETWEEN THE PRIMARY AND GENERAL ELECTION?",
+      "answer":"Voters affiliated with a major party — Democratic or Republican — vote in the primary election for nominees to move forward to the general election. Because Wyoming has a closed partisan primary, only voters registered with a major party affiliation can vote for candidates in partisan races. For the 2024 election, the deadline for registered voters to change party affiliation was May 15. In the primary election, unaffiliated voters or minor party-affiliated voters can still vote, but their ballot only includes non-partisan races, like those for municipal offices.\n\nAll registered voters — regardless of party affiliation — can vote in the general election for candidates to fill offices at the federal, state and local levels. General election voters also get to decide on ballot initiatives and whether to retain judges."
+    },
+    {
+      "question":"HOW DO I REGISTER TO VOTE?",
+      "answer":"You can register to vote at your polling place on election day. You must bring [documents to prove](https://sos.wyo.gov/Forms/Elections/General/VoterRegistrationForm.pdf) you're eligible to register and vote in Wyoming. \n\nYou can also register in person at the [county clerk's office](https://sos.wyo.gov/Elections/Docs/WYCountyClerks.pdf). \n\nRegistering by mail is also an option. For more information check out the [voter registration application](https://sos.wyo.gov/Forms/Elections/General/VoterRegistrationForm.pdf). "
+    },
+    {
+      "question":"DOES WYOMING HAVE VOTER ID REQUIREMENTS?",
+      "answer":"Yes, Wyoming voters are required to show identification when voting.\n\nValid forms of identification to vote are:\n\n* WY Driver's License or ID Card\n* Tribal ID Card\n* Valid US Passport\n* US Military Card\n* DL or ID Card from Another State\n* University of Wyoming Student ID\n* Wyoming Community College Student ID\n* Wyoming Public School Student ID\n* Valid Wyoming Concealed Firearm Permit\n* Valid Medicare Insurance Card\n* Valid Medicaid Insurance Card"
+    },
+    {
+      "question":"WHO CAN VOTE IN WYOMING?",
+      "answer":"You may register to vote if you are:\n\n* A United States citizen.\n* A resident of Wyoming.\n* 18 years of age or older on election day.\n* Not declared to be mentally incompetent by a court.\n* Not convicted of a felony (unless you were pardoned or have had your rights restored). Find out more about having rights restored on the [Wyoming Department of Corrections' website](https://corrections.wyo.gov/about-us/restoration-of-rights)."
+    },
+    {
+      "question":"CAN I VOTE BY MAIL?",
+      "answer":"Yes, the mail-in and in-person absentee voting period for most voters is 28 days before the primary and general elections. However, Wyomingites covered by the Uniformed and Overseas Citizens Absentee Voting Act have 45 days. \n\nYou can return your ballot by mail or person, but your county clerk's office must receive it no later than 7:00 p.m. on election day to be counted.\n\nFor more information or to request an absentee ballot, [contact your county clerk](https://sos.wyo.gov/Elections/Docs/WYCountyClerks.pdf)."
+    },
+    {
+      "question":"HOW DO I VOTE IN PERSON?",
+      "answer":"The first step to voting in person is locating your polling place. Contact your county clerk or look it up on the [Wyoming Secretary of State's website](https://myelectionday.sos.wyo.gov/WYVOTES/Pages/VOSearch.aspx). The polls are open from 7 a.m. to 7 p.m., or until the last person in line at 7 p.m. has voted. \n\nMore questions? Contact your county clerk or check out the Wyoming Secretary of State's [frequently asked election questions](https://sos.wyo.gov/faqs.aspx?root=ELEC)."
+    }
+  ],
+  "aboutProject":"WyoFile produced this guide with coding and web development by Thomas Musselman, editing by Tennessee Watson and production assistance by Calla Shosh. Contact Tennessee Watson with questions, corrections or suggestions at [tennessee@wyofile.com](mailto:tennessee@wyofile.com).\n\nWyoFile is a Wyoming 501(c)3 nonprofit, independent, member-supported, public-interest news service reporting on the people, places and policy of Wyoming. WyoFile's donor base is politically diverse, including some donors who are candidates in this year's election. WyoFile's news decisions are 100% separate from donor relations.\n\nThis material is available for republication by other media outlets under WyoFile's [standard republication terms](https://wyofile.com/about/republish/)."
 }
