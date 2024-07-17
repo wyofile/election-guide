@@ -7,9 +7,38 @@ import {OSM, Vector as VectorSource} from 'ol/source.js';
 import {Fill, Stroke, Style, Text} from 'ol/style.js';
 import Select from 'ol/interaction/Select.js';
 import {click, noModifierKeys} from 'ol/events/condition.js';
+import {Control, defaults as defaultControls} from 'ol/control.js';
 
 import 'ol/ol.css';
 import '../styles/components/district-map.css'
+
+const MAP_CENTER = [-11971873.22771757, 5311971.846945472]
+
+class ResetControl extends Control {
+  constructor(opt_options) {
+    const options = opt_options || {};
+
+    const button = document.createElement('button');
+    button.innerHTML = 'R';
+
+    const element = document.createElement('div');
+    element.className = 'reset-map ol-unselectable ol-control';
+    element.appendChild(button);
+
+    super({
+      element: element,
+      target: options.target,
+    });
+
+    button.addEventListener('click', this.handleReset.bind(this), false);
+  }
+
+  handleReset() {
+    const mapView = this.getMap().getView()
+    mapView.setCenter(MAP_CENTER)
+    mapView.setZoom(6.9);
+  }
+}
 
 const DistrictMap = ({chamber, geoData, setActiveDistrict}) => {
 
@@ -77,12 +106,15 @@ const DistrictMap = ({chamber, geoData, setActiveDistrict}) => {
       },
       style: selectStyle,
     });
+
+
     
     const map = new Map({
       target: `${chamber}-map`,
+      controls: defaultControls().extend([new ResetControl()]),
       layers: [osmLayer, districtsLayer],
       view: new View({
-          center: [-11971873.22771757, 5311971.846945472],
+          center: MAP_CENTER,
           minZoom: 6.9,
           zoom: 6.9,
         }),
