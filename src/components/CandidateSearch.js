@@ -43,10 +43,10 @@ const PLACEHOLDER = 'Enter candidate (e.g., John Barasso)'
 const CandidateSearch = ({candidates}) => {
     const [searchText, setSearchText] = useState('')
 
-    const matchingCandidates = ((searchText !== null) && (searchText.length < 3)) ? []
-        : candidates
-            .filter(d => d.displayName.toUpperCase().includes(searchText.toUpperCase()))
-            .slice(0, 5)
+    // const matchingCandidates = ((searchText !== null) && (searchText.length < 3)) ? []
+    //     : candidates
+    //         .filter(d => d.displayName.toUpperCase().includes(searchText.toUpperCase()))
+    //         .slice(0, 5)
 
     function handleChange(event) {
         const input = event.target.value
