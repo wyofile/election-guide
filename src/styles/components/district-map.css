@@ -3,20 +3,27 @@
 .map-container {
   margin:auto;
   /* min-width: 380px; */
-  width: 80%;
-  height: 300px;
+  width: 90%;
+  height: 275px;
   border: 2px solid var(--dark-sea-green);
 }
 
 .reset-map {
-  top: 65px;
+  bottom: .5em;
   left: .5em;
+
 }
 
-.ol-touch .reset-map {
-  top: 80px;
+.ol-control button:hover{
+  background-color: white;
 }
 
+.reset-map button {
+  max-width: auto;
+  width: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+}
 
 @media only screen and (min-device-width: 480px){
   .map-container {

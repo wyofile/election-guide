@@ -18,7 +18,7 @@ const Header = () => {
           2024 Election Guide
         </Link></h1>
         <h2 className="subtitle">{webSubtitle}</h2>
-        <Link href=""><div className="button">Support this work</div></Link>
+        <Link target="_blank" href="https://wyofile.com/donate/?campaign=7013h000000cXuSAAU"><div className="button">Support this work</div></Link>
         <div className="update">
           Last update: {formatDate(new Date(updateTime.updateTime))}
         </div>
