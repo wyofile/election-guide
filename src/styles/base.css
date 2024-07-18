@@ -20,7 +20,7 @@
 body {
     /* Default to futura-pt for text elements */
     font-family: "Roboto", sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     background-color: #e5e4e2;
 }
@@ -31,26 +31,17 @@ body {
     justify-content: flex-start;
 }
 
-@media screen and (max-width: 468px) {
-    body {
-        font-size: 14px;
-    }
-}
-
 p,
 ol,
 ul {
     font-family: "Roboto", sans-serif;
-    font-size: 18px;
     color: rgb(17, 17, 17);
     line-height: 1.5em;
     font-weight: 400;
 }
 
-@media screen and (max-width: 468px) {
-    p {
-        font-size: 16px;
-    }
+section ul {
+    margin-top: 0;
 }
 
 h1,
