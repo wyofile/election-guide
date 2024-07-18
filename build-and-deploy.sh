@@ -12,6 +12,8 @@
 # node process/main.js
 
 # Build
+node ./inputs/processData.js
+
 npm run build
 
 # Deploy
