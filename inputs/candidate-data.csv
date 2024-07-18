@@ -1,4 +1,4 @@
-﻿last_name,first_name,middle_name,suffix,has_photo,has_questionaire,ballot_name,slug,status,district,party,incubent,wyoleg_link,mailing_address,mailing_city_state_zip,campaign_telephone,email,website,date_filed,date_withdrawn
+lastName,firstName,middleName,suffix,hasPhoto,hasReponses,ballotName,slug,status,district,party,incumbent,wyoleg,mailingAddress,mailingCityStateZip,campaignTelephone,email,website,dateFiled,dateWithdrawn
 ALLEMAND,BILL,JAMES,MR,FALSE,FALSE,Bill Allemand,bill-allemand,active,H58,REP,TRUE,https://wyoleg.gov/Legislators/2024/H/2114,PO BOX 119,MIDWEST WY 82643,307-277-0902,BILLSHOT307@GMAIL.COM,BILLFOR58.COM,5/16/2024,
 ALLEN,ANTHONY,LEVON,Jr,FALSE,FALSE,Edis Allen,anthony-allen,active,H62,REP,FALSE,,946 E 2ND STREET,CASPER WY 82601,307-258-9608,EDISSIX@GMAIL.COM,,5/16/2024,
 ANDERSON,JAMES,LEE,,TRUE,TRUE,Jim Anderson,james-anderson,active,S28,REP,TRUE,https://wyoleg.gov/Legislators/2024/S/1985,5941 S CEDAR ST,CASPER WY 82601,307-267-5775,JLAWYO@BRESNAN.NET,,5/16/2024,
@@ -21,6 +21,7 @@ BYRON,ANDREW,PETER,,TRUE,TRUE,Andrew P Byron,andrew-byron,active,H22,REP,TRUE,ht
 CAMERON,KYLE,G,,TRUE,TRUE,Kyle G. Cameron,kyle-cameron,active,us-house,DEM,FALSE,,PO BOX 2598,CHEYENNE WY 82003,307-286-9906,CANDIDATE@CAMERONFORWYOMING.NET,CAMERONFORWYOMING.NET,5/21/2024,
 CAMPBELL,ELISSA,JO,,TRUE,TRUE,Elissa Campbell,elissa-campbell,active,H56,REP,FALSE,,718 DIVINE AVE,CASPER WY 82601,307-439-5364,ELISSA@CAMPBELL4WYOMING.COM,CAMPBELL4WYOMING.COM,5/16/2024,
 CAMPBELL,KEVIN,JOHN,,FALSE,FALSE,Kevin Campbell,kevin-campbell,active,H62,REP,FALSE,,P.O. BOX 83,GLENROCK WY 82637,307-267-2038,KEVIN.HIGHCOUNTRY@GMAIL.COM,,5/24/2024,
+CESSOR,TYLER,,,TRUE,TRUE,Tyler Cessor,tyler-cessor,active,H57,IND,FALSE,,,,307-214-0802,TYLERCESSORFORHD57@GMAIL.COM,TYLERCESSORFORHD57.COM,,
 CHESTEK,KENNETH,D.,,TRUE,TRUE,Ken Chestek,kenneth-chestek,active,H13,DEM,TRUE,https://wyoleg.gov/Legislators/2024/H/2095,4317 CLIFF ST,LARAMIE WY 82070,307-460-9139,KCHESTEK@GMAIL.COM,CHESTEKFORHD13.COM,5/16/2024,
 CHRISTOPHERSON,PHILLIP,GREG,,TRUE,TRUE,Phil Christopherson,phillip-christopherson,active,S24,REP,FALSE,,1719 MOONSHINER LN,GILLETTE WY 82718,307-689-9637,PHILFORWYOMING@GMAIL.COM,,5/30/2024,
 CLAUSEN,ROBERT,AARON,,FALSE,FALSE,Aaron Clausen,robert-clausen,active,H06,REP,FALSE,,910 ESTERBROOK RD,DOUGLAS WY 82633,307-351-3664,AARON.CLAUSEN@YAHOO.COM,,5/31/2024,

@@ -4,6 +4,7 @@ import Markdown from 'react-markdown'
 import Layout from '../design/Layout'
 import DistrictMap from '../components/DistrictMap'
 import CandidateSearch from '../components/CandidateSearch'
+import RaceCandidates from '../components/RaceCandidates'
 
 import houseDistricts from '../data/house-districts.json'
 import senateDistricts from '../data/senate-districts.json'
@@ -42,8 +43,10 @@ const Home = () => {
       <h2 className='section-header'>Federal Delegation</h2>
       <h3 className="race-header">U.S. Senate</h3>
       <Markdown>{textContent.usSenateIntro}</Markdown>
+      <RaceCandidates candidates={candidates.filter((candidate)=>candidate.district === 'us-sen')} />
       <h3 className="race-header">U.S. House At-Large</h3>
       <Markdown>{textContent.usHouseIntro}</Markdown>
+      <RaceCandidates candidates={candidates.filter((candidate)=>candidate.district === 'us-house')} />
     </section>
 
     <section>

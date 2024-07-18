@@ -109,9 +109,9 @@ a:hover {
     font-style: italic;
     font-size: 0.9em;
 }
-.fakelink {
+/* .fakelink {
     position: absolute;
     bottom: 3px;
     right: 8px;
     color: var(--tan4);
-}
+} */

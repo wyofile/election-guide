@@ -1,0 +1,88 @@
+.party-buckets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+}
+
+.party-bucket {
+  padding: 0 0.5em;
+  h4 {
+      margin: 0;
+      text-transform: uppercase;
+  }
+  border-left: 3px solid gray;    
+  margin-bottom: 1em;
+}
+
+.candidate {
+  margin-top: 0.5em;
+}
+
+.candidate a {
+    width: 310px;
+    display: flex;
+    align-items: stretch;
+    background-color: #eeeeee;
+    box-shadow: 2px 2px 3px #aaa;
+    color: black;
+}
+.candidate a:hover {
+    opacity: 0.85;
+    text-decoration: none;
+    /* border: 2px solid black; */
+    color: #666;
+}
+
+.portrait-col {
+    flex: 0 0 100px;
+}
+.portrait-container {
+    width: 100px;
+    height: 100px;
+    background-color: #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.info-col {
+    flex: 0 1 200px;
+    padding: 0.5em 0.5em;
+    position: relative;
+    display: block;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.tag-line {
+    font-size: 0.8em;
+    margin-top: 0.3em;
+}
+
+.tag {
+    /* display: inline-block; */
+    /* border: 1px solid var(--tan4); */
+    /* padding: 0.2em 0.5em; */
+    margin-right: 0.5em;
+}
+
+.summary-line {
+    font-style: italic;
+    font-size: 0.9em;
+    height: 1em;
+    margin-bottom: 10px;
+}
+
+.fakelink {
+    position: absolute;
+    bottom: 3px;
+    right: 8px;
+    color: #666;
+    font-size: 0.9em;
+}
