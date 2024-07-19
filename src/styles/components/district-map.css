@@ -3,8 +3,8 @@
 .map-container {
   margin:auto;
   /* min-width: 380px; */
-  width: 90%;
-  height: 275px;
+  width: 75%;
+  aspect-ratio: 58700 / 46000;
   border: 2px solid var(--dark-sea-green);
 }
 
@@ -24,7 +24,6 @@
   bottom: .5em;
   left: .5em;
   font-size: 0.8rem;
-
 }
 
 .ol-control button:hover{
@@ -38,8 +37,8 @@
   padding-left: 10px;
 }
 
-@media only screen and (min-device-width: 480px){
+/* @media only screen and (min-device-width: 480px){
   .map-container {
     height: 500px;
   }
-}
+} */

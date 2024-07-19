@@ -12,12 +12,12 @@
 
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 1px;
   display: grid;
   grid-template-rows: auto;
   grid-auto-rows: auto;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 2px;
+  gap: 1px;
 
 }
 

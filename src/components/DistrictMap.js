@@ -13,18 +13,14 @@ import 'ol/ol.css';
 import '../styles/components/district-map.css'
 
 const MAP_CENTER = [-11971873.22771757, 5311971.846945472]
-
-const calcZoom = map => {
-  const width = document.getElementById(map.getTarget()).offsetWidth
-  return width*width*-0.00000579 + width*0.00864669 + 3.66904
-}
+const CONSTRAINTS = [-12417689.197989667, 4975536.361069247, -11527133.271643478, 5660965.110251664]
 
 class ResetControl extends Control {
   constructor(opt_options) {
     const options = opt_options || {};
 
     const button = document.createElement('button');
-    button.innerHTML = 'Reset Map';
+    button.innerHTML = 'Reset Zoom';
 
     const element = document.createElement('div');
     element.className = 'reset-map ol-unselectable ol-control';
@@ -41,10 +37,8 @@ class ResetControl extends Control {
   handleReset() {
     const map = this.getMap()
     const mapView = map.getView()
-    const newZoom = calcZoom(this.getMap())
     mapView.setCenter(MAP_CENTER)
-    mapView.setMinZoom(newZoom)
-    mapView.setZoom(newZoom);
+    mapView.setZoom(0);
   }
 }
 
@@ -121,13 +115,10 @@ const DistrictMap = ({chamber, geoData, setActiveDistrict}) => {
       layers: [osmLayer, districtsLayer],
       view: new View({
           center: MAP_CENTER,
+          extent: CONSTRAINTS,
+          zoom: 0
         }),
     });
-
-    const defaultMinZoom = calcZoom(map)
-
-    map.getView().setZoom(defaultMinZoom)
-    map.getView().setMinZoom(defaultMinZoom)
 
     map.addInteraction(selectDistrict)
 
