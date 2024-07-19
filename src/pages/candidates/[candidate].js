@@ -69,7 +69,10 @@ export default function CandidatePage({candidate}) {
           return(
             <div key={`question-${i}`}>
               <h3 className="question-header">{q}</h3>
-              <Markdown>{answer}</Markdown>
+              <div className="answer">
+                <p className="answer-can-name">{candidate.ballotName}:</p>
+                <Markdown>{answer}</Markdown>
+              </div>
             </div>
           )
         })}
