@@ -88,3 +88,69 @@
     color: #666;
     font-size: 0.8em;
 }
+
+.out-of-cycle-note {
+    background-color: #eeeeee;
+    box-shadow: 2px 2px 3px #aaa;
+    color: black;
+    width: 400px;
+    margin: 0 auto;
+    padding: 1em;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+
+.holdover {
+    display: inline-block;
+    border: 1px solid var(--tan5);
+    background: var(--gray1);
+    box-shadow: 2px 2px 3px #aaa;
+    margin-bottom: 0.5em;
+    color: black;
+    display: flex;
+}
+
+.holdover:hover {
+    opacity: 0.85;
+    text-decoration: none;
+    color: #666;
+}
+
+.holdover-party-icon {
+    align-self:stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 40px;
+    font-size: 1.1em;
+    margin-right: 0.5em;
+    position: relative;
+}
+
+.holdover-info {
+    position: relative;
+    height: 3.5em;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+}
+
+.holdover-name {
+    font-size: 1.1em;
+    text-transform: uppercase; 
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+.wyoleg-note {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    font-size: 0.85rem;
+    color: #666;
+}

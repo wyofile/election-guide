@@ -43,10 +43,10 @@ const Home = () => {
       <h2 className='section-header'>Federal Delegation</h2>
       <h3 className="race-header">U.S. Senate</h3>
       <Markdown>{textContent.usSenateIntro}</Markdown>
-      <RaceCandidates candidates={candidates.filter((candidate)=>candidate.district === 'us-sen')} />
+      <RaceCandidates district='us-sen' candidates={candidates.filter((candidate)=>candidate.district === 'us-sen')} />
       <h3 className="race-header">U.S. House At-Large</h3>
       <Markdown>{textContent.usHouseIntro}</Markdown>
-      <RaceCandidates candidates={candidates.filter((candidate)=>candidate.district === 'us-house')} />
+      <RaceCandidates district='us-house' candidates={candidates.filter((candidate)=>candidate.district === 'us-house')} />
     </section>
 
     <section>
@@ -56,17 +56,19 @@ const Home = () => {
       <Markdown>{textContent.wyomingLegislatureIntro}</Markdown>
 
       <h3 className='race-header'>Wyoming House of Representatives</h3>
-      <p>Select a district from the map to view House of Representatives candidates.</p>
+      <p className="chamber-intro">Select a district from the map to view House of Representatives candidates.</p>
+      <p className="note">Note: Some smaller districts may require you to zoom in.</p><br />
       <DistrictMap chamber='house' geoData={houseDistricts} setActiveDistrict={setActiveHouseDistrict} />
-      <h3 className="district-title">{activeHouseDistrict ? `State House District ${activeHouseDistrict}` : "No district selected."}</h3>
-      <RaceCandidates candidates={candidates.filter((candidate)=>candidate.district === `H${activeHouseDistrict}` )} />
+      <h3 className="district-title">{activeHouseDistrict ? `State House District ${parseInt(activeHouseDistrict.substring(1))}` : "No district selected."}</h3>
+      <RaceCandidates district={activeHouseDistrict} candidates={candidates.filter((candidate)=>candidate.district === activeHouseDistrict )} />
       <br />
       <h3 className='race-header'>Wyoming Senate</h3>
-      <p>Select a district from the map to view Senate candidates.</p>
+      <p className="chamber-intro">Select a district from the map to view Senate candidates.</p>
+      <p className="note">Note: Some smaller districts may require you to zoom in.</p><br />
 
       <DistrictMap chamber='senate' geoData={senateDistricts} setActiveDistrict={setActiveSenateDistrict} />
-      <h3 className="district-title">{activeSenateDistrict ? `State Senate District ${activeSenateDistrict}` : "No district selected."}</h3>
-      <RaceCandidates candidates={candidates.filter((candidate)=>candidate.district === `S${activeSenateDistrict}` )} />
+      <h3 className="district-title">{activeSenateDistrict ? `State Senate District ${parseInt(activeSenateDistrict.substring(1))}` : "No district selected."}</h3>
+      <RaceCandidates district={activeSenateDistrict} candidates={candidates.filter((candidate)=> candidate.district === activeSenateDistrict )} />
     </section>
 
     <section>

@@ -14,7 +14,7 @@ const Candidate = ({slug, ballotName, party, status, incumbent, hasResponses, di
     // cap_tracker_2023_link flags for current lawmakers
     const partyInfo = PARTIES.find(d => d.key === party)
     const statusInfo = STATUS.find(d => d.key === status)
-    return <div className="search-candidate" style={{ borderTop: `3px solid ${partyInfo.color}` }}><Link href={`${slug}`}>
+    return <div className="search-candidate" style={{ borderTop: `3px solid ${partyInfo.color}` }}><Link href={`/candidates/${slug}`}>
         <div className="search-party-label" >
             <div className="search-party-text" style={{ background: partyInfo.color }}>{party[0]}</div>
         </div>

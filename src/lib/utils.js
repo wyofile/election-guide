@@ -44,3 +44,15 @@ export const formatRace = district => {
         return `Senate District ${parseInt(district.substring(1))}`
     }
 }
+
+export const getPortraitPath = (basePath, hasPhoto, party, slug) => {
+    if (hasPhoto) {
+        return `${basePath}/portraits/${slug}.png`
+      } else if (party === 'REP') {
+        return `${basePath}/portraits/non-participantrepublican.png`
+      } else if (party === 'DEM') {
+        return `${basePath}/portraits/non-participantdemocratic.png`
+      } else {
+        return `${basePath}/portraits/non-participant.png`
+      }
+}

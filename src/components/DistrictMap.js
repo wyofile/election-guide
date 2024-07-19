@@ -16,7 +16,6 @@ const MAP_CENTER = [-11971873.22771757, 5311971.846945472]
 
 const calcZoom = map => {
   const width = document.getElementById(map.getTarget()).offsetWidth
-  console.log(map.getTarget())
   return width*width*-0.00000579 + width*0.00864669 + 3.66904
 }
 
@@ -134,11 +133,10 @@ const DistrictMap = ({chamber, geoData, setActiveDistrict}) => {
 
     selectDistrict.on('select', (e) => {
       if(e.selected[0]){
-        setActiveDistrict(e.selected[0].get(districtNumberIdentifier).substring(1))
+        setActiveDistrict(`${districtPrefix}${e.selected[0].get(districtNumberIdentifier).substring(1)}`)
       } else {
         setActiveDistrict(null)
       }
-      console.log(selectDistrict.getFeatures())
     })
 
     return () => map.setTarget(null)

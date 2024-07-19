@@ -5,7 +5,9 @@ const { parse } = require('csv-parse/sync')
 const candidateDataPath = path.join(__dirname, './candidate-data.csv')
 const fedResponsesPath = path.join(__dirname, './federal-responses.csv')
 const legResponsesPath = path.join(__dirname, './wyo-leg-responses.csv')
+const senHoldoversPath = path.join(__dirname, './senate-holdovers.csv')
 const outputFilePath = path.join(__dirname, '../src/data/candidate-data.json')
+const senHoldoversOutputPath = path.join(__dirname, '../src/data/senate-holdovers.json')
 
 const candidateDataString = fs.readFileSync(candidateDataPath, 'utf-8')
 const candidateData = parse(candidateDataString, {columns: true, bom: true, cast: (value, context)=>{
@@ -17,6 +19,9 @@ const candidateData = parse(candidateDataString, {columns: true, bom: true, cast
     return value
   }
 }})
+
+const senHoldoversString = fs.readFileSync(senHoldoversPath, 'utf-8')
+const senHoldoversData = parse(senHoldoversString, {columns: true, bom: true})
 
 const fedResponsesString = fs.readFileSync(fedResponsesPath, 'utf-8')
 const fedResponsesData = parse(fedResponsesString, {columns: true, bom: true})
@@ -40,5 +45,6 @@ const canDataWithResponses = candidateData.map((candidate) => {
 })
 
 fs.writeFileSync(outputFilePath,JSON.stringify(canDataWithResponses, null, 2))
+fs.writeFileSync(senHoldoversOutputPath,JSON.stringify(senHoldoversData, null, 2))
 
  

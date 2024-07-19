@@ -1,0 +1,55 @@
+.candidate-summary {
+  margin-top: 0.5em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: #eeeeee;
+  box-shadow: 2px 2px 4px #aaa;
+  color: black;
+}
+
+.summ-portrait-col {
+  flex: 1 0 100px;
+}
+.summ-portrait-container {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.summ-info-col {
+  flex: 1 1 400px;
+  padding: 0.5em 1em;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.summ-intro-line {
+  margin-top: 0.5em;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.summ-position-line {
+  font-size: 1.3em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.summ-name {
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+.incum-line {
+  font-style: italic;
+  font-size: 1.3em;
+  text-align: center;
+}
