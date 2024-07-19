@@ -31,3 +31,15 @@ section {
 .guide-intro {
   padding-top:15px;
 }
+
+.district-title {
+  text-align: center;
+  margin-top: 1em;
+  background-color: var(--wheat);
+  padding: 0.3em 0.5em;
+  color: black;
+  text-transform: uppercase;
+  font-weight:bold;
+  margin-left: 1em;
+  margin-right: 1em;
+}

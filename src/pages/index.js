@@ -58,13 +58,15 @@ const Home = () => {
       <h3 className='race-header'>Wyoming House of Representatives</h3>
       <p>Select a district from the map to view House of Representatives candidates.</p>
       <DistrictMap chamber='house' geoData={houseDistricts} setActiveDistrict={setActiveHouseDistrict} />
-      <h2 className="district-title">{activeHouseDistrict ? `State House District ${activeHouseDistrict}` : "No district selected."}</h2>
+      <h3 className="district-title">{activeHouseDistrict ? `State House District ${activeHouseDistrict}` : "No district selected."}</h3>
+      <RaceCandidates candidates={candidates.filter((candidate)=>candidate.district === `H${activeHouseDistrict}` )} />
       <br />
       <h3 className='race-header'>Wyoming Senate</h3>
       <p>Select a district from the map to view Senate candidates.</p>
 
       <DistrictMap chamber='senate' geoData={senateDistricts} setActiveDistrict={setActiveSenateDistrict} />
-      <h2 className="district-title">{activeSenateDistrict ? `State Senate District ${activeSenateDistrict}` : "No district selected."}</h2>
+      <h3 className="district-title">{activeSenateDistrict ? `State Senate District ${activeSenateDistrict}` : "No district selected."}</h3>
+      <RaceCandidates candidates={candidates.filter((candidate)=>candidate.district === `S${activeSenateDistrict}` )} />
     </section>
 
     <section>
