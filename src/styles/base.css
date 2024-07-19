@@ -14,6 +14,7 @@
     --dimgray: #517e64;
     --dark-sea-green: #89a6a0;
     --tan: #c8b8a1;
+    --black: #070707;
     /* party/outcome colors handled via different system */
 }
 
@@ -241,6 +242,7 @@ main {
 
 a {
     text-decoration: none;
+    color: #237bcf;
 }
 
 a:hover {

@@ -17,7 +17,7 @@ const Candidate = (props) => {
       <div className="portrait-col" >
           <div className="portrait-container">
               <Image
-                  alt={`${ballotName}`}
+                  alt={ballotName}
                   src={portraitPath}
                   width={100}
                   height={100}
@@ -73,12 +73,19 @@ const RaceCandidates = ({district, candidates}) => {
           {
               PARTIES.map(party => {
                   const candidatesInBucket = candidates.filter(candidate => candidate.party === party.key)
-                  if (candidatesInBucket.length === 0) return null
+                  const isUncontestedPrimary = candidatesInBucket.length === 1 && (party.key === "REP" || party.key === "DEM")
+                  const isMinorPartyNoCandidates = candidatesInBucket.length === 0 && (party.key != "REP" && party.key != "DEM")
+                  const isIndependent = party.key === 'IND'
+                  
+                  if (isMinorPartyNoCandidates) return null
                   return <div className="party-bucket" key={party.key} style={{ borderLeft: `3px solid ${party.color}` }}>
                       <h4 style={{
                           color: party.color
                       }}>{pluralize(party.noun, candidatesInBucket.length)}</h4>
+                      {candidatesInBucket.length === 0 && <div className="party-note">No {party.adjective} candidates are running in this district.</div>}
                       <div>{candidatesInBucket.map(candidate => <Candidate key={candidate.slug} color={party.color} {...candidate} />)}</div>
+                      {isUncontestedPrimary && <div className="party-note">This candidate is running uncontested in the {party.adjective} Primary.</div>}
+                      {isIndependent && <div className="party-note">Independent candidates do not participate in a primary election. They must collect signatures to appear on the General Election ballot.</div>}
                   </div>
               })
           }

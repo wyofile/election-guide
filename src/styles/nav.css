@@ -1,6 +1,6 @@
 
 .nav {
-  background-color: #e5e4e2;
+  background-color: var(--goldenrod);
   position: sticky;
   top: 0px;
   
@@ -22,11 +22,12 @@
 }
 
 .nav-menu-item {
-  background-color: var(--dark-sea-green);
+  background-color: var(--wheat);
   margin: 1px;
   padding-left: 10px;
   padding-right: 10px;
   text-align: center;
+  text-transform:uppercase;
 }
 
 .nav-menu a {

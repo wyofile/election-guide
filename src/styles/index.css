@@ -1,5 +1,11 @@
 .guide-intro {
   padding-top:15px;
+  font-size: 1.2rem;
+}
+
+.guide-intro p {
+  font-weight: 400;
+  color: var(--black);
 }
 
 

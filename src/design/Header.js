@@ -15,9 +15,10 @@ const Header = () => {
       <div className="header-center">
         <Link href="https://wyofile.com"><h1 className="site-title">WyoFile</h1></Link>
         <h1 className="election-guide-title"><Link href="/">
-          2024 Election Guide
+          ELECTION GUIDE 2024
         </Link></h1>
         <h2 className="subtitle">{webSubtitle}</h2>
+        
         <Link target="_blank" href="https://wyofile.com/donate/?campaign=7013h000000cXuSAAU"><div className="button">Support this work</div></Link>
         <div className="update">
           Last update: {formatDate(new Date(updateTime.updateTime))}

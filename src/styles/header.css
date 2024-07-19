@@ -1,9 +1,15 @@
 
 .header {
-  background-color: #070707;
+  background-color: var(--dark-sea-green);
   padding: 15px;
   padding-top: 40px;
   display:block;
+  background-image: url('/election-guide-2024/flag.png');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  /* background-attachment: fixed; */
+  /* background-position:left bottom; */
+
 }
 
 .header a {
@@ -14,6 +20,7 @@
   width: 100%;
   max-width: 1280px;
   margin: auto;
+
 }
 
 .header-center{
@@ -22,6 +29,7 @@
   align-items:center;
   justify-content:center;
   margin: auto;
+  position:relative;
 }
 
 h1 h2 {
@@ -31,28 +39,33 @@ h1 h2 {
 
 .site-title {
   color: white;
-  font-weight:400;
-  font-size: 4rem;
+  font-weight:300;
+  font-size: 3rem;
   margin: 0;
   margin-top: 0px !important;
+  text-shadow: 0 3px 6px rgba(0,0,0, 0.25);
 }
 
 .button {
   font-family: "Roboto Slab", serif;
-  color: black;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
   text-decoration: none;
-  padding: 5px 30px;
+  text-shadow: 0 3px 6px rgba(0,0,0, 0.25);
+  padding: 10px 30px;
   border-radius: 10px;
   cursor: pointer;
   margin: 15px;
   text-align: center;
   display:inline-block;
-  background-color: var(--goldenrod);
+  background-color: #324b60;
+  box-shadow: 0 3px 6px rgba(0,0,0, 0.3);
+
 }
 
 .button:hover {
-  background-color: var(--wheat);
-  color: black;
+  box-shadow: none;
 }
 
 
@@ -66,6 +79,7 @@ h1 h2 {
   color: white;
   font-family: "Roboto", sans-serif;
   text-align: center;
+  text-shadow: 0 3px 6px rgba(0,0,0, 0.25);
 }
 
 .election-guide-title{
@@ -77,7 +91,10 @@ h1 h2 {
 .election-guide-title a {
   text-align:center;
   text-decoration: none;
-  color: var(--goldenrod);
+  color: white;
+  font-weight: 800;
+  font-size: 3.5rem;
+  text-shadow: 0 3px 6px rgba(0,0,0, 0.25);
 }
 
 .election-guide-title a:hover {
@@ -85,7 +102,7 @@ h1 h2 {
 }
 
 .update {
-  color: #888;
+  color: #666;
   text-align: center;
   font-size: 0.75rem;
   font-family: "Roboto", sans-serif;
