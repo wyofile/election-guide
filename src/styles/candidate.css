@@ -1,0 +1,24 @@
+
+
+.question-header {
+  font-family: "Roboto", sans-serif;
+  text-align:left;
+  margin-top: 0.4em;
+  margin-bottom: 0;
+  background-color: var(--wheat);
+  padding: 0.3em 0.5em;
+  color: black;
+  font-weight:bold;
+}
+
+.on-the-issues p {
+  border-left: 5px solid var(--wheat);
+  margin: 0;
+  padding: 10px;
+}
+
+.on-the-issues ol, ul {
+  border-left: 5px solid var(--wheat);
+  margin:0;
+  padding-top: 10px;
+}

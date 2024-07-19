@@ -145,6 +145,7 @@ const DistrictMap = ({chamber, geoData, setActiveDistrict}) => {
   return (
     <>
       <div id={`${chamber}-map`} className="map-container" />
+      <p className="map-note">Note: Some smaller districts may require you to zoom in.</p><br />
     </>
   );
 }

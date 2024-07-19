@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Markdown from 'react-markdown'
+import Image from "next/image";
 
 import Layout from '../design/Layout'
 import DistrictMap from '../components/DistrictMap'
@@ -19,7 +20,7 @@ const Home = () => {
   const [activeHouseDistrict, setActiveHouseDistrict] = useState(null)
   const [activeSenateDistrict, setActiveSenateDistrict] = useState(null)
 
-  const pageDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus sit amet volutpat consequat mauris nunc congue. Ut enim blandit volutpat maecenas volutpat. Morbi tincidunt ornare massa eget egestas purus viverra accumsan. Felis eget nunc lobortis mattis aliquam faucibus purus in massa. Magna etiam tempor orci eu lobortis elementum nibh. Arcu risus quis varius quam quisque id diam vel quam. Egestas diam in arcu cursus euismod."
+  const pageDescription = textContent.guideIntro
 
   return (
     <Layout 
@@ -57,14 +58,13 @@ const Home = () => {
 
       <h3 className='race-header'>Wyoming House of Representatives</h3>
       <p className="chamber-intro">Select a district from the map to view House of Representatives candidates.</p>
-      <p className="note">Note: Some smaller districts may require you to zoom in.</p><br />
+
       <DistrictMap chamber='house' geoData={houseDistricts} setActiveDistrict={setActiveHouseDistrict} />
       <h3 className="district-title">{activeHouseDistrict ? `State House District ${parseInt(activeHouseDistrict.substring(1))}` : "No district selected."}</h3>
       <RaceCandidates district={activeHouseDistrict} candidates={candidates.filter((candidate)=>candidate.district === activeHouseDistrict )} />
       <br />
       <h3 className='race-header'>Wyoming Senate</h3>
       <p className="chamber-intro">Select a district from the map to view Senate candidates.</p>
-      <p className="note">Note: Some smaller districts may require you to zoom in.</p><br />
 
       <DistrictMap chamber='senate' geoData={senateDistricts} setActiveDistrict={setActiveSenateDistrict} />
       <h3 className="district-title">{activeSenateDistrict ? `State Senate District ${parseInt(activeSenateDistrict.substring(1))}` : "No district selected."}</h3>

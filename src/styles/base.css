@@ -32,6 +32,50 @@ body {
     justify-content: flex-start;
 }
 
+section {
+    display: block;
+    padding: 0 0.5em;
+    margin-bottom: 2em;
+}
+
+.section-header {
+    text-align: center;
+    padding: 0.3em 0.5em;
+    padding-bottom: 0.2em;
+    background-color: var(--wheat);
+    border-top: 4px solid var(--goldenrod);
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    margin-left: -1em;
+    margin-right: -1em;
+    font-weight:bold;
+}
+
+.race-header {
+    text-align: center;
+    margin-top: 0.2em;
+    background-color: var(--goldenrod);
+    padding: 0.3em 0.5em;
+    color: black;
+    text-transform: uppercase;
+    font-weight:bold;
+}
+
+.district-title {
+    text-align: center;
+    margin-top: 1em;
+    background-color: var(--wheat);
+    padding: 0.3em 0.5em;
+    color: black;
+    text-transform: uppercase;
+    font-weight:bold;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+  
+
 p,
 ol,
 ul {
@@ -90,8 +134,17 @@ h4 {
 .link-anchor {
     display: block;
     position: relative;
-    top: -50px;
+    top: -115px;
     visibility: hidden;
+}
+
+@media screen and (min-width: 468px) {
+    .link-anchor {
+        display: block;
+        position: relative;
+        top: -50px;
+        visibility: hidden;
+    }
 }
 
 .note {
@@ -99,10 +152,11 @@ h4 {
     font-size: 0.9em;
     line-height: 1.2em;
     font-style: italic;
-    color: var(#666);
+    color: #555;
     margin-bottom: 0.5em;
     margin-top: 0.3em;
 }
+
 
 /* 
 button {
@@ -160,11 +214,6 @@ table {
     font-size: 14px;
 }
 
-@media screen and (max-width: 468px) {
-    table {
-        font-size: 13px;
-    }
-}
 
 th {
     text-align: left;
@@ -178,7 +227,7 @@ hr {
 }
 
 input {
-    font-size: 16px;
+    font-size: 1.1rem;
     /* Necessary to avoid zooming bug on iOS */
 }
 

@@ -8,6 +8,18 @@
   border: 2px solid var(--dark-sea-green);
 }
 
+.map-note {
+  font-size: 0.9em;
+  line-height: 1.2em;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 0.5em;
+  margin-top: 0.3em;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .reset-map {
   bottom: .5em;
   left: .5em;
