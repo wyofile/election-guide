@@ -1,6 +1,6 @@
 
 .nav {
-  background-color: white;
+  background-color: #fff;
   position: sticky;
   top: 0px;
   
@@ -28,6 +28,7 @@
   padding-right: 10px;
   text-align: center;
   text-transform:uppercase;
+  border: 1px solid var(--goldenrod)
 }
 
 .nav-menu a {
