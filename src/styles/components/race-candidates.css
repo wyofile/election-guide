@@ -28,6 +28,7 @@
     box-shadow: 2px 2px 3px #aaa;
     color: black;
 }
+
 .candidate a:hover {
     opacity: 0.85;
     text-decoration: none;
@@ -38,6 +39,7 @@
 .portrait-col {
     flex: 0 0 100px;
 }
+
 .portrait-container {
     width: 100px;
     height: 100px;
@@ -84,5 +86,5 @@
     bottom: 3px;
     right: 8px;
     color: #666;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }

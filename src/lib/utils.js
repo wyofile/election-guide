@@ -32,3 +32,15 @@ export const dollarFormatResponsive = num => {
     if (Math.abs(num) >= 10_000_000 && (Math.abs(num) < 100_000_000)) return format('$,.3s')(num)
     else return 'ERR'
 }
+
+export const formatRace = district => {
+    if (district === 'us-sen') {
+        return "U.S. Senate"
+    } else if (district === 'us-house') {
+        return "U.S. House of Representatives"
+    } else if (district[0] === 'H') {
+        return `House District ${parseInt(district.substring(1))}`
+    } else if (district[0] === 'S') {
+        return `Senate District ${parseInt(district.substring(1))}`
+    }
+}

@@ -4,12 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { pluralize } from '../lib/utils'
-
-export const PARTIES = [
-  { key: 'REP', noun: 'Republican', adjective: 'Republican', color: '#d73027' },
-  { key: 'DEM', noun: 'Democrat', adjective: 'Democratic', color: '#4575b4' },
-  { key: 'IND', noun: 'Independent', adjective: 'Independent', color: '#666' },
-]
+import { PARTIES } from '../lib/styles'
 
 const Candidate = (props) => {
   console.log(props)

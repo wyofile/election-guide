@@ -1,4 +1,3 @@
-
 .search-box {
     border: 1px solid var(--dimgray);
     background-color: var(--dark-sea-green);
@@ -6,62 +5,49 @@
     margin-bottom: 1em;
 }
 
-.ledein {
+.search-title {
     font-weight: bold;
     text-transform: uppercase;
 }
 
-form {
+.search-box form {
     display: flex;
     flex-wrap: wrap;
     margin-top: 0.5em;
     margin-bottom: 1em;
+    
 }
 
-input {
+.search-box input {
     margin: -1px;
     flex: 4 1 15rem;
     height: 2em;
     padding: 0.25em;
 }
 
-button {
-    margin: -1px;
-    flex: 1 1 auto;
-    background-color: var(--tan5);
-    color: white;
-    font-weight: normal;
-}
-
-button:hover {
-    background-color: var(--link);
-}
-
-.candidate-tile {
+.search-candidate {
     margin: 0.5em auto;
     margin-top: 0.5em;
-    border: 1px solid var(--tan5);
-    box-shadow: 2px 2px 3px #aaa;
+    box-shadow: 2px 2px 3px #222;
     max-width: 400px;
 }
 
-/* a {
+.search-candidate a {
     min-height: 40px;
     display: flex;
     align-items: stretch;
-    background-color: var(--tan1);
-    
-    
+    background-color: #eeeeee;
     color: black;
 }
-a:hover {
-    opacity: 0.8;
+
+.search-candidate a:hover {
+    opacity: 0.85;
     text-decoration: none;
-    color: var(--link);
-} */
+    color: #666;
+}
 
 
-.party {
+.search-party-text {
     width: 40px;
     height: 100%;
     display: flex;
@@ -70,7 +56,8 @@ a:hover {
     font-size: 1.2em;
     color: white;
 }
-.info-col {
+
+.search-info-col {
     flex: 1 1 100px;
     padding: 0.5em 0.5em;
     position: relative;
@@ -78,40 +65,35 @@ a:hover {
     display: flex;
     align-items: center;
 }
-.name {
+
+.search-name {
     font-size: 1.2em;
     margin-bottom: 0;
     font-weight: bold;
     text-transform: uppercase;
 }
-.tag-line {
+
+.search-tag-line {
     font-size: 0.8em;
     margin-top: 0.2em;
 }
 
-.tag:not(:last-child):after {
-    content: ' •'
-}
-.status {
+.search-status {
     /* color: white; */
     margin: 0.3em 0;
-    background: var(--tan2);
-    border: 1px solid var(--tan4);
     padding: 0.5em 0.5em;
     width: 100%
 }
-.current {
-    font-size: 0.9em;
-    font-style: italic;
-    color: var(--gray3);
-}
-.summary-line {
+
+.search-incum {
     font-style: italic;
     font-size: 0.9em;
+    min-height: 1em;
 }
-/* .fakelink {
+
+.search-fakelink {
     position: absolute;
     bottom: 3px;
     right: 8px;
-    color: var(--tan4);
-} */
+    color: #666;
+}
