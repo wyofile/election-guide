@@ -85,7 +85,7 @@ const RaceCandidates = ({district, candidates}) => {
                       {candidatesInBucket.length === 0 && <div className="party-note">No {party.adjective} candidates are running in this district.</div>}
                       <div>{candidatesInBucket.map(candidate => <Candidate key={candidate.slug} color={party.color} {...candidate} />)}</div>
                       {isUncontestedPrimary && <div className="party-note">This candidate is running uncontested in the {party.adjective} Primary.</div>}
-                      {isIndependent && <div className="party-note">Independent candidates do not participate in a primary election. They must collect signatures to appear on the General Election ballot.</div>}
+                      {isIndependent && <div className="party-note">Independent candidates do not participate in a primary election. They must collect signatures to appear on the general election ballot.</div>}
                   </div>
               })
           }
