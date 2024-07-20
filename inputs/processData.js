@@ -26,8 +26,11 @@ const senHoldoversData = parse(senHoldoversString, {columns: true, bom: true})
 const fedResponsesString = fs.readFileSync(fedResponsesPath, 'utf-8')
 const fedResponsesData = parse(fedResponsesString, {columns: true, bom: true})
 
-const legResponsesString = fs.readFileSync(legResponsesPath, 'utf-8')
+let legResponsesString = fs.readFileSync(legResponsesPath, 'utf-8')
+legResponsesString = legResponsesString.replace("’", "\'")
 const legResponsesData = parse(legResponsesString, {columns: true, bom: true})
+
+
 
 const canDataWithResponses = candidateData.map((candidate) => {
   debugger
