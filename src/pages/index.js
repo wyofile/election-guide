@@ -6,6 +6,7 @@ import Layout from '../design/Layout'
 import DistrictMap from '../components/DistrictMap'
 import CandidateSearch from '../components/CandidateSearch'
 import RaceCandidates from '../components/RaceCandidates'
+import ElectionStories from '../components/ElectionStories';
 
 import houseDistricts from '../data/house-districts.json'
 import senateDistricts from '../data/senate-districts.json'
@@ -70,6 +71,8 @@ const Home = () => {
       <h3 className="district-title">{activeSenateDistrict ? `State Senate District ${parseInt(activeSenateDistrict.substring(1))}` : "No district selected."}</h3>
       <RaceCandidates district={activeSenateDistrict} candidates={candidates.filter((candidate)=> candidate.district === activeSenateDistrict )} />
     </section>
+
+    <ElectionStories />
 
     <section>
       <a className="link-anchor" id="voter-faq"></a>

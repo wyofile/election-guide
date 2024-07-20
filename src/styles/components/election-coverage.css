@@ -1,0 +1,66 @@
+.election-coverage {
+  border: 1px solid var(--dimgray);
+  background-color: var(--dark-sea-green);
+  padding: 1em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+
+.election-coverage-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.election-coverage-stories {
+  display: grid;
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.election-coverage-stories a:hover {
+  opacity: 0.85;
+  text-decoration: none;
+  color: #666;
+}
+
+.election-coverage-story {
+  margin: 0;
+  box-shadow: 2px 2px 3px #222;
+  max-width: 300px;
+  min-height: 125px;
+  display: flex;
+  align-items: stretch;
+  background-color: #eeeeee;
+  color: black;
+  padding: 10px;
+
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+}
+
+.story-title {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.fake-link {
+  align-self:flex-end;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.more-news-link {
+  color: black;
+  align-self: flex-end;
+}
+

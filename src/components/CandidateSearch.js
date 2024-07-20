@@ -1,17 +1,14 @@
-import { useState } from "react";
-import Link from "next/link";
+import { useState } from "react"
+import Link from "next/link"
 
 import '../styles/components/candidate-search.css'
 
-import { PARTIES, STATUS } from "@/lib/styles";
+import { PARTIES, STATUS } from "@/lib/styles"
 import { formatRace } from "@/lib/utils"
 
 const PLACEHOLDER = 'Enter candidate (e.g., John Barrasso)'
 
-
-
 const Candidate = ({slug, ballotName, party, status, incumbent, hasResponses, district}) => {
-    // cap_tracker_2023_link flags for current lawmakers
     const partyInfo = PARTIES.find(d => d.key === party)
     const statusInfo = STATUS.find(d => d.key === status)
     return <div className="search-candidate" style={{ borderTop: `3px solid ${partyInfo.color}` }}><Link href={`/candidates/${slug}`}>
