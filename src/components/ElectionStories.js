@@ -26,7 +26,7 @@ const ElectionStories = () => {
         <div className="election-coverage-stories">
           {data.map(story => {
             return(
-              <Link key={`story-${story.id}`} href={story.link}>
+              <Link key={`story-${story.id}`} href={story.link} target="_blank">
                 <div className="election-coverage-story">
                   <div className="story-title">{story.title.rendered}</div>
                   <div className="story-date">{formatDate(new Date(story.date))}</div>
@@ -37,7 +37,7 @@ const ElectionStories = () => {
           })}
         </div>
       )}
-    <Link className='more-news-link' href={ELECTION_COVERAGE} >View more election coverage on WyoFile.com <img src="external.svg"></img></Link>
+    <Link className='more-news-link' href={ELECTION_COVERAGE} target="_blank" >View more election coverage on WyoFile.com <img src="external.svg"></img></Link>
     </div>
   )
 }
