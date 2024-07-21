@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { Map, MapBrowserEvent, View } from 'ol';
-import GeoJSON from 'ol/format/GeoJSON.js';
+import TopoJSON from 'ol/format/TopoJSON.js';
 import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer.js';
 import {OSM, Vector as VectorSource} from 'ol/source.js';
 import {Fill, Stroke, Style, Text} from 'ol/style.js';
@@ -47,18 +47,21 @@ const DistrictMap = ({chamber, geoData, setActiveDistrict}) => {
   useEffect(() => {   
     let districtNumberIdentifier = null
     let districtPrefix = null
+    let layerObjectName = null
 
     if (chamber === 'house') {
       districtNumberIdentifier = 'SLDLST'
+      layerObjectName = 'tl_2023_56_sldl-tl_2023_56_sldl'
       districtPrefix = 'H'
     }
     if (chamber === 'senate') {
       districtNumberIdentifier = 'SLDUST'
+      layerObjectName = 'tl_2023_56_sldu-tl_2023_56_sldu'
       districtPrefix = 'S'
     }
 
     const districtsVectorSource = new VectorSource({
-      features: new GeoJSON().readFeatures(geoData),
+      features: new TopoJSON().readFeatures(geoData),
     });
   
     const districtsLayer = new VectorLayer({
@@ -98,7 +101,7 @@ const DistrictMap = ({chamber, geoData, setActiveDistrict}) => {
     }
     
     const osmLayer = new TileLayer({
-      preload: Infinity,
+      // preload: Infinity,
       source: new OSM(),
     })
     

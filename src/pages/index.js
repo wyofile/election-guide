@@ -6,8 +6,8 @@ import StateRaces from '@/components/StateRaces'
 import RaceCandidates from '@/components/RaceCandidates'
 import ElectionStories from '@/components/ElectionStories';
 
-import houseGeoData from '@/data/house-districts.json'
-import senateGeoData from '@/data/senate-districts.json'
+import houseGeoData from '@/data/wyo-house-districts.json'
+import senateGeoData from '@/data/wyo-senate-districts.json'
 import textData from '@/data/static-text.json'
 import candidateData from '@/data/candidate-data.json'
 
