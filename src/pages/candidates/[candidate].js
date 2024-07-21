@@ -5,6 +5,7 @@ import federalQs from '../../data/federal-qs.json'
 
 import CandidateOpponents from '@/components/CandidateOpponents'
 import CandidatePageSummary from '@/components/CandidatePageSummary'
+import CandidateStories from '@/components/CandidateStories'
 import CandidateLinks from '@/components/CandidateLinks'
 import Layout from '@/design/Layout'
 import { formatRace } from '@/lib/utils'
@@ -28,18 +29,20 @@ export async function getStaticProps({ params }) {
   const activeOpponents = candidateData.filter(c => (c.district === candidate.district && c.status ==='active'))
   const questions = (candidate.district[0] === 'u' ? federalQs : wyoLegQs)
   const questionnaireIntro = textData.questionnaireIntro
+  const aboutProject = textData.aboutProject
   // Populate page props
   return {
       props: {
         candidate,
         activeOpponents,
         questions,
-        questionnaireIntro
+        questionnaireIntro,
+        aboutProject
       }
   }
 }
 
-export default function CandidatePage({candidate, questions, questionnaireIntro, activeOpponents}) {
+export default function CandidatePage({candidate, questions, questionnaireIntro, aboutProject, activeOpponents}) {
 
   const pageDescription = `${candidate.ballotName} (${candidate.party}) is running as a candidate for ${formatRace(candidate.district)} in Wyoming's 2024 election. See biographic details, issue positions and information on how to vote.`
   return (
@@ -77,11 +80,19 @@ export default function CandidatePage({candidate, questions, questionnaireIntro,
       </div>
 
     </section>
+    <section>
       <a className="link-anchor" id="coverage"></a>
       <h2 className='section-header'>WyoFile Coverage of {candidate.lastName}</h2>
-    <section>
+      <CandidateStories slug={candidate.slug} ballotName={candidate.ballotName} />
 
     </section>
+
+
+    <section>
+      <h2 className='section-header'>About this Project</h2>
+      <Markdown>{aboutProject}</Markdown>
+    </section>
+
 
 
 

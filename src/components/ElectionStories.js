@@ -1,31 +1,27 @@
-import useSwr from 'swr'
 import Link from 'next/link'
+import { useStoriesWithSlug } from '@/lib/dataHooks'
 
 import '../styles/components/election-coverage.css'
 import { formatDate } from '../lib/utils'
 
-const API_PATH = 'https://wyofile.com/wp-json/wp/v2'
 const ELECTION_COVERAGE = 'https://wyofile.com/elections-2024/'
-const ELECTION_TAG_ID = 14174
+const ELECTION_SLUG = '2024election'
 const NUM_STORIES = 6
-
-const fetcher = (...args) => fetch(...args).then(res => res.json())
 
 const ElectionStories = () => {
 
-  // const {data, error, isLoading} = useSwr(`${API_PATH}/posts?tag=${ELECTION_TAG_ID}&per_page=${NUM_STORIES}&fields[]=id&fields[]=date&fields[]=link&fields[]=title`, fetcher)
-  const data = []
-  const error = null;
-  const isLoading = false;
+  const {stories, error, loading} = useStoriesWithSlug(NUM_STORIES, ELECTION_SLUG)
+  // const stories = []
+  // const error = null;
+  // const isLoading = false;
   return (
     <div className='election-coverage'>
       <div className='election-coverage-title'>Latest Election Coverage from WyoFile</div>
       {error && <div className="load-error">Unable to Load Stories</div>}
-      {isLoading ? (
-        <div className="loading">Loading...</div>
-      ) : (
+      {loading && <div className="loading">Loading...</div>}
+      {stories && 
         <div className="election-coverage-stories">
-          {data.map(story => {
+          {stories.map(story => {
             return(
               <Link key={`story-${story.id}`} href={story.link} target="_blank">
                 <div className="election-coverage-story">
@@ -37,7 +33,7 @@ const ElectionStories = () => {
             )
           })}
         </div>
-      )}
+      }
     <Link className='more-news-link' href={ELECTION_COVERAGE} target="_blank" >More election coverage on WyoFile.com <img src="external.svg"></img></Link>
     </div>
   )

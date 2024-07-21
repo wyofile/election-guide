@@ -6,6 +6,7 @@
   aspect-ratio: 58700 / 46000;
   border: 2px solid var(--dark-sea-green);
   margin-top: 30px;
+  cursor:pointer;
 }
 
 @media screen and (min-width: 575px) {
@@ -38,8 +39,13 @@
   font-size: 0.8rem;
 }
 
+.ol-control {
+  cursor: pointer;
+}
+
 .ol-control button:hover{
   background-color: white;
+  cursor: pointer;
 }
 
 .reset-map button {

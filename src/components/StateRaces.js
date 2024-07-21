@@ -10,6 +10,8 @@ const StateRaces = ({houseDistricts, senateDistricts, candidates}) => {
   const [activeHouseDistrict, setActiveHouseDistrict] = useState(null)
   const [activeSenateDistrict, setActiveSenateDistrict] = useState(null)
 
+
+
   return (
     <>
       <div className='chamber-selector'>
@@ -18,18 +20,18 @@ const StateRaces = ({houseDistricts, senateDistricts, candidates}) => {
       </div>
       <div className="state-race-container">
         <div className={`chamber-container ${chamber ==='house' ? 'visible' : ''}`}>
-          <h3 className='race-header'>{activeHouseDistrict ? `State House District ${parseInt(activeHouseDistrict.substring(1))}` : "Select a house district on the map"}</h3>
+          <h3 className='race-header'>{activeHouseDistrict ? `State House District ${parseInt(activeHouseDistrict)}` : "Select a house district on the map"}</h3>
           <Suspense fallback={<div className="map-container">Loading...</div>}>
             <DistrictMap chamber='house' geoData={houseDistricts} setActiveDistrict={setActiveHouseDistrict} />
           </Suspense>
-          <RaceCandidates district={activeHouseDistrict} candidates={candidates.filter((candidate)=>candidate.district === activeHouseDistrict )} />
+          <RaceCandidates chamber='house' district={`H${activeSenateDistrict}`} candidates={candidates.filter((candidate)=>candidate.district === `H${activeHouseDistrict}`)} />
         </div>
         <div className={`chamber-container ${chamber ==='senate' ? 'visible' : ''}`}>
-          <h3 className='race-header'>{activeSenateDistrict ? `State Senate District ${parseInt(activeSenateDistrict.substring(1))}` : "Select a senate district on the map"}</h3>
+          <h3 className='race-header'>{activeSenateDistrict ? `State Senate District ${parseInt(activeSenateDistrict)}` : "Select a senate district on the map"}</h3>
           <Suspense fallback={<div className="map-container">Loading...</div>}>
             <DistrictMap chamber='senate' geoData={senateDistricts} setActiveDistrict={setActiveSenateDistrict} />
           </Suspense>
-          <RaceCandidates district={activeSenateDistrict} candidates={candidates.filter((candidate)=> candidate.district === activeSenateDistrict )} />
+          <RaceCandidates chamber='senate' district={activeSenateDistrict} candidates={candidates.filter((candidate)=> candidate.district === `S${activeSenateDistrict}`)} />
         </div>
       </div>
     </>

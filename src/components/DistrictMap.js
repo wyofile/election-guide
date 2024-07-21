@@ -52,12 +52,12 @@ const DistrictMap = ({chamber, geoData, setActiveDistrict}) => {
     if (chamber === 'house') {
       districtNumberIdentifier = 'SLDLST'
       layerObjectName = 'tl_2023_56_sldl-tl_2023_56_sldl'
-      districtPrefix = 'H'
+      districtPrefix = 'HD '
     }
     if (chamber === 'senate') {
       districtNumberIdentifier = 'SLDUST'
       layerObjectName = 'tl_2023_56_sldu-tl_2023_56_sldu'
-      districtPrefix = 'S'
+      districtPrefix = 'SD '
     }
 
     const districtsVectorSource = new VectorSource({
@@ -76,26 +76,35 @@ const DistrictMap = ({chamber, geoData, setActiveDistrict}) => {
             color: 'rgba(0, 0, 0, 0.1)',
           }),
           text: new Text({
-            text: districtPrefix + feature.get(districtNumberIdentifier).substring(1),
-            fill: new Fill({color: '#000'})
+            text: districtPrefix + parseInt(feature.get(districtNumberIdentifier)),
+            fill: new Fill({color: '#000'}),
+            font: '0.75rem sans-serif',
+            backgroundFill: new Fill({color:'rgba(255,255,255,0.8)'}),
+            padding: [3, 0, 0, 3],
+            overflow: true,
           }),
         })
-      }
+      },
     })
   
     const selectStyle = (feature) => {
       const selectedStyle = new Style({
         fill: new Fill({
-          color: 'rgba(137,166,160,0.8)',
+          color: 'rgba(137,166,160,0.6)',
         }),
         stroke: new Stroke({
           color: 'rgba(81,126,100,0.8)',
           width: 2,
         }),
         text: new Text({
-          text: districtPrefix + feature.get(districtNumberIdentifier).substring(1),
-          fill: new Fill({color: '#000'})
+          text: districtPrefix + parseInt(feature.get(districtNumberIdentifier)),
+          backgroundFill: new Fill({color:'rgba(137,166,160,0.9)'}),
+          fill: new Fill({color: '#000'}),
+          font: 'bold 0.75rem sans-serif',
+          padding: [3, 0, 0, 3],
+          overflow:true
         }),
+        zIndex: 100
       })
       return selectedStyle
     }
@@ -127,7 +136,8 @@ const DistrictMap = ({chamber, geoData, setActiveDistrict}) => {
 
     selectDistrict.on('select', (e) => {
       if(e.selected[0]){
-        setActiveDistrict(`${districtPrefix}${e.selected[0].get(districtNumberIdentifier).substring(1)}`)
+        setActiveDistrict(e.selected[0].get(districtNumberIdentifier).substring(1))
+
       } else {
         setActiveDistrict(null)
       }
