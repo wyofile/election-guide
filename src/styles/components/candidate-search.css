@@ -3,6 +3,9 @@
     background-color: var(--dark-sea-green);
     padding: 1em;
     margin-bottom: 1em;
+    box-shadow: 2px 2px 3px #aaa;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
 }
 
 .search-title {

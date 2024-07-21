@@ -3,28 +3,20 @@ import textData from '../../data/static-text.json'
 import wyoLegQs from '../../data/wyo-leg-qs.json'
 import federalQs from '../../data/federal-qs.json'
 
+import CandidateOpponents from '@/components/CandidateOpponents'
 import CandidatePageSummary from '@/components/CandidatePageSummary'
-import Layout from '../../design/Layout'
+import CandidateLinks from '@/components/CandidateLinks'
+import Layout from '@/design/Layout'
 import { formatRace } from '@/lib/utils'
 
-import Link from 'next/link'
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
 import Markdown from 'react-markdown'
 
 import '../../styles/candidate.css'
 
-const getCandidate = pageSlug => {
-  return candidateData.find(c => c.slug === pageSlug)
-}
-
-const getSlugs = () => {
-  return candidateData.map(c => c.slug)
-}
 
 export async function getStaticPaths() {
   // Define routes that should be used for /[candidate] pages
-  const slugs = getSlugs()
+  const slugs = candidateData.map(c => c.slug)
   return {
     paths: slugs.map(d => ({ params: { candidate: d } })),
     fallback: false,
@@ -32,23 +24,24 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const candidate = getCandidate(params.candidate)
+  const candidate = candidateData.find(c => c.slug === params.candidate)
+  const activeOpponents = candidateData.filter(c => (c.district === candidate.district && c.status ==='active'))
   const questions = (candidate.district[0] === 'u' ? federalQs : wyoLegQs)
   const questionnaireIntro = textData.questionnaireIntro
   // Populate page props
   return {
       props: {
         candidate,
+        activeOpponents,
         questions,
         questionnaireIntro
       }
   }
 }
 
-export default function CandidatePage({candidate, questions, questionnaireIntro}) {
+export default function CandidatePage({candidate, questions, questionnaireIntro, activeOpponents}) {
 
   const pageDescription = `${candidate.ballotName} (${candidate.party}) is running as a candidate for ${formatRace(candidate.district)} in Wyoming's 2024 election. See biographic details, issue positions and information on how to vote.`
-
   return (
     <Layout 
       relativePath={candidate.slug}
@@ -61,8 +54,12 @@ export default function CandidatePage({candidate, questions, questionnaireIntro}
     >
     <CandidatePageSummary candidate={candidate} />
 
+    <CandidateLinks wyoleg={candidate.wyoleg} website={candidate.website} email={candidate.email}/>
+
+    <CandidateOpponents opponents={activeOpponents} currentSlug={candidate.slug} race={formatRace(candidate.district)} />
+
     <section>
-      <a className="link-anchor" id="federal-delegation"></a>
+      <a className="link-anchor" id="questionnaire"></a>
       <h2 className='section-header'>On the Issues</h2>
       <Markdown>{questionnaireIntro}</Markdown>
       <div className="on-the-issues">
@@ -78,6 +75,11 @@ export default function CandidatePage({candidate, questions, questionnaireIntro}
           )
         })}
       </div>
+
+    </section>
+      <a className="link-anchor" id="coverage"></a>
+      <h2 className='section-header'>WyoFile Coverage of {candidate.lastName}</h2>
+    <section>
 
     </section>
 

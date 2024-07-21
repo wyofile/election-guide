@@ -1,0 +1,94 @@
+.opponents-container {
+  border: 1px solid #666;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  box-shadow: 2px 2px 3px #aaa;
+}
+
+.opponents-title {
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+  font-weight:bold;
+    margin-top: 0;
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+}
+
+.opp-party-buckets {
+   display:flex;
+ }
+
+/* .opp-party-bucket:last-child{
+  flex-grow:1
+} */
+
+.opp-party-bucket:not(:last-child) {
+  margin-right: 1em;
+}
+
+.opp-party-bucket {
+  flex-grow: 1;
+    h4 {
+        margin: 0;
+        text-transform: uppercase;
+        text-align: left;
+        font-weight: 500;
+    }
+    margin-bottom: 0.5em;
+}
+
+
+.opp-party-list {
+  display: grid;
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 2px;
+}
+
+.opponent-candidate {
+  margin-top: 0.5em;
+  margin-right: 0.5em;
+  min-width: 160px;
+}
+
+.opponent-candidate a {
+  background-color: #eeeeee;
+  height: 40px;
+  display: flex;
+  align-items: stretch;
+  box-shadow: 2px 2px 3px #aaa;
+  color: black;
+}
+.opponent-candidate a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+  /* border: 2px solid black; */
+  color: var(--link);
+}
+.opp-portrait-col {
+  flex: 0 0 40px;
+}
+.opp-portrait-container {
+  width: 40px;
+  height: 40px;
+  background-color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.opp-info-col {
+  flex: 1 1 120px;
+  padding: 0.5em 0.5em;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+.opp-name {
+  font-size: 1em;
+  margin-bottom: 0;
+  width: 100%;
+}

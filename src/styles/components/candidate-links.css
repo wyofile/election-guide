@@ -1,0 +1,16 @@
+.candidate-links {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 5px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  font-family: "Roboto Slab", serif;
+}
+
+.candidate-link {
+  display: inline;
+}
+
+.candidate-link:not(:last-child):after{
+  content: ' • '
+}

@@ -1,6 +1,5 @@
 import useSwr from 'swr'
 import Link from 'next/link'
-import { useState, useEffect } from "react"
 
 import '../styles/components/election-coverage.css'
 import { formatDate } from '../lib/utils'
@@ -14,8 +13,10 @@ const fetcher = (...args) => fetch(...args).then(res => res.json())
 
 const ElectionStories = () => {
 
-  const {data, error, isLoading} = useSwr(`${API_PATH}/posts?tag=${ELECTION_TAG_ID}&per_page=${NUM_STORIES}&fields[]=id&fields[]=date&fields[]=link&fields[]=title`, fetcher)
-
+  // const {data, error, isLoading} = useSwr(`${API_PATH}/posts?tag=${ELECTION_TAG_ID}&per_page=${NUM_STORIES}&fields[]=id&fields[]=date&fields[]=link&fields[]=title`, fetcher)
+  const data = []
+  const error = null;
+  const isLoading = false;
   return (
     <div className='election-coverage'>
       <div className='election-coverage-title'>Latest Election Coverage from WyoFile</div>
@@ -37,7 +38,7 @@ const ElectionStories = () => {
           })}
         </div>
       )}
-    <Link className='more-news-link' href={ELECTION_COVERAGE} target="_blank" >View more election coverage on WyoFile.com <img src="external.svg"></img></Link>
+    <Link className='more-news-link' href={ELECTION_COVERAGE} target="_blank" >More election coverage on WyoFile.com <img src="external.svg"></img></Link>
     </div>
   )
 }

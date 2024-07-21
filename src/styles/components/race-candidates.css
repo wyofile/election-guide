@@ -3,19 +3,18 @@
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 0.5em;
-  margin-bottom: 2em;
 }
 
 .party-bucket {
   padding: 0 0.5em;
+  border-left: 3px solid gray;    
+  margin-bottom: 1.5em;
   h4 {
       margin: 0;
       text-transform: uppercase;
       font-weight: bold;
       text-align: left;
   }
-  border-left: 3px solid gray;    
-  margin-bottom: 1em;
 }
 
 .candidate {
