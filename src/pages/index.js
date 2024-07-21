@@ -1,25 +1,35 @@
-import React, { useState, useEffect } from 'react'
 import Markdown from 'react-markdown'
-import Image from "next/image";
 
-import Layout from '../design/Layout'
-import DistrictMap from '../components/DistrictMap'
-import CandidateSearch from '../components/CandidateSearch'
-import RaceCandidates from '../components/RaceCandidates'
-import ElectionStories from '../components/ElectionStories';
+import Layout from '@/design/Layout'
+import CandidateSearch from '@/components/CandidateSearch'
+import StateRaces from '@/components/StateRaces'
+import RaceCandidates from '@/components/RaceCandidates'
+import ElectionStories from '@/components/ElectionStories';
 
-import houseDistricts from '../data/house-districts.json'
-import senateDistricts from '../data/senate-districts.json'
-import textContent from '../data/static-text.json'
-import candidates from '../data/candidate-data.json'
+import houseGeoData from '@/data/house-districts.json'
+import senateGeoData from '@/data/senate-districts.json'
+import textData from '@/data/static-text.json'
+import candidateData from '@/data/candidate-data.json'
 
-import '../styles/index.css'
+import '@/styles/index.css'
 
-const Home = () => {
+export async function getStaticProps() {
+  const candidates = candidateData
+  const textContent = textData
+  const houseDistricts = houseGeoData
+  const senateDistricts = senateGeoData
+  return {
+    props: {
+      candidates,
+      textContent,
+      houseDistricts,
+      senateDistricts
+    }
+  }
+}
 
-  const [chamber, setChamber] = useState('house')
-  const [activeHouseDistrict, setActiveHouseDistrict] = useState(null)
-  const [activeSenateDistrict, setActiveSenateDistrict] = useState(null)
+const Home = ({candidates, textContent, houseDistricts, senateDistricts}) => {
+
 
   const pageDescription = textContent.guideIntro
 
@@ -56,20 +66,8 @@ const Home = () => {
       <h2 className='section-header'>Wyoming State Legislature</h2>
 
       <Markdown>{textContent.wyomingLegislatureIntro}</Markdown>
-
-      <h3 className='race-header'>Wyoming House of Representatives</h3>
-      <p className="chamber-intro">Select a district from the map to view House of Representatives candidates.</p>
-
-      <DistrictMap chamber='house' geoData={houseDistricts} setActiveDistrict={setActiveHouseDistrict} />
-      <h3 className="district-title">{activeHouseDistrict ? `State House District ${parseInt(activeHouseDistrict.substring(1))}` : "No district selected."}</h3>
-      <RaceCandidates district={activeHouseDistrict} candidates={candidates.filter((candidate)=>candidate.district === activeHouseDistrict )} />
-      <br />
-      <h3 className='race-header'>Wyoming Senate</h3>
-      <p className="chamber-intro">Select a district from the map to view Senate candidates.</p>
-
-      <DistrictMap chamber='senate' geoData={senateDistricts} setActiveDistrict={setActiveSenateDistrict} />
-      <h3 className="district-title">{activeSenateDistrict ? `State Senate District ${parseInt(activeSenateDistrict.substring(1))}` : "No district selected."}</h3>
-      <RaceCandidates district={activeSenateDistrict} candidates={candidates.filter((candidate)=> candidate.district === activeSenateDistrict )} />
+      
+      <StateRaces houseDistricts={houseDistricts} senateDistricts={senateDistricts} candidates={candidates.filter(candidate => candidate.district[0] != 'u' )}/>
     </section>
 
     <ElectionStories />

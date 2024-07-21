@@ -1,8 +1,6 @@
 import '../styles/footer.css'
 
 const Footer = () => {
-
-
     return <footer>
       <div className="footer-interior">
         <ul className="footer-menu">
@@ -18,8 +16,7 @@ const Footer = () => {
         </ul>
         <div className="footer-bottom">
           <div className="footer-bottom-left">
-            <span className="copywright">© 2024 WyoFile</span>
-            <span>Powered by Newspack</span>     
+            <span className="copywright">© 2024 WyoFile</span>   
           </div>
           <div className="footer-bottom-right">
             <ul className="social-links-menu">

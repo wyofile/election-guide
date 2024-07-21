@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Map, MapBrowserEvent, View } from 'ol';
 import GeoJSON from 'ol/format/GeoJSON.js';

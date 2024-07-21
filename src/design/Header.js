@@ -1,10 +1,9 @@
 import Link from 'next/link'
 
 import updateTime from '../data/update-time.json'
-
 import { formatDate } from '../lib/utils'
-
 import { metaData } from '../config'
+
 import "../styles/base.css"
 import "../styles/header.css"
 

@@ -8,6 +8,7 @@ const legResponsesPath = path.join(__dirname, './wyo-leg-responses.csv')
 const senHoldoversPath = path.join(__dirname, './senate-holdovers.csv')
 const outputFilePath = path.join(__dirname, '../src/data/candidate-data.json')
 const senHoldoversOutputPath = path.join(__dirname, '../src/data/senate-holdovers.json')
+const updateTimeFilePath = path.join(__dirname, '../src/data/update-time.json')
 
 const candidateDataString = fs.readFileSync(candidateDataPath, 'utf-8')
 const candidateData = parse(candidateDataString, {columns: true, bom: true, cast: (value, context)=>{
@@ -49,5 +50,6 @@ const canDataWithResponses = candidateData.map((candidate) => {
 
 fs.writeFileSync(outputFilePath,JSON.stringify(canDataWithResponses, null, 2))
 fs.writeFileSync(senHoldoversOutputPath,JSON.stringify(senHoldoversData, null, 2))
+fs.writeFileSync(updateTimeFilePath, JSON.stringify({ updateTime: new Date() }, null, 2))
 
  

@@ -7,8 +7,8 @@ import { formatRace, getPortraitPath } from '../lib/utils'
 import '../styles/components/candidate-page-summary.css'
 
 const CandidatePageSummary = ({candidate}) => {
-  const {party, slug, ballotName, district, incumbent, hasPhoto} = candidate
 
+  const {party, slug, ballotName, district, incumbent, hasPhoto} = candidate
   const partyInfo = PARTIES.find(d => d.key === party)
   
   const portraitPath = getPortraitPath(useRouter().basePath, hasPhoto, party, slug)
