@@ -80,7 +80,7 @@ export default function CandidatePage({candidate, questions, questionnaireIntro,
     <section>
       <a className="link-anchor" id="coverage"></a>
       <h2 className='section-header'>WyoFile Coverage of {candidate.lastName}</h2>
-      <CandidateStories slug={candidate.slug} ballotName={candidate.ballotName} />
+      <CandidateStories tagId={candidate.tagId} slug={candidate.slug} ballotName={candidate.ballotName} />
     </section>
 
     <section>

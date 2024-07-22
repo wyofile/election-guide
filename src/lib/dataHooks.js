@@ -1,73 +1,21 @@
-import { useEffect, useState } from 'react'
+import useSWRImmutable from 'swr/immutable'
+
+const fetcher = (...args) => fetch(...args).then(res => res.json())
 
 const API_PATH = 'https://wyofile.com/wp-json/wp/v2'
+const OPINION_TAG_ID = 9269
+const JAN_01_2023 = '2023-01-01T00:00:00Z'
 
-export const useTagCount = (slug) => {
-  const [count, setCount] = useState(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
+export const useStories = (tagId, count) => {
+  const fieldsString = ['id', 'date', 'link', 'title'].join(',')
 
-  useEffect(() => {
-    setLoading(true)
-    fetch(`${API_PATH}/tags?slug=${slug}&_fields[]=id&_fields[]=count`)
-      .then(res => res.json())
-      .then(tags => {
-        if (tags.length === 0) {
-          setCount(0)
-          setLoading(false)
-        } else {
-          setCount(tags[0].count)
-          setLoading(false)
-        }
-      })
-      .catch(error => {
-        setError(error)
-        setLoading(false)
-      })
-  }, [slug])
+  const key = `${API_PATH}/posts?tags=${tagId}&per_page=${count}&tags_exlude=${OPINION_TAG_ID}&after=${JAN_01_2023}&_fields=${fieldsString}`
 
-  return {
-    count,
-    loading,
-    error
-  }
-}
-
-export const useStoriesWithSlug = (count, slug) => {
-  const [stories, setStories] = useState(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-
-  useEffect(() => {
-    setLoading(true)
-    fetch(`${API_PATH}/tags?slug=${slug}&_fields[]=id&_fields[]=count`)
-      .then(tagRes => tagRes.json())
-      .then(tags => {
-        if (tags.length > 0) {
-          fetch(`${API_PATH}/posts?tags=${tags[0].id}&per_page=${count}&_fields[]=id&_fields[]=date&_fields[]=link&_fields[]=title`)
-          .then(storiesRes => storiesRes.json())
-          .then(stories => {
-            setStories(stories)
-            setLoading(false)
-          })
-          .catch(storiesError => {
-            setError(storiesError);
-            setLoading(false);
-          });
-        } else {
-          setStories([])
-          setLoading(false)
-        }
-      })
-      .catch(tagError => {
-        setError(tagError);
-        setLoading(false);
-      });
-  }, [slug]);
+  const {data: stories, isLoading, error} = useSWRImmutable(key, fetcher)
 
   return {
     stories,
-    loading,
+    isLoading,
     error
   }
 }

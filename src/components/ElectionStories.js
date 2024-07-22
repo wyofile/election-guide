@@ -1,17 +1,17 @@
 import Link from 'next/link'
-import { useStoriesWithSlug } from '@/lib/dataHooks'
+import { useStories } from '@/lib/dataHooks'
 import he from 'he'
 
 
 import { formatDate } from '../lib/utils'
 
 const ELECTION_COVERAGE = 'https://wyofile.com/elections-2024/'
-const ELECTION_SLUG = '2024election'
+const ELECTION_TAG_ID = '14174'
 const NUM_STORIES = 6
 
 const ElectionStories = () => {
 
-  const {stories, error, loading} = useStoriesWithSlug(NUM_STORIES, ELECTION_SLUG)
+  const {stories, isLoading, error} = useStories(ELECTION_TAG_ID, NUM_STORIES)
   // const stories = []
   // const error = null;
   // const isLoading = false;
@@ -19,8 +19,8 @@ const ElectionStories = () => {
     <div className='election-coverage'>
       <div className='election-coverage-title'>Latest Election Coverage from WyoFile</div>
       {error && <div className="load-error">Unable to Load Stories</div>}
-      {loading && <div className="loading">Loading...</div>}
-      {stories && 
+      {isLoading && <div className="loading">Loading...</div>}
+      {(!isLoading && !error && stories) && 
         <div className="election-coverage-stories home-cov-stories">
           {stories.map(story => {
             return(

@@ -2,6 +2,8 @@ const fs = require('fs')
 const path = require('path')
 const { parse } = require('csv-parse/sync')
 
+const candidateTags = require('./candidate-tags.json')
+
 const candidateDataPath = path.join(__dirname, './candidate-data.csv')
 const fedResponsesPath = path.join(__dirname, './federal-responses.csv')
 const legResponsesPath = path.join(__dirname, './wyo-leg-responses.csv')
@@ -34,7 +36,6 @@ const legResponsesData = parse(legResponsesString, {columns: true, bom: true})
 
 
 const canDataWithResponses = candidateData.map((candidate) => {
-  debugger
   let candidateResponses = null
   if (candidate.district.slice(0,2) === 'us' && candidate.hasResponses){
     candidateResponses = fedResponsesData.find((response) => response.slug === candidate.slug)
@@ -45,7 +46,10 @@ const canDataWithResponses = candidateData.map((candidate) => {
     delete candidateResponses.slug
     candidateResponses = Object.values(candidateResponses)
   }
-  return({ ...candidate, "responses": candidateResponses})
+
+  const getTag = candidateTags.find(tag => candidate.slug === tag.slug)
+
+  return({ ...candidate, "responses": candidateResponses, "tagId": getTag.id})
 })
 
 fs.writeFileSync(outputFilePath,JSON.stringify(canDataWithResponses, null, 2))

@@ -7,6 +7,8 @@ import StateRaces from '@/components/StateRaces'
 import RaceCandidates from '@/components/RaceCandidates'
 import ElectionStories from '@/components/ElectionStories';
 
+import { useCandidateTags } from '@/lib/dataHooks'
+
 import houseGeoData from '@/data/wyo-house-districts.json'
 import senateGeoData from '@/data/wyo-senate-districts.json'
 import textData from '@/data/static-text.json'
@@ -28,7 +30,6 @@ export async function getStaticProps() {
 }
 
 const Home = ({candidates, textContent, houseDistricts, senateDistricts}) => {
-
 
   const pageDescription = textContent.guideIntro
 

@@ -36,7 +36,6 @@
 .candidate a:hover {
     opacity: 0.85;
     text-decoration: none;
-    /* border: 2px solid black; */
     color: #666;
 }
 
@@ -104,13 +103,13 @@
     text-align: center;
 }
 
-
 .holdover {
     display: inline-block;
     box-shadow: 2px 2px 3px #aaa;
     margin-bottom: 0.5em;
     color: black;
     display: flex;
+    border: 1px solid black;
 }
 
 .holdover:hover {
@@ -164,4 +163,4 @@
     color: #666;
     margin-top: 0.6em;
     width: 310px;
-  }
+}

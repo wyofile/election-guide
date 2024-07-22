@@ -5,12 +5,12 @@ import Image from 'next/image'
 import {useRouter} from 'next/router'
 
 import { getPortraitPath } from '@/lib/utils'
-import { useTagCount } from '@/lib/dataHooks'
+import { useStories } from '@/lib/dataHooks'
 
 const Candidate = (props) => {
-  const { slug, ballotName, party, color, hasPhoto, hasResponses, incumbent } = props
+  const { slug, ballotName, party, color, hasPhoto, hasResponses, incumbent, tagId } = props
   const portraitPath = getPortraitPath(useRouter().basePath, hasPhoto, party, slug)
-  const {count: numArticles, loading, error} = useTagCount(slug)
+  const {stories, isLoading, error} = useStories(tagId, 25)
 
   return <div className="candidate" style={{ borderTop: `5px solid ${color}` }}><Link href={`/candidates/${slug}`}>
       <div className="portrait-col" >
@@ -33,8 +33,8 @@ const Candidate = (props) => {
           <div className="tag-line">
               {hasResponses && <span className="tag">✏️ Candidate Q&A</span>}
               {!hasResponses && <span className="tag">🚫 No Q&A response</span>}
-              { loading && <span className='tag'>⏳</span> }
-              { (!loading && !error && numArticles > 0) && <span className="tag">📰 <strong>{numArticles}</strong> {(numArticles === 1) ? 'article' : 'articles'}</span>}
+              { isLoading && <span className='tag'>⏳</span> }
+              { (!isLoading && !error && stories.length > 0) && <span className="tag">📰 <strong>{stories.length >= 25 ? '25+' : stories.length}</strong> {(stories.length === 1) ? 'article' : 'articles'}</span>}
           </div>
           <div className="fakelink">
               <span>See more »</span>
