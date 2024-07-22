@@ -15,6 +15,7 @@
     --dark-sea-green: #89a6a0;
     --tan: #c8b8a1;
     --black: #070707;
+    --link: #237bcf;
     /* party/outcome colors handled via different system */
 }
 
@@ -242,7 +243,7 @@ main {
 
 a {
     text-decoration: none;
-    color: #237bcf;
+    color: var(--link);
 }
 
 a:hover {

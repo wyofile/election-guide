@@ -5,7 +5,7 @@ import { formatDate } from '@/lib/utils'
 const ELECTION_COVERAGE = 'https://wyofile.com/elections-2024/'
 
 const CandidateStories = ({slug, ballotName}) => {
-  const {stories, loading, error} = useStoriesWithSlug(12, slug)
+  const {stories, loading, error} = useStoriesWithSlug(9, slug)
   return(
     <div className='election-coverage-candidate'>
     {error && <div className="load-error">Unable to Load Stories</div>}

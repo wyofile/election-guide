@@ -20,7 +20,7 @@ const ElectionStories = () => {
       {error && <div className="load-error">Unable to Load Stories</div>}
       {loading && <div className="loading">Loading...</div>}
       {stories && 
-        <div className="election-coverage-stories">
+        <div className="election-coverage-stories home-cov-stories">
           {stories.map(story => {
             return(
               <Link key={`story-${story.id}`} href={story.link} target="_blank">

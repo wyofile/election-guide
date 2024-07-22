@@ -12,9 +12,6 @@ import { formatRace } from '@/lib/utils'
 
 import Markdown from 'react-markdown'
 
-
-
-
 export async function getStaticPaths() {
   // Define routes that should be used for /[candidate] pages
   const slugs = candidateData.map(c => c.slug)
@@ -64,7 +61,7 @@ export default function CandidatePage({candidate, questions, questionnaireIntro,
     <section>
       <a className="link-anchor" id="questionnaire"></a>
       <h2 className='section-header'>On the Issues</h2>
-      <Markdown>{questionnaireIntro}</Markdown>
+      <Markdown className='questionnaire-intro'>{questionnaireIntro}</Markdown>
       <div className="on-the-issues">
         {questions.map((q, i) => {
           const answer = candidate.responses ? candidate.responses[i] : "_No Candidate Response._"
@@ -78,23 +75,18 @@ export default function CandidatePage({candidate, questions, questionnaireIntro,
           )
         })}
       </div>
-
     </section>
+
     <section>
       <a className="link-anchor" id="coverage"></a>
       <h2 className='section-header'>WyoFile Coverage of {candidate.lastName}</h2>
       <CandidateStories slug={candidate.slug} ballotName={candidate.ballotName} />
-
     </section>
-
 
     <section>
       <h2 className='section-header'>About this Project</h2>
       <Markdown>{aboutProject}</Markdown>
     </section>
-
-
-
 
     </Layout>
   )

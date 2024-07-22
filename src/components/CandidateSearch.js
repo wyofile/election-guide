@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Link from "next/link"
+import { useTagCount } from "@/lib/dataHooks"
 
 import { PARTIES, STATUS } from "@/lib/styles"
 import { formatRace } from "@/lib/utils"
@@ -9,6 +10,8 @@ const PLACEHOLDER = 'Enter candidate (e.g., John Barrasso)'
 const Candidate = ({slug, ballotName, party, status, incumbent, hasResponses, district}) => {
     const partyInfo = PARTIES.find(d => d.key === party)
     const statusInfo = STATUS.find(d => d.key === status)
+    const {count: numArticles, loading, error} = useTagCount(slug)
+
     return <div className="search-candidate" style={{ borderTop: `3px solid ${partyInfo.color}` }}><Link href={`/candidates/${slug}`}>
         <div className="search-party-label" >
             <div className="search-party-text" style={{ background: partyInfo.color }}>{party[0]}</div>
@@ -23,6 +26,8 @@ const Candidate = ({slug, ballotName, party, status, incumbent, hasResponses, di
                 <div className="search-tag-line">
                     {hasResponses && <span className="tag">✏️ Candidate Q&A</span>}
                     {!hasResponses && <span className="tag">🚫 No Q&A response</span>}
+                    { loading && <span className='tag'></span> }
+                    { (!loading && !error && numArticles > 0) && <span className="tag">📰 <strong>{numArticles}</strong> {(numArticles === 1) ? 'article' : 'articles'}</span>}
                 </div>
             </div>
 

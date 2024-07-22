@@ -2,16 +2,36 @@ import { useEffect, useState } from 'react'
 
 const API_PATH = 'https://wyofile.com/wp-json/wp/v2'
 
-// export const useTagCount = (slug) => {
-//   const path = `${API_PATH}/tags?slug=${slug}&_fields[]=id&_fields[]=count`
-//   const { data, error, isLoading } = useSwr(path, fetcher)
+export const useTagCount = (slug) => {
+  const [count, setCount] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
 
-//   return {
-//     count: data[0].count,
-//     isLoading,
-//     isError: error
-//   }
-// }
+  useEffect(() => {
+    setLoading(true)
+    fetch(`${API_PATH}/tags?slug=${slug}&_fields[]=id&_fields[]=count`)
+      .then(res => res.json())
+      .then(tags => {
+        if (tags.length === 0) {
+          setCount(0)
+          setLoading(false)
+        } else {
+          setCount(tags[0].count)
+          setLoading(false)
+        }
+      })
+      .catch(error => {
+        setError(error)
+        setLoading(false)
+      })
+  }, [slug])
+
+  return {
+    count,
+    loading,
+    error
+  }
+}
 
 export const useStoriesWithSlug = (count, slug) => {
   const [stories, setStories] = useState(null)

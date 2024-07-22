@@ -40,10 +40,9 @@
 
 .election-coverage-stories a {
   display: flex;
-  
 }
 
-.election-coverage-stories > a:nth-child(n+3) {
+.home-cov-stories > a:nth-child(n+3) {
   display: none;
 }
 
@@ -51,24 +50,19 @@
   .election-coverage-stories {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));    
   }
-
 }
 
 @media screen and (min-width: 495px) {
-  .election-coverage-stories > a:nth-child(n+3) {
+  .home-cov-stories > a:nth-child(n+3) {
     display: flex;
   }
 }
-
-
 
 .election-coverage-stories a:hover {
   opacity: 0.85;
   text-decoration: none;
   color: #666;
 }
-
-
 
 .election-coverage-story {
   margin: 0;
@@ -86,6 +80,7 @@
 .story-date {
   margin-bottom: 10px;
 }
+
 .story-title {
   font-weight: 500;
   font-size: 1.1rem;

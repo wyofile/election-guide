@@ -1,4 +1,5 @@
 import Markdown from 'react-markdown'
+import { MarkdownExternalLinks } from '@/lib/styles'
 
 import Layout from '@/design/Layout'
 import CandidateSearch from '@/components/CandidateSearch'
@@ -43,7 +44,7 @@ const Home = ({candidates, textContent, houseDistricts, senateDistricts}) => {
     >
 
     <section className="guide-intro">
-      <Markdown>{textContent.guideIntro}</Markdown>
+      <MarkdownExternalLinks>{textContent.guideIntro}</MarkdownExternalLinks>
     </section>
 
     <CandidateSearch candidates={candidates} />
@@ -76,7 +77,7 @@ const Home = ({candidates, textContent, houseDistricts, senateDistricts}) => {
       {textContent.voterFAQ.map((faq, i) => (
           <div key={i} className="faq-question">
             <h3 className='race-header'>{faq.question}</h3>
-            <Markdown>{faq.answer}</Markdown>
+            <MarkdownExternalLinks>{faq.answer}</MarkdownExternalLinks>
           </div>
       ))}
     </section>
@@ -85,13 +86,6 @@ const Home = ({candidates, textContent, houseDistricts, senateDistricts}) => {
       <h2 className='section-header'>About this Project</h2>
       <Markdown>{textContent.aboutProject}</Markdown>
     </section>
-
-
-
-
-
-
-
 
     </Layout>
   )

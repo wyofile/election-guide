@@ -1,7 +1,7 @@
 .party-buckets {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-top: 0.5em;
 }
 
@@ -9,6 +9,9 @@
   padding: 0 0.5em;
   border-left: 3px solid gray;    
   margin-bottom: 1.5em;
+  margin-right: 1em;
+  margin-left: 1em;
+  flex-grow: 1;
   h4 {
       margin: 0;
       text-transform: uppercase;
@@ -22,7 +25,7 @@
 }
 
 .candidate a {
-    width: 310px;
+
     display: flex;
     align-items: stretch;
     background-color: #eeeeee;
@@ -52,7 +55,7 @@
 }
 
 .info-col {
-    flex: 0 1 200px;
+    flex: 1 1 200px;
     padding: 0.5em 0.5em;
     position: relative;
     display: block;
