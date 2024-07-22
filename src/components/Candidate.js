@@ -31,10 +31,10 @@ const Candidate = (props) => {
           <div className="name">{ballotName}</div>
           <div className="summary-line">{incumbent ? 'Incumbent' : ''}</div>
           <div className="tag-line">
-              {hasResponses && <span className="tag">✏️ Candidate Q&A</span>}
-              {!hasResponses && <span className="tag">🚫 No Q&A response</span>}
-              { isLoading && <span className='tag'>⏳</span> }
-              { (!isLoading && !error && stories.length > 0) && <span className="tag">📰 <strong>{stories.length >= 25 ? '25+' : stories.length}</strong> {(stories.length === 1) ? 'article' : 'articles'}</span>}
+              {hasResponses && <div className="tag">✏️ Candidate Q&A</div>}
+              {!hasResponses && <div className="tag">🚫 No Q&A response</div>}
+              { isLoading && <div className='tag'>⏳</div> }
+              { (!isLoading && !error && stories.length > 0) && <div className="tag">📰 <strong>{stories.length >= 25 ? '25+' : stories.length}</strong> {(stories.length === 1) ? 'article' : 'articles'}</div>}
           </div>
           <div className="fakelink">
               <span>See more »</span>

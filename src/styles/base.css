@@ -4,11 +4,7 @@
 
 /* Colors */
 
-
-
-
 :root {
-
     --goldenrod: #d29a30;
     --wheat: #e9dcae;
     --dimgray: #517e64;
@@ -16,12 +12,10 @@
     --tan: #c8b8a1;
     --black: #070707;
     --link: #237bcf;
-    /* party/outcome colors handled via different system */
 }
 
 
 body {
-    /* Default to futura-pt for text elements */
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
     font-weight: 400;
@@ -53,6 +47,7 @@ section {
     margin-left: -1em;
     margin-right: -1em;
     font-weight:bold;
+    box-shadow: 2px 2px 3px #aaa;
 }
 
 .race-header {
@@ -63,6 +58,7 @@ section {
     color: black;
     text-transform: uppercase;
     font-weight:bold;
+    box-shadow: 2px 2px 3px #aaa;
 }
 
 .district-title {
@@ -237,8 +233,8 @@ main {
     padding: 10px;
     padding-top: 0;
     max-width: 900px;
-    width:90%;
     margin: auto;
+    width: 90%;
 }
 
 a {

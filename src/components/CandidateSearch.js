@@ -55,6 +55,7 @@ const CandidateSearch = ({candidates}) => {
         <form onSubmit={e => { e.preventDefault(); }}>
             <input onChange={handleChange} type="text" value={searchText} placeholder={PLACEHOLDER} />
         </form>
+        { (matchingCandidates.length === 0 && searchText.length >= 3) && <p className="note">No candidates match your search...</p>}
         {
             matchingCandidates.map(c => <Candidate key={c.slug} {...c} />)
         }

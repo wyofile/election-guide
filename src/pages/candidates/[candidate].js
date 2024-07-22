@@ -11,6 +11,7 @@ import Layout from '@/design/Layout'
 import { formatRace } from '@/lib/utils'
 
 import Markdown from 'react-markdown'
+import Link from 'next/link'
 
 export async function getStaticPaths() {
   // Define routes that should be used for /[candidate] pages
@@ -86,6 +87,7 @@ export default function CandidatePage({candidate, questions, questionnaireIntro,
     <section>
       <h2 className='section-header'>About this Project</h2>
       <Markdown>{aboutProject}</Markdown>
+      <Link className='return-to' href='https://www.wyofile.com'>Return to WyoFile.com »</Link>
     </section>
 
     </Layout>

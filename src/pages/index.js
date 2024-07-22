@@ -1,13 +1,12 @@
 import Markdown from 'react-markdown'
 import { MarkdownExternalLinks } from '@/lib/styles'
+import Link from 'next/link'
 
 import Layout from '@/design/Layout'
 import CandidateSearch from '@/components/CandidateSearch'
 import StateRaces from '@/components/StateRaces'
 import RaceCandidates from '@/components/RaceCandidates'
 import ElectionStories from '@/components/ElectionStories';
-
-import { useCandidateTags } from '@/lib/dataHooks'
 
 import houseGeoData from '@/data/wyo-house-districts.json'
 import senateGeoData from '@/data/wyo-senate-districts.json'
@@ -86,6 +85,7 @@ const Home = ({candidates, textContent, houseDistricts, senateDistricts}) => {
     <section>
       <h2 className='section-header'>About this Project</h2>
       <Markdown>{textContent.aboutProject}</Markdown>
+      <Link className='return-to' href='https://www.wyofile.com'>Return to WyoFile.com »</Link>
     </section>
 
     </Layout>
