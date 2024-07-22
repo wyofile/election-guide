@@ -13,26 +13,13 @@ const API_PATH = 'https://wyofile.com/wp-json/wp/v2'
 //   }
 // }
 
-// export const useStoriesWithSlug = (count, slug) => {
-//   const tagPath = `${AtPI_PATH}/tags?slug=${slug}&_fields[]=id&_fields[]=count`
-//   const { data: tags, error: tagsError } = useSwr(slug ? tagPath : null, fetcher)
-
-//   const { data: stories, error: storiesError } = useSwr(tags[0] ? `${API_PATH}/posts?tag=${tags[0].id}&per_page=${count}&_fields[]=id&_fields[]=date&_fields[]=link&_fields[]=title`: null, fetcher)
-//   console.log(stories)
-
-//   return {
-//     stories,
-//     error: tagsError || storiesError,
-//     isLoading: !storiesError && !stories
-//   }
-// }
-
 export const useStoriesWithSlug = (count, slug) => {
   const [stories, setStories] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
   useEffect(() => {
+    setLoading(true)
     fetch(`${API_PATH}/tags?slug=${slug}&_fields[]=id&_fields[]=count`)
       .then(tagRes => tagRes.json())
       .then(tags => {

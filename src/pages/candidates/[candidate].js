@@ -12,7 +12,7 @@ import { formatRace } from '@/lib/utils'
 
 import Markdown from 'react-markdown'
 
-import '../../styles/candidate.css'
+
 
 
 export async function getStaticPaths() {

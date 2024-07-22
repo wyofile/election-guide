@@ -1,7 +1,7 @@
 
 import Link from 'next/link'
 
-import '../styles/nav.css'
+
 
 const PAGE_LINKS = [
     { path: '/', label: 'All Races' },

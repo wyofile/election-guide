@@ -9,8 +9,7 @@ import Select from 'ol/interaction/Select.js';
 import {click, noModifierKeys} from 'ol/events/condition.js';
 import {Control, defaults as defaultControls} from 'ol/control.js';
 
-import 'ol/ol.css';
-import '../styles/components/district-map.css'
+
 
 const MAP_CENTER = [-11971873.22771757, 5311971.846945472]
 const CONSTRAINTS = [-12417689.197989667, 4975536.361069247, -11527133.271643478, 5660965.110251664]

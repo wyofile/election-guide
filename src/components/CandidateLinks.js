@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import '@/styles/components/candidate-links.css'
 
 const CandidateLinks = ({wyoleg, website, email}) => {
   return(

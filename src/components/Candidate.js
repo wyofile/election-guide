@@ -1,4 +1,4 @@
-import '../styles/components/race-candidates.css'
+
 
 import Link from 'next/link'
 import Image from 'next/image'

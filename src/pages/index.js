@@ -11,8 +11,6 @@ import senateGeoData from '@/data/wyo-senate-districts.json'
 import textData from '@/data/static-text.json'
 import candidateData from '@/data/candidate-data.json'
 
-import '@/styles/index.css'
-
 export async function getStaticProps() {
   const candidates = candidateData
   const textContent = textData

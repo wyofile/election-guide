@@ -4,8 +4,6 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import '@/styles/components/candidate-opponents.css'
-
 const Candidate = (props) => {
   const { slug, ballotName, party, hasPhoto, isCurrentPage } = props
   const partyInfo = PARTIES.find(d => d.key === party)

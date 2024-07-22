@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import { useStoriesWithSlug } from '@/lib/dataHooks'
-
-import '../styles/components/election-coverage.css'
-import { formatDate } from '../lib/utils'
+import { formatDate } from '@/lib/utils'
 
 const ELECTION_COVERAGE = 'https://wyofile.com/elections-2024/'
 
@@ -16,7 +14,7 @@ const CandidateStories = ({slug, ballotName}) => {
       <>
         {stories.length === 0 && <p>Currently no WyoFile stories on {ballotName}.</p>}
         <div className="election-coverage-stories">
-          {stories.map(story => {
+          {!loading && stories.map(story => {
             return(
               <Link key={`story-${story.id}`} href={story.link} target="_blank">
                 <div className="election-coverage-story" style={{border: '1px solid black'}}>

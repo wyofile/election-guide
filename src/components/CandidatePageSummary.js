@@ -4,8 +4,6 @@ import {useRouter} from "next/router"
 import { PARTIES } from '../lib/styles'
 import { formatRace, getPortraitPath } from '../lib/utils'
 
-import '../styles/components/candidate-page-summary.css'
-
 const CandidatePageSummary = ({candidate}) => {
 
   const {party, slug, ballotName, district, incumbent, hasPhoto} = candidate

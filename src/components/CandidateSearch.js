@@ -1,8 +1,6 @@
 import { useState } from "react"
 import Link from "next/link"
 
-import '../styles/components/candidate-search.css'
-
 import { PARTIES, STATUS } from "@/lib/styles"
 import { formatRace } from "@/lib/utils"
 

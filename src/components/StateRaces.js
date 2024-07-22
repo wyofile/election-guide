@@ -3,14 +3,12 @@ import React, { useState, Suspense } from 'react'
 
 import RaceCandidates from '@/components/RaceCandidates'
 const DistrictMap = React.lazy(()=> import('@/components/DistrictMap'));
-import '@/styles/components/state-races.css'
+
 
 const StateRaces = ({houseDistricts, senateDistricts, candidates}) => {
   const [chamber, setChamber] = useState('house')
   const [activeHouseDistrict, setActiveHouseDistrict] = useState(null)
   const [activeSenateDistrict, setActiveSenateDistrict] = useState(null)
-
-
 
   return (
     <>

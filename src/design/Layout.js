@@ -6,7 +6,6 @@ import Footer from './Footer'
 
 import { metaData } from "@/config";
 
-import '../styles/base.css'
 
 const Layout = ({
   pageTitle,

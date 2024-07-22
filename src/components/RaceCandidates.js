@@ -1,12 +1,8 @@
-import '../styles/components/race-candidates.css'
-
 import senateHoldovers from '../data/senate-holdovers.json'
 
 import Link from 'next/link'
-import Image from 'next/image'
-import {useRouter} from 'next/router'
 
-import { pluralize, getPortraitPath } from '../lib/utils'
+import { pluralize } from '../lib/utils'
 import { PARTIES } from '../lib/styles'
 
 import Candidate from './Candidate'

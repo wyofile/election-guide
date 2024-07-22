@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useStoriesWithSlug } from '@/lib/dataHooks'
 
-import '../styles/components/election-coverage.css'
+
 import { formatDate } from '../lib/utils'
 
 const ELECTION_COVERAGE = 'https://wyofile.com/elections-2024/'
