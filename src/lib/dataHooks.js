@@ -56,7 +56,7 @@ export const useStoriesWithSlug = (count, slug) => {
         setError(tagError);
         setLoading(false);
       });
-  }, []);
+  }, [slug]);
 
   return {
     stories,

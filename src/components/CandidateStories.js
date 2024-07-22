@@ -19,7 +19,7 @@ const CandidateStories = ({slug, ballotName}) => {
           {stories.map(story => {
             return(
               <Link key={`story-${story.id}`} href={story.link} target="_blank">
-                <div className="election-coverage-story">
+                <div className="election-coverage-story" style={{border: '1px solid black'}}>
                   <div className="story-title">{story.title.rendered}</div>
                   <div className="story-date">{formatDate(new Date(story.date))}</div>
                   <div className="fake-link">Read Story <img src="/election-guide-2024/external.svg"></img></div>

@@ -11,10 +11,9 @@ const Candidate = (props) => {
   const partyInfo = PARTIES.find(d => d.key === party)
   const router = useRouter()
   const portraitPath = getPortraitPath(router.basePath,hasPhoto,party,slug)
-  return <div className='opponent-candidate'
+  return <div className={`opponent-candidate ${isCurrentPage && 'active-opp'}`}
       style={{
           borderTop: `3px solid ${partyInfo.color}`,
-          fontWeight: isCurrentPage ? 'bold' : null,
       }}
   >
       <Link href={`${slug}`}>
@@ -40,24 +39,35 @@ const Candidate = (props) => {
 }
 
 const CandidateOpponents = ({opponents, race, currentSlug}) => {
+
+  const order = {
+    "REP": 1,
+    "DEM": 2,
+    "IND": 3
+  }
+
+  opponents.sort((a, b) => a.lastName - b.lastName)
+  opponents.sort((a, b) => order[a.party] - order[b.party])
+
+  let prevParty
+  opponents.forEach(opp => {
+    opp["label"] = opp.party != prevParty
+    prevParty = opp.party
+  })
+
   return (
     <div className='opponents-container'>
       <h4 className='opponents-title'>Active candidates for {race}</h4>
-        <div className="opp-party-buckets">
-            {
-              PARTIES.map(party => {
-                const opponentsInParty = opponents.filter(d => d.party === party.key)
-                if (opponentsInParty.length === 0) return null
-                return <div className="opp-party-bucket" key={party.key} style={{ borderLeft: `0px solid ${party.color}` }}>
-                    <h4 style={{
-                        color: party.color
-                    }}>{pluralize(party.noun, opponentsInParty.length)}</h4>
-                    <div className="opp-party-list">{opponentsInParty.map(d => 
-                      <Candidate key={d.slug} isCurrentPage={d.slug === currentSlug} {...d} />)}</div>
-                </div>
-              })
-            }
-        </div>
+      <div className="opp-grid">
+        { opponents.map(c => {
+          const party = PARTIES.find(p => p.key === c.party)
+          const partyCount = opponents.filter(opp => opp.party === party.key).length
+          return <div className="opp-tile">
+            {c.label && <h4 className="bucket-label" style={{color: party.color}}>{pluralize(party.noun, partyCount)}</h4>}
+            <Candidate key={c.slug} isCurrentPage={c.slug === currentSlug} {...c} />
+          </div>
+        })}
+      </div>
     </div>
   )
 }
