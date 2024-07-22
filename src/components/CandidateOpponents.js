@@ -16,7 +16,7 @@ const Candidate = (props) => {
           borderTop: `3px solid ${partyInfo.color}`,
       }}
   >
-      <Link href={`${slug}`}>
+      <Link href={`${slug}`} scroll={false}>
           <div className="opp-portrait-col">
             <div className="opp-portrait-container">
               <Image
