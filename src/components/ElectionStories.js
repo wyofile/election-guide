@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useStoriesWithSlug } from '@/lib/dataHooks'
+import he from 'he'
 
 
 import { formatDate } from '../lib/utils'
@@ -25,7 +26,7 @@ const ElectionStories = () => {
             return(
               <Link key={`story-${story.id}`} href={story.link} target="_blank">
                 <div className="election-coverage-story">
-                  <div className="story-title">{story.title.rendered}</div>
+                  <div className="story-title">{he.decode(story.title.rendered)}</div>
                   <div className="story-date">{formatDate(new Date(story.date))}</div>
                   <div className="fake-link">Read Story <img src="external.svg"></img></div>
                 </div>

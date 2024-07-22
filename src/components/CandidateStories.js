@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useStoriesWithSlug } from '@/lib/dataHooks'
 import { formatDate } from '@/lib/utils'
+import he from 'he'
 
 const ELECTION_COVERAGE = 'https://wyofile.com/elections-2024/'
 
@@ -18,7 +19,7 @@ const CandidateStories = ({slug, ballotName}) => {
             return(
               <Link key={`story-${story.id}`} href={story.link} target="_blank">
                 <div className="election-coverage-story" style={{border: '1px solid black'}}>
-                  <div className="story-title">{story.title.rendered}</div>
+                  <div className="story-title">{he.decode(story.title.rendered)}</div>
                   <div className="story-date">{formatDate(new Date(story.date))}</div>
                   <div className="fake-link">Read Story <img src="/election-guide-2024/external.svg"></img></div>
                 </div>
