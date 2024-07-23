@@ -9,7 +9,7 @@ const JAN_01_2023 = '2023-01-01T00:00:00Z'
 export const useStories = (tagId, count) => {
   const fieldsString = ['id', 'date', 'link', 'title'].join(',')
 
-  const key = `${API_PATH}/posts?tags=${tagId}&per_page=${count}&categories_exlude=${OPINION_CATEGORY_ID}&after=${JAN_01_2023}&_fields=${fieldsString}`
+  const key = `${API_PATH}/posts?tags=${tagId}&per_page=${count}&categories_exclude=${OPINION_CATEGORY_ID}&after=${JAN_01_2023}&_fields=${fieldsString}`
 
   const {data: stories, isLoading, error} = useSWRImmutable(key, fetcher)
 
