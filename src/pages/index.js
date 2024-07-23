@@ -39,7 +39,7 @@ export async function getStaticProps() {
 
 const Home = ({candidates, textContent, houseDistricts, senateDistricts}) => {
 
-  const pageDescription = textContent.guideIntro
+  const pageDescription = textContent.pageDescription
 
   return (
     <Layout 
