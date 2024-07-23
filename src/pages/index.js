@@ -13,8 +13,17 @@ import senateGeoData from '@/data/wyo-senate-districts.json'
 import textData from '@/data/static-text.json'
 import candidateData from '@/data/candidate-data.json'
 
-export async function getStaticProps() {
+//decrease build index.html size
+const getCandidateDataNoResponses = () => {
   const candidates = candidateData
+  candidates.forEach(c => {
+    delete(c.responses)
+  })
+  return candidates
+}
+
+export async function getStaticProps() {
+  const candidates = getCandidateDataNoResponses()
   const textContent = textData
   const houseDistricts = houseGeoData
   const senateDistricts = senateGeoData
