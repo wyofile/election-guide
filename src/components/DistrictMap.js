@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
 import { Map, MapBrowserEvent, View } from 'ol';
-import TopoJSON from 'ol/format/TopoJSON.js';
+import GeoJSON from 'ol/format/GeoJSON.js';
 import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer.js';
 import {OSM, Vector as VectorSource} from 'ol/source.js';
 import {Fill, Stroke, Style, Text} from 'ol/style.js';
 import Select from 'ol/interaction/Select.js';
 import {click, noModifierKeys} from 'ol/events/condition.js';
 import {Control, defaults as defaultControls} from 'ol/control.js';
-
-
 
 const MAP_CENTER = [-11971873.22771757, 5311971.846945472]
 const CONSTRAINTS = [-12417689.197989667, 4975536.361069247, -11527133.271643478, 5660965.110251664]
@@ -50,17 +48,15 @@ const DistrictMap = ({chamber, geoData, setActiveDistrict}) => {
 
     if (chamber === 'house') {
       districtNumberIdentifier = 'SLDLST'
-      layerObjectName = 'tl_2023_56_sldl-tl_2023_56_sldl'
       districtPrefix = 'HD '
     }
     if (chamber === 'senate') {
       districtNumberIdentifier = 'SLDUST'
-      layerObjectName = 'tl_2023_56_sldu-tl_2023_56_sldu'
       districtPrefix = 'SD '
     }
 
     const districtsVectorSource = new VectorSource({
-      features: new TopoJSON().readFeatures(geoData),
+      features: new GeoJSON().readFeatures(geoData),
     });
   
     const districtsLayer = new VectorLayer({
