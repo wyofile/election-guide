@@ -58,7 +58,7 @@ const RaceCandidates = ({district, candidates, chamber}) => {
       </div>
     }
     {(district && candidates.length === 0 && chamber === 'senate') && 
-      <OutOfCycleBox holdover={senateHoldovers.find((holdover) => holdover.district === `S${district}`)} />
+      <OutOfCycleBox holdover={senateHoldovers.find((holdover) => holdover.district === `S${district.substring(1)}`)} />
     }
     </>
   )

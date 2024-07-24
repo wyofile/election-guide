@@ -4,7 +4,7 @@ import updateTime from '../data/update-time.json'
 import { formatDate } from '../lib/utils'
 import { metaData } from '../config'
 
-
+import ShareButtons from '@/components/ShareButtons'
 
 const Header = () => {
   const { webSubtitle } = metaData
@@ -23,6 +23,7 @@ const Header = () => {
         </div>
       </div>
     </div>
+    <ShareButtons url="https://projects.wyofile.com/election-guide-2024" />
   </div>
 }
 
