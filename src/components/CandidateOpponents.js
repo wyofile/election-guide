@@ -1,39 +1,33 @@
 import { PARTIES } from '@/lib/styles'
-import { pluralize, getPortraitPath } from '@/lib/utils';
-import { useRouter } from 'next/router';
+import { pluralize, getPortraitPath, usePath } from '@/lib/utils';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Candidate = (props) => {
-  const { slug, ballotName, party, hasPhoto, isCurrentPage } = props
+const Candidate = ({ slug, ballotName, party, hasPhoto, isCurrentPage }) => {
+
   const partyInfo = PARTIES.find(d => d.key === party)
-  const router = useRouter()
-  const portraitPath = getPortraitPath(router.basePath,hasPhoto,party,slug)
-  return <div className={`opponent-candidate ${isCurrentPage && 'active-opp'}`}
-      style={{
-          borderTop: `3px solid ${partyInfo.color}`,
-      }}
-  >
-      <Link href={`${slug}`} scroll={false}>
-          <div className="opp-portrait-col">
-            <div className="opp-portrait-container">
-              <Image
-                  alt={`${ballotName}`}
-                  src={portraitPath}
-                  width={40}
-                  height={40}
-                  style={{
-                      width: '100%',
-                      height: 'auto',
-                  }}
-              />
-            </div>
+  const portraitPath = getPortraitPath(hasPhoto,party,slug)
+
+  return (
+    <div className={ `opponent-candidate ${isCurrentPage && 'active-opp'}` } style={{ borderTop: `3px solid ${partyInfo.color}` }}>
+      <Link href={ usePath(`/candidates/${slug}`) } scroll={ false }>
+        <div className="opp-portrait-col">
+          <div className="opp-portrait-container">
+            <Image
+              alt={ `${ballotName}` }
+              src={ portraitPath }
+              width={ 40 }
+              height={ 40 }
+              style={{ width: '100%', height: 'auto'}}
+            />
           </div>
-          <div className="opp-info-col">
-              <div className="opp-name">{ballotName}</div>
-          </div>
-      </Link >
-  </div >
+        </div>
+        <div className="opp-info-col">
+          <div className="opp-name">{ballotName}</div>
+        </div>
+      </Link>
+    </div>
+  )
 }
 
 const CandidateOpponents = ({opponents, race, currentSlug}) => {
