@@ -84,7 +84,7 @@ const DistrictMap = ({chamber, geoData, activeDistrict, setActiveDistrict}) => {
             width: 1.5,
           }),
           fill: new Fill({
-            color: 'rgba(0, 0, 0, 0.1)',
+            color: 'rgba(0, 0, 0, 0.05)',
           }),
           text: new Text({
             text: districtPrefix + parseInt(feature.get(districtNumberIdentifier)),
@@ -199,6 +199,8 @@ const DistrictMap = ({chamber, geoData, activeDistrict, setActiveDistrict}) => {
 
   return (
     <>
+      <div id={`${chamber}-map`} className="map-container" />
+      <p className="map-note">Note: Some smaller districts may require you to zoom in.</p>
       <div className="district-selectors">
         <button className='district-scroll' onClick={handlePrevDistrict}>{'«'}</button>
         <select className="district-dropdown" onChange={handleDropDown} value={activeDistrict ? activeDistrict : ''}>
@@ -207,8 +209,6 @@ const DistrictMap = ({chamber, geoData, activeDistrict, setActiveDistrict}) => {
         </select>
         <button className='district-scroll' onClick={handleNextDistrict}>{'»'}</button>
       </div>
-      <div id={`${chamber}-map`} className="map-container" />
-      <p className="map-note">Note: Some smaller districts may require you to zoom in.</p><br />
     </>
   )
 }
