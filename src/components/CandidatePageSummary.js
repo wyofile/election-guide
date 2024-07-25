@@ -1,5 +1,4 @@
 import Image from "next/image";
-import {useRouter} from "next/router"
 
 import { PARTIES } from '../lib/styles'
 import { formatRace, getPortraitPath } from '../lib/utils'
@@ -9,7 +8,7 @@ const CandidatePageSummary = ({candidate}) => {
   const {party, slug, ballotName, district, incumbent, hasPhoto} = candidate
   const partyInfo = PARTIES.find(d => d.key === party)
   
-  const portraitPath = getPortraitPath(useRouter().basePath, hasPhoto, party, slug)
+  const portraitPath = getPortraitPath(hasPhoto, party, slug)
 
   return <div className="candidate-summary" style={{ borderTop: `5px solid ${partyInfo.color}` }}>
 
