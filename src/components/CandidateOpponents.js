@@ -60,7 +60,7 @@ const CandidateOpponents = ({opponents, race, currentSlug}) => {
         { opponents.map(c => {
           const party = PARTIES.find(p => p.key === c.party)
           const partyCount = opponents.filter(opp => opp.party === party.key).length
-          return <div className="opp-tile">
+          return <div className="opp-tile" key={c.slug}>
             {c.label && <h4 className="bucket-label" style={{color: party.color}}>{pluralize(party.noun, partyCount)}</h4>}
             <Candidate key={c.slug} isCurrentPage={c.slug === currentSlug} {...c} />
           </div>

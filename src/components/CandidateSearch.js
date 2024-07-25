@@ -1,16 +1,16 @@
 import { useState } from "react"
 import Link from "next/link"
-import { useTagCount } from "@/lib/dataHooks"
+import { useStories } from "@/lib/dataHooks"
 
 import { PARTIES, STATUS } from "@/lib/styles"
 import { formatRace } from "@/lib/utils"
 
 const PLACEHOLDER = 'Enter candidate (e.g., John Barrasso)'
 
-const Candidate = ({slug, ballotName, party, status, incumbent, hasResponses, district}) => {
+const Candidate = ({slug, ballotName, party, status, incumbent, hasResponses, district, tagId}) => {
     const partyInfo = PARTIES.find(d => d.key === party)
     const statusInfo = STATUS.find(d => d.key === status)
-    const {count: numArticles, loading, error} = useTagCount(slug)
+    const {stories, isLoading, error} = useStories(tagId, 25)
 
     return <div className="search-candidate" style={{ borderTop: `3px solid ${partyInfo.color}` }}><Link href={`/candidates/${slug}`}>
         <div className="search-party-label" >
@@ -26,8 +26,8 @@ const Candidate = ({slug, ballotName, party, status, incumbent, hasResponses, di
                 <div className="search-tag-line">
                     {hasResponses && <span className="tag">✏️ Candidate Q&A</span>}
                     {!hasResponses && <span className="tag">🚫 No Q&A response</span>}
-                    { loading && <span className='tag'></span> }
-                    { (!loading && !error && numArticles > 0) && <span className="tag">📰 <strong>{numArticles}</strong> {(numArticles === 1) ? 'article' : 'articles'}</span>}
+                    { isLoading && <span className='tag'></span> }
+                    { (!isLoading && !error && stories.length > 0) && <span className="tag">📰 <strong>{stories.length >= 25 ? '25+' : stories.length}</strong> {(stories.length === 1) ? 'article' : 'articles'}</span>}
                 </div>
             </div>
 
@@ -55,6 +55,7 @@ const CandidateSearch = ({candidates}) => {
         <form onSubmit={e => { e.preventDefault(); }}>
             <input onChange={handleChange} type="text" value={searchText} placeholder={PLACEHOLDER} />
         </form>
+        { (matchingCandidates.length === 0 && searchText.length >= 3) && <p className="note">No candidates match your search...</p>}
         {
             matchingCandidates.map(c => <Candidate key={c.slug} {...c} />)
         }

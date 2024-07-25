@@ -1,36 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# WyoFile Election Guide 2024
 
-## Getting Started
+## About
 
-First, run the development server:
+Deployed at https://projects.wyofile.com/election-guide-2024
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This site is an election guide for federal and state candidates in the state of Wyoming, built for the independent member-supported news service [WyoFile](https://www.wyofile.com). Development was completed by [Tom Musselman](https://github.com/musselmanth). It was *heavily* influenced (with permission) by [Eric Dietrich's app for Montana Free Press](https://github.com/mtfreepress/mt-2024-elections)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Question about the code can be directed to Tom Musselman (tmusselman@gmail.com), and about the project and editing to Tennessee Watson (tennessee@wyofile.com)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Tech
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+It is a front-end only static export Next.js app, deployed via AWS S3 with Cloudfront CDN. 
 
-## Learn More
+It uses [OpenLayers](https://openlayers.org/) for the interactive district map. Shapefiles files for district lines were provided by the US Census Bureau and compressed and converted into GeoJSON.
 
-To learn more about Next.js, take a look at the following resources:
+News article content is fetched and cached using SWR from the Wordpress REST API. All other data is converted from CSV files into JSON objects and imported.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

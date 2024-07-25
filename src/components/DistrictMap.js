@@ -1,67 +1,79 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react'
 
-import { Map, MapBrowserEvent, View } from 'ol';
-import TopoJSON from 'ol/format/TopoJSON.js';
-import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer.js';
-import {OSM, Vector as VectorSource} from 'ol/source.js';
-import {Fill, Stroke, Style, Text} from 'ol/style.js';
-import Select from 'ol/interaction/Select.js';
-import {click, noModifierKeys} from 'ol/events/condition.js';
-import {Control, defaults as defaultControls} from 'ol/control.js';
-
-
+import { Collection, Map, MapBrowserEvent, View } from 'ol'
+import GeoJSON from 'ol/format/GeoJSON.js'
+import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer.js'
+import {OSM, Vector as VectorSource} from 'ol/source.js'
+import {Fill, Stroke, Style, Text} from 'ol/style.js'
+import Select from 'ol/interaction/Select.js'
+import {click, noModifierKeys} from 'ol/events/condition.js'
+import {Control, defaults as defaultControls} from 'ol/control.js'
 
 const MAP_CENTER = [-11971873.22771757, 5311971.846945472]
 const CONSTRAINTS = [-12417689.197989667, 4975536.361069247, -11527133.271643478, 5660965.110251664]
 
 class ResetControl extends Control {
   constructor(opt_options) {
-    const options = opt_options || {};
+    const options = opt_options || {}
 
-    const button = document.createElement('button');
-    button.innerHTML = 'Reset Zoom';
+    const button = document.createElement('button')
+    button.innerHTML = 'Reset Zoom'
 
-    const element = document.createElement('div');
-    element.className = 'reset-map ol-unselectable ol-control';
-    element.appendChild(button);
+    const element = document.createElement('div')
+    element.className = 'reset-map ol-unselectable ol-control'
+    element.appendChild(button)
 
     super({
       element: element,
       target: options.target,
-    });
+    })
 
-    button.addEventListener('click', this.handleReset.bind(this), false);
+    button.addEventListener('click', this.handleReset.bind(this), false)
   }
 
   handleReset() {
     const map = this.getMap()
     const mapView = map.getView()
     mapView.setCenter(MAP_CENTER)
-    mapView.setZoom(0);
+    mapView.setZoom(0)
   }
 }
 
-const DistrictMap = ({chamber, geoData, setActiveDistrict}) => {
+const DistrictMap = ({chamber, geoData, activeDistrict, setActiveDistrict}) => {
+
+  let districtNumberIdentifier
+  let districtPrefix
+  let labelPrefix
+
+  if (chamber === 'house') {
+    districtNumberIdentifier = 'SLDLST'
+    districtPrefix = 'HD '
+    labelPrefix = 'House District '
+  }
+  if (chamber === 'senate') {
+    districtNumberIdentifier = 'SLDUST'
+    districtPrefix = 'SD '
+    labelPrefix = 'Senate District '
+  }
+
+  const selectedFeatures = useRef(new Collection())
+
+  const districtOptions = geoData.features.map(feat => {
+    return feat.properties[districtNumberIdentifier]
+  }).sort()
+
+  const mapFeatures = useRef(new GeoJSON().readFeatures(geoData))
+
+  const mapView = useRef(new View({
+    center: MAP_CENTER,
+    extent: CONSTRAINTS,
+    zoom: 0
+  }),)
 
   useEffect(() => {   
-    let districtNumberIdentifier = null
-    let districtPrefix = null
-    let layerObjectName = null
-
-    if (chamber === 'house') {
-      districtNumberIdentifier = 'SLDLST'
-      layerObjectName = 'tl_2023_56_sldl-tl_2023_56_sldl'
-      districtPrefix = 'HD '
-    }
-    if (chamber === 'senate') {
-      districtNumberIdentifier = 'SLDUST'
-      layerObjectName = 'tl_2023_56_sldu-tl_2023_56_sldu'
-      districtPrefix = 'SD '
-    }
-
     const districtsVectorSource = new VectorSource({
-      features: new TopoJSON().readFeatures(geoData),
-    });
+      features: mapFeatures.current,
+    })
   
     const districtsLayer = new VectorLayer({
       source: districtsVectorSource,
@@ -72,7 +84,7 @@ const DistrictMap = ({chamber, geoData, setActiveDistrict}) => {
             width: 1.5,
           }),
           fill: new Fill({
-            color: 'rgba(0, 0, 0, 0.1)',
+            color: 'rgba(0, 0, 0, 0.05)',
           }),
           text: new Text({
             text: districtPrefix + parseInt(feature.get(districtNumberIdentifier)),
@@ -89,7 +101,7 @@ const DistrictMap = ({chamber, geoData, setActiveDistrict}) => {
     const selectStyle = (feature) => {
       const selectedStyle = new Style({
         fill: new Fill({
-          color: 'rgba(137,166,160,0.6)',
+          color: 'rgba(137,166,160,0.5)',
         }),
         stroke: new Stroke({
           color: 'rgba(81,126,100,0.8)',
@@ -109,7 +121,6 @@ const DistrictMap = ({chamber, geoData, setActiveDistrict}) => {
     }
     
     const osmLayer = new TileLayer({
-      // preload: Infinity,
       source: new OSM(),
     })
     
@@ -118,39 +129,88 @@ const DistrictMap = ({chamber, geoData, setActiveDistrict}) => {
         return click(mapBrowserEvent) && noModifierKeys(mapBrowserEvent)
       },
       style: selectStyle,
-    });
+      features: selectedFeatures.current
+    })
 
     const map = new Map({
       target: `${chamber}-map`,
       controls: defaultControls().extend([new ResetControl()]),
       layers: [osmLayer, districtsLayer],
-      view: new View({
-          center: MAP_CENTER,
-          extent: CONSTRAINTS,
-          zoom: 0
-        }),
-    });
+      view: mapView.current
+    })
 
     map.addInteraction(selectDistrict)
 
     selectDistrict.on('select', (e) => {
       if(e.selected[0]){
-        setActiveDistrict(e.selected[0].get(districtNumberIdentifier).substring(1))
+        setActiveDistrict(e.selected[0].get(districtNumberIdentifier))
 
       } else {
-        setActiveDistrict(null)
+        setActiveDistrict('')
       }
     })
 
     return () => map.setTarget(null)
-  }, []);
+  }, [])
+
+  const handleManualDistrict = (districtToSet) => {
+
+    selectedFeatures.current.clear()
+    if (districtToSet != '') {
+      const mapFeature = mapFeatures.current.find(feat => {
+        return feat.getProperties()[districtNumberIdentifier] === districtToSet
+      })
+      const polygon = mapFeature.getGeometry()
+      mapView.current.fit(polygon, {padding: [40,40,30,30]})
+      selectedFeatures.current.push(mapFeature)
+    } else {
+      mapView.current.setCenter(MAP_CENTER)
+      mapView.current.setZoom(0)
+    }
+    setActiveDistrict(districtToSet)
+  }
+
+  const handleDropDown = (e) => {
+    handleManualDistrict(e.target.value)
+  }
+
+  const handlePrevDistrict = () => {
+    const optionsCount = districtOptions.length
+    let newDistrict
+    if (activeDistrict == '') {
+      newDistrict = districtOptions[optionsCount - 1]
+    } else {
+      newDistrict = ((parseInt(activeDistrict) - 1 + (-1 % optionsCount) + optionsCount) % optionsCount + 1)
+    }
+    console.log(newDistrict)
+    handleManualDistrict(String(newDistrict).padStart(3, '0'))
+  }
+
+  const handleNextDistrict = () => {
+    const optionsCount = districtOptions.length
+    let newDistrict
+    if (activeDistrict == '') {
+      newDistrict = districtOptions[0]
+    } else {
+      newDistrict = ((parseInt(activeDistrict) - 1 + (1 % optionsCount) + optionsCount) % optionsCount + 1)
+    }
+    handleManualDistrict(String(newDistrict).padStart(3, '0'))
+  }
 
   return (
     <>
       <div id={`${chamber}-map`} className="map-container" />
-      <p className="map-note">Note: Some smaller districts may require you to zoom in.</p><br />
+      <p className="map-note">Note: Some smaller districts may require you to zoom in.</p>
+      <div className="district-selectors">
+        <button className='district-scroll' onClick={handlePrevDistrict}>{'«'}</button>
+        <select className="district-dropdown" onChange={handleDropDown} value={activeDistrict ? activeDistrict : ''}>
+          <option value='' className="none-option">{chamber} Districts</option>
+          { districtOptions.map(d => <option key={d} value={d}>{labelPrefix + parseInt(d.substring(1))}</option>)}
+        </select>
+        <button className='district-scroll' onClick={handleNextDistrict}>{'»'}</button>
+      </div>
     </>
-  );
+  )
 }
 
-export default DistrictMap;
+export default DistrictMap

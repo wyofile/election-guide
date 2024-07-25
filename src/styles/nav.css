@@ -4,7 +4,7 @@
   position: sticky;
   top: 0px;
   
-  z-index: 1000;
+  z-index: 10;
   box-shadow: 0px 5px 5px -5px #000;
 }
 
@@ -16,7 +16,7 @@
   display: grid;
   grid-template-rows: auto;
   grid-auto-rows: auto;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1px;
 
 }
