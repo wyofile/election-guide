@@ -10,7 +10,7 @@ const Candidate = ({ slug, ballotName, party, hasPhoto, isCurrentPage }) => {
 
   return (
     <div className={ `opponent-candidate ${isCurrentPage && 'active-opp'}` } style={{ borderTop: `3px solid ${partyInfo.color}` }}>
-      <Link href={ usePath(`/candidates/${slug}`) } scroll={ false }>
+      <Link href={slug} scroll={ false }>
         <div className="opp-portrait-col">
           <div className="opp-portrait-container">
             <Image
