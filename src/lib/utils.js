@@ -15,9 +15,9 @@ export const formatRace = district => {
   } else if (district === 'us-house') {
     return "U.S. House of Representatives"
   } else if (district[0] === 'H') {
-    return `WY State House District ${parseInt(district.substring(1))}`
+    return `WY House District ${parseInt(district.substring(1))}`
   } else if (district[0] === 'S') {
-    return `WY State Senate District ${parseInt(district.substring(1))}`
+    return `WY Senate District ${parseInt(district.substring(1))}`
   }
 }
 
