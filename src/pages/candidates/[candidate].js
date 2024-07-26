@@ -1,4 +1,4 @@
-import candidateData from '../../data/candidate-data.json'
+import candidateData from '@/data/candidate-data.json'
 import textData from '../../data/static-text.json'
 import wyoLegQs from '../../data/wyo-leg-qs.json'
 import federalQs from '../../data/federal-qs.json'
@@ -64,7 +64,7 @@ export default function CandidatePage({candidate, questions, questionnaireIntro,
       <Markdown className='questionnaire-intro'>{questionnaireIntro}</Markdown>
       <div className="on-the-issues">
         {questions.map((q, i) => {
-          const answer = candidate.responses ? candidate.responses[i] : '_No candidate respones._'
+          const answer = candidate.responses[i] ? candidate.responses[i] : '_No candidate response._'
           return(
             <div key={`question-${i}`}>
               <h3 className="question-header">{q}</h3>

@@ -13,11 +13,11 @@ import senateGeoData from '@/data/wyo-senate-districts.json'
 import textData from '@/data/static-text.json'
 import candidateData from '@/data/candidate-data.json'
 
-//decrease build index.html size
+// decrease build index.html size
 const getCandidateDataNoResponses = () => {
-  const candidates = candidateData
-  candidates.forEach(c => {
-    delete(c.responses)
+  const candidates = candidateData.map(c => {
+    const { hasPhoto, hasResponses, ballotName, slug, status, district, party, incumbent, tagId } = c
+    return { hasPhoto, hasResponses, ballotName, slug, status, district, party, incumbent, tagId }
   })
   return candidates
 }
