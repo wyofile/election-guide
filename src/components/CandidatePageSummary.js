@@ -1,7 +1,10 @@
 import Image from "next/image";
+import { css } from "@emotion/react";
 
 import { PARTIES } from '../lib/styles'
 import { formatRace, getPortraitPath } from '../lib/utils'
+
+
 
 const CandidatePageSummary = ({candidate}) => {
 
@@ -10,19 +13,20 @@ const CandidatePageSummary = ({candidate}) => {
   
   const portraitPath = getPortraitPath(hasPhoto, party, slug)
 
+  const imageBackgroundCss = css`
+    background-image: ${partyInfo.gradientLeft},
+                      ${partyInfo.gradientRight};
+  `
+
   return <div className="candidate-summary" style={{ borderTop: `5px solid ${partyInfo.color}` }}>
 
       <div className="summ-portrait-col">
-          <div className="summ-portrait-container">
+          <div className="summ-portrait-container" css={imageBackgroundCss}>
               <Image
                   alt={`${ballotName}`}
                   src={portraitPath}
-                  width={250}
-                  height={250}
-                  style={{
-                      width: '100%',
-                      height: 'auto',
-                  }}
+                  width={200}
+                  height={200}
               />
           </div>
       </div>

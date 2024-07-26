@@ -18,7 +18,7 @@ const CandidateStories = ({slug, ballotName, tagId}) => {
           {!isLoading && stories.map(story => {
             return(
               <Link key={`story-${story.id}`} href={story.link} target="_blank">
-                <div className="election-coverage-story" style={{border: '1px solid black'}}>
+                <div className="election-coverage-story" style={{border: '1px solid #666'}}>
                   <div className="story-title">{he.decode(story.title.rendered)}</div>
                   <div className="story-date">{formatDate(new Date(story.date))}</div>
                   <div className="fake-link">Read Story <img src="/election-guide-2024/external.svg"></img></div>
