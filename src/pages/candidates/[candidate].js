@@ -41,7 +41,6 @@ export async function getStaticProps({ params }) {
 }
 
 export default function CandidatePage({candidate, questions, questionnaireIntro, aboutProject, activeOpponents}) {
-  console.log(candidate)
   const pageDescription = `${candidate.ballotName} (${candidate.party}) is running as a candidate for ${formatRace(candidate.district)} in Wyoming's 2024 election. See biographic details, issue positions and information on how to vote.`
   return (
     <Layout 
@@ -65,12 +64,7 @@ export default function CandidatePage({candidate, questions, questionnaireIntro,
       <Markdown className='questionnaire-intro'>{questionnaireIntro}</Markdown>
       <div className="on-the-issues">
         {questions.map((q, i) => {
-          let answer
-          if (candidate.hasResponses){
-            answer = candidate.responses[i]
-          }  else {
-            answer = "_No Candidate Response._"
-          }
+          const answer = candidate.responses ? candidate.responses[i] : '_No candidate respones._'
           return(
             <div key={`question-${i}`}>
               <h3 className="question-header">{q}</h3>
