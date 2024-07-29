@@ -172,8 +172,14 @@ details {
     padding: 0.5em;
     box-shadow: 2px 2px 3px #aaa;
     margin-top: 1em;
-    margin-right: 2em;
-    margin-left: 2em;
+
+}
+
+@media screen and (min-width: 468px) {
+  details {
+    margin-right: 1.5em;
+    margin-left: 1.5em;
+  }
 }
 
 details>summary {

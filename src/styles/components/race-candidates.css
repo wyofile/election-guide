@@ -32,6 +32,10 @@
   max-width: 366px;
 }
 
+details .candidate {
+  min-width: 235px;
+}
+
 .candidate a {
 
     display: flex;
