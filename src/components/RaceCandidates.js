@@ -32,13 +32,17 @@ const OutOfCycleBox = ({holdover}) => {
 }
 
 const RaceCandidates = ({district, candidates, chamber}) => {
+
+  const activeCandidates = candidates.filter(c => c.status === 'active' )
+  const withdrawnCandidates = candidates.filter(c => c.status === 'dropout' )
+
   return (
     <>
     {candidates.length > 0 &&
       <div className="party-buckets">
           {
               PARTIES.map(party => {
-                  const candidatesInBucket = candidates.filter(candidate => candidate.party === party.key)
+                  const candidatesInBucket = activeCandidates.filter(candidate => candidate.party === party.key)
                   const isUncontestedPrimary = candidatesInBucket.length === 1 && (party.key === "REP" || party.key === "DEM")
                   const isMinorPartyNoCandidates = candidatesInBucket.length === 0 && (party.key != "REP" && party.key != "DEM")
                   const isIndependent = party.key === 'IND'
@@ -59,6 +63,27 @@ const RaceCandidates = ({district, candidates, chamber}) => {
     }
     {(district && candidates.length === 0 && chamber === 'senate') && 
       <OutOfCycleBox holdover={senateHoldovers.find((holdover) => holdover.district === `S${district.substring(1)}`)} />
+    }
+    { withdrawnCandidates.length > 0 && 
+      <details>
+        <summary>Withdrawn Candidates</summary>
+        <div className="party-buckets">
+          {
+            PARTIES.map(party => {
+              const candidatesInBucket = withdrawnCandidates.filter(c => c.party === party.key)
+              if (candidatesInBucket.length === 0) return null
+              return(
+                <div className="party-bucket" key={party.key} style={{ borderLeft: `3px solid ${party.color}` }}>
+                      <h4 style={{
+                          color: party.color
+                      }}>{pluralize(party.noun, candidatesInBucket.length)}</h4>
+                      <div>{candidatesInBucket.map(candidate => <Candidate key={candidate.slug} color={party.color} {...candidate} />)}</div>
+                </div>
+              )
+            })
+          }
+        </div>
+      </details>
     }
     </>
   )

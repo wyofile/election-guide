@@ -12,7 +12,6 @@
 
 .summ-portrait-col {
   flex-grow:1;
-
 }
 
 .summ-portrait-container {
@@ -57,7 +56,6 @@
 }
 
 .incum-line {
-  font-style: italic;
   font-size: 1.3em;
   text-align: center;
 }

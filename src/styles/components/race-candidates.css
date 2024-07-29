@@ -29,6 +29,7 @@
 .candidate {
   margin-top: 0.5em;
   min-width: 250px;
+  max-width: 366px;
 }
 
 .candidate a {

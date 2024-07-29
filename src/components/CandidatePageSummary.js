@@ -1,16 +1,17 @@
 import Image from "next/image";
 import { css } from "@emotion/react";
 
-import { PARTIES } from '../lib/styles'
+import { PARTIES, STATUS } from '../lib/styles'
 import { formatRace, getPortraitPath } from '../lib/utils'
 
 
 
 const CandidatePageSummary = ({candidate}) => {
 
-  const {party, slug, ballotName, district, incumbent, hasPhoto} = candidate
-  const partyInfo = PARTIES.find(d => d.key === party)
-  
+  const {party, slug, ballotName, district, incumbent, hasPhoto, status} = candidate
+  const partyInfo = PARTIES.find(p => p.key === party)
+  const statusInfo = STATUS.find(s => s.key === status)
+
   const portraitPath = getPortraitPath(hasPhoto, party, slug)
 
   const imageBackgroundCss = css`
@@ -37,7 +38,7 @@ const CandidatePageSummary = ({candidate}) => {
                   <div> for <strong>{formatRace(district)}</strong></div>
               </div>
               <h1 className="summ-name">{ballotName}</h1>
-              <div className="incum-line">{incumbent ? "Incumbent" : ""}</div>
+              <div className="incum-line"><em>{incumbent ? "Incumbent • " : ""}</em>{ statusInfo.label }</div>
           </div>
       </div>
   </div>

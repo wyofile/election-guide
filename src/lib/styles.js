@@ -11,6 +11,7 @@ export const STATUS = [
   { key: 'lost-primary', label: '❌ Lost Aug. 20 primary' },
   { key: 'lost-general', label: '❌ Lost Nov. 5 general election' },
   { key: 'won', label: '✅ Won Nov. 5 general election' },
+  { key: 'dropout', label: '❌ Withdrawn'}
 ]
 
 export const MarkdownExternalLinks = ({children}) => {
