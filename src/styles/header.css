@@ -112,7 +112,7 @@ h1 h2 {
   font-style: italic;
 }
 
-.share-buttons {
+/* .share-buttons {
   margin-top: 10px;
   left: 5px;
   bottom: 5px;
@@ -143,6 +143,44 @@ h1 h2 {
   .share-buttons {
     flex-direction: column;
     position: fixed;
+  }
+} */
+
+.share-buttons {
+
+}
+
+.a2a_kit {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.share-label {
+  font-size: 0.75em;
+  color: white;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 3px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1000px) {
+  .share-buttons {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+  }
+  
+  .a2a_kit {
+    flex-direction: column;
+    gap: 3px;
+
+  }
+
+  .share-label {
+    color: black;
   }
 }
 

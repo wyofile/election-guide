@@ -5,6 +5,7 @@ import Nav from './Nav'
 import Footer from './Footer'
 
 import { metaData } from "@/config";
+import Script from 'next/script';
 
 
 const Layout = ({
@@ -45,12 +46,21 @@ const Layout = ({
         <meta name="twitter:description" content={socialDescription} />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
 
-        {/* <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/> */}
+
 
       </Head>
+
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-306KYTFJD8"></Script>
+      <Script id="ga">
+        {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){window.dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-306KYTFJD8');
+      `}
+      </Script>
+
       <Header />
       <Nav />
       <main>{children}</main>
