@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import { Collection, Map, MapBrowserEvent, View } from 'ol'
 import GeoJSON from 'ol/format/GeoJSON.js'
@@ -8,6 +8,7 @@ import {Fill, Stroke, Style, Text} from 'ol/style.js'
 import Select from 'ol/interaction/Select.js'
 import {click, noModifierKeys} from 'ol/events/condition.js'
 import {Control, defaults as defaultControls} from 'ol/control.js'
+import { usePath } from '@/lib/utils'
 
 const MAP_CENTER = [-11971873.22771757, 5311971.846945472]
 const CONSTRAINTS = [-12417689.197989667, 4975536.361069247, -11527133.271643478, 5660965.110251664]
@@ -39,7 +40,7 @@ class ResetControl extends Control {
   }
 }
 
-const DistrictMap = ({chamber, geoData, activeDistrict, setActiveDistrict}) => {
+const DistrictMap = ({chamber, activeDistrict, setActiveDistrict}) => {
 
   let districtNumberIdentifier
   let districtPrefix
@@ -57,12 +58,11 @@ const DistrictMap = ({chamber, geoData, activeDistrict, setActiveDistrict}) => {
   }
 
   const selectedFeatures = useRef(new Collection())
+  
+  const districtsVectorSource = useRef(new VectorSource({ format: new GeoJSON(), url: usePath(`/wyo-${chamber}-districts.json`) }))
 
-  const districtOptions = geoData.features.map(feat => {
-    return feat.properties[districtNumberIdentifier]
-  }).sort()
-
-  const mapFeatures = useRef(new GeoJSON().readFeatures(geoData))
+  const [districtOptions, setDistrictOptions] = useState([])
+  const [isLoadingFeatures, setIsLoadingFeatures] = useState(true)
 
   const mapView = useRef(new View({
     center: MAP_CENTER,
@@ -71,12 +71,16 @@ const DistrictMap = ({chamber, geoData, activeDistrict, setActiveDistrict}) => {
   }),)
 
   useEffect(() => {   
-    const districtsVectorSource = new VectorSource({
-      features: mapFeatures.current,
+
+    districtsVectorSource.current.on('featuresloadend', (e) => {
+      setDistrictOptions(e.features.map(feat => {
+        return feat.getProperties()[districtNumberIdentifier]
+      }).sort())
+      setIsLoadingFeatures(false)
     })
   
     const districtsLayer = new VectorLayer({
-      source: districtsVectorSource,
+      source: districtsVectorSource.current,
       style: (feature) => {
         return new Style({
           stroke: new Stroke({
@@ -157,7 +161,7 @@ const DistrictMap = ({chamber, geoData, activeDistrict, setActiveDistrict}) => {
 
     selectedFeatures.current.clear()
     if (districtToSet != '') {
-      const mapFeature = mapFeatures.current.find(feat => {
+      const mapFeature = districtsVectorSource.current.getFeatures().find(feat => {
         return feat.getProperties()[districtNumberIdentifier] === districtToSet
       })
       const polygon = mapFeature.getGeometry()
@@ -202,12 +206,19 @@ const DistrictMap = ({chamber, geoData, activeDistrict, setActiveDistrict}) => {
       <div id={`${chamber}-map`} className="map-container" />
       <p className="map-note">Note: Some smaller districts may require you to zoom in.</p>
       <div className="district-selectors">
-        <button className='district-scroll' onClick={handlePrevDistrict}>{'«'}</button>
-        <select className="district-dropdown" onChange={handleDropDown} value={activeDistrict ? activeDistrict : ''}>
-          <option value='' className="none-option">{chamber} Districts</option>
-          { districtOptions.map(d => <option key={d} value={d}>{labelPrefix + parseInt(d.substring(1))}</option>)}
-        </select>
-        <button className='district-scroll' onClick={handleNextDistrict}>{'»'}</button>
+        { isLoadingFeatures ? 
+          <div>Loading Districts...</div>
+          :
+          <>
+            <button className='district-scroll' onClick={handlePrevDistrict}>{'«'}</button>
+            <select className="district-dropdown" onChange={handleDropDown} value={activeDistrict ? activeDistrict : ''}>
+              <option value='' className="none-option">{chamber} Districts</option>
+              { districtOptions.map(d => <option key={d} value={d}>{labelPrefix + parseInt(d.substring(1))}</option>)}
+            </select>
+            <button className='district-scroll' onClick={handleNextDistrict}>{'»'}</button>
+          </>
+        }
+
       </div>
     </>
   )

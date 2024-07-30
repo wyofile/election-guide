@@ -5,7 +5,7 @@ import RaceCandidates from '@/components/RaceCandidates'
 const DistrictMap = React.lazy(()=> import('@/components/DistrictMap'));
 
 
-const StateRaces = ({houseDistricts, senateDistricts, candidates}) => {
+const StateRaces = ({ candidates }) => {
   const [chamber, setChamber] = useState('house')
   const [activeHouseDistrict, setActiveHouseDistrict] = useState('')
   const [activeSenateDistrict, setActiveSenateDistrict] = useState('')
@@ -20,14 +20,14 @@ const StateRaces = ({houseDistricts, senateDistricts, candidates}) => {
         <div className={`chamber-container ${chamber ==='house' ? 'visible' : ''}`}>
           <h3 className='race-header'>{activeHouseDistrict ? `State House District ${parseInt(activeHouseDistrict.substring(1))}` : "Select a house district to view candidates"}</h3>
           <Suspense fallback={<div className="map-container">Loading...</div>}>
-            <DistrictMap chamber='house' geoData={houseDistricts} activeDistrict={activeHouseDistrict} setActiveDistrict={setActiveHouseDistrict} />
+            <DistrictMap chamber='house' activeDistrict={activeHouseDistrict} setActiveDistrict={setActiveHouseDistrict} />
           </Suspense>
           <RaceCandidates chamber='house' district={activeSenateDistrict} candidates={candidates.filter((candidate)=>candidate.district === `H${activeHouseDistrict.substring(1)}`)} />
         </div>
         <div className={`chamber-container ${chamber ==='senate' ? 'visible' : ''}`}>
           <h3 className='race-header'>{activeSenateDistrict ? `State Senate District ${parseInt(activeSenateDistrict)}` : "Select a senate district to view candidates"}</h3>
           <Suspense fallback={<div className="map-container">Loading...</div>}>
-            <DistrictMap chamber='senate' geoData={senateDistricts} activeDistrict={activeSenateDistrict} setActiveDistrict={setActiveSenateDistrict} />
+            <DistrictMap chamber='senate' activeDistrict={activeSenateDistrict} setActiveDistrict={setActiveSenateDistrict} />
           </Suspense>
           <RaceCandidates chamber='senate' district={activeSenateDistrict} candidates={candidates.filter((candidate)=> candidate.district === `S${activeSenateDistrict.substring(1)}`)} />
         </div>

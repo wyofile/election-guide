@@ -8,8 +8,6 @@ import StateRaces from '@/components/StateRaces'
 import RaceCandidates from '@/components/RaceCandidates'
 import ElectionStories from '@/components/ElectionStories';
 
-import houseGeoData from '@/data/wyo-house-districts.json'
-import senateGeoData from '@/data/wyo-senate-districts.json'
 import textData from '@/data/static-text.json'
 import candidateData from '@/data/candidate-data.json'
 
@@ -25,19 +23,15 @@ const getCandidateDataNoResponses = () => {
 export async function getStaticProps() {
   const candidates = getCandidateDataNoResponses()
   const textContent = textData
-  const houseDistricts = houseGeoData
-  const senateDistricts = senateGeoData
   return {
     props: {
       candidates,
-      textContent,
-      houseDistricts,
-      senateDistricts
+      textContent
     }
   }
 }
 
-const Home = ({candidates, textContent, houseDistricts, senateDistricts}) => {
+const Home = ({candidates, textContent}) => {
 
   const pageDescription = textContent.pageDescription
 
@@ -75,7 +69,7 @@ const Home = ({candidates, textContent, houseDistricts, senateDistricts}) => {
 
       <Markdown>{textContent.wyomingLegislatureIntro}</Markdown>
       
-      <StateRaces houseDistricts={houseDistricts} senateDistricts={senateDistricts} candidates={candidates.filter(candidate => candidate.district[0] != 'u' )}/>
+      <StateRaces candidates={candidates.filter(candidate => candidate.district[0] != 'u' )}/>
     </section>
 
     <ElectionStories />
