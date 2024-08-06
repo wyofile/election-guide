@@ -15,7 +15,7 @@ const Candidate = ({ slug, ballotName, party, color, hasPhoto, hasResponses, inc
     <div className="candidate" style={{ borderTop: `5px solid ${color}` }}>
       <Link href={`/candidates/${slug}`}>
         <div className="portrait-col" >
-          <div className="portrait-container">
+          <div className="portrait-container" style={{background: `linear-gradient(5deg, #eeeeee 0%, #e5e3e2 6%, ${color} 92%)`}}>
               <Image
                   alt={ballotName}
                   src={portraitPath}

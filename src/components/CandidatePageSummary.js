@@ -4,8 +4,6 @@ import { css } from "@emotion/react";
 import { PARTIES, STATUS } from '../lib/styles'
 import { formatRace, getPortraitPath } from '../lib/utils'
 
-
-
 const CandidatePageSummary = ({candidate}) => {
 
   const {party, slug, ballotName, district, incumbent, hasPhoto, status} = candidate
@@ -14,15 +12,10 @@ const CandidatePageSummary = ({candidate}) => {
 
   const portraitPath = getPortraitPath(hasPhoto, party, slug)
 
-  const imageBackgroundCss = css`
-    background-image: ${partyInfo.gradientLeft},
-                      ${partyInfo.gradientRight};
-  `
-
   return <div className="candidate-summary" style={{ borderTop: `5px solid ${partyInfo.color}` }}>
 
       <div className="summ-portrait-col">
-          <div className="summ-portrait-container" css={imageBackgroundCss}>
+          <div className="summ-portrait-container" style={{background: `linear-gradient(5deg, #eeeeee 0%, #e5e3e2 6%, ${partyInfo.color} 92%)`}}>
               <Image
                   alt={`${ballotName}`}
                   src={portraitPath}

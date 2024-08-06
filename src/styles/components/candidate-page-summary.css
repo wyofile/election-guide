@@ -17,10 +17,6 @@
 .summ-portrait-container {
   max-height: 200px;
 
-  background-size: 50% 100%, 50% 100%;
-  background-repeat: no-repeat;
-
-  background-position: left, right;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -12,7 +12,7 @@ const Candidate = ({ slug, ballotName, party, hasPhoto, isCurrentPage }) => {
     <div className={ `opponent-candidate ${isCurrentPage && 'active-opp'}` } style={{ borderTop: `3px solid ${partyInfo.color}` }}>
       <Link href={slug} scroll={ false }>
         <div className="opp-portrait-col">
-          <div className="opp-portrait-container">
+          <div className="opp-portrait-container" style={{background: `linear-gradient(5deg, #eeeeee 0%, #e5e3e2 6%, ${partyInfo.color} 92%)`}}>
             <Image
               alt={ `${ballotName}` }
               src={ portraitPath }

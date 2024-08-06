@@ -23,12 +23,8 @@ export const formatRace = district => {
 
 export const getPortraitPath = (hasPhoto, party, slug) => {
   if (hasPhoto) {
-    return usePath(`/portraits/${slug}.png`)
-  } else if (party === 'REP') {
-    return usePath('/portraits/non-participantrepublican.png')
-  } else if (party === 'DEM') {
-    return usePath('/portraits/non-participantdemocratic.png')
+    return usePath(`/portraits-t/${slug}.png`)
   } else {
-    return usePath('/portraits/non-participant.png')
+    return usePath('/portraits-t/non-participant.png')
   }
 }
