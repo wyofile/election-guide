@@ -5,6 +5,8 @@ const { parse } = require('csv-parse/sync')
 const candidateTags = require('./candidate-tags.json')
 
 const candidateDataPath = path.join(__dirname, './candidate-data.csv')
+// const candidateDataPath = path.join(__dirname, './mock-post-primary-candidate-data.csv')
+
 const fedResponsesPath = path.join(__dirname, './federal-responses.csv')
 const legResponsesPath = path.join(__dirname, './wyo-leg-responses.csv')
 const senHoldoversPath = path.join(__dirname, './senate-holdovers.csv')

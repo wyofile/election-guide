@@ -58,6 +58,7 @@ const Home = ({candidates, textContent}) => {
       <h3 className="race-header">U.S. Senate</h3>
       <Markdown>{textContent.usSenateIntro}</Markdown>
       <RaceCandidates district='us-sen' candidates={candidates.filter((candidate)=>candidate.district === 'us-sen')} />
+      <br />
       <h3 className="race-header">U.S. House At-Large</h3>
       <Markdown>{textContent.usHouseIntro}</Markdown>
       <RaceCandidates district='us-house' candidates={candidates.filter((candidate)=>candidate.district === 'us-house')} />
