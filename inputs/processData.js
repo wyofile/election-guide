@@ -35,8 +35,6 @@ let legResponsesString = fs.readFileSync(legResponsesPath, 'utf-8')
 legResponsesString = legResponsesString.replace("’", "\'")
 const legResponsesData = parse(legResponsesString, {columns: true, bom: true})
 
-
-
 const canDataWithResponses = candidateData.map((candidate) => {
   let candidateResponses = null
   if (candidate.district.slice(0,2) === 'us' && candidate.hasResponses){

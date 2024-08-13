@@ -1,0 +1,22 @@
+.row {
+  display: flex;
+  height: 40px;
+  gap: 5px;
+  margin: 5px;
+}
+
+.empty {
+  width: 50px;
+}
+
+.aisle {
+  width: 15px;
+}
+
+.seat {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
