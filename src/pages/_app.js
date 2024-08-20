@@ -18,7 +18,6 @@ import '@/styles/components/candidate-links.css'
 import '@/styles/components/candidate-opponents.css'
 import '@/styles/components/candidate-page-summary.css'
 import '@/styles/components/election-coverage.css'
-import '@/styles/caucus-tracker.css'
 
 export default function App({ Component, pageProps }) {
     return <Component {...pageProps} />;

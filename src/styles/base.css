@@ -224,3 +224,9 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

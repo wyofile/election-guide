@@ -68,13 +68,17 @@
   outline: none;
   cursor: pointer;
   color: black;
-  background-color: #eeeeee;
+
   border: 1px solid #666;
   border-radius: 3px;
-  padding: 10px 5px;
-  font-size: 0.9em;
+  padding: 11px 10px;
+
+  padding-right: 30px;
+  font-size: 1em;
   box-shadow: 2px 2px 3px #aaa;
   text-transform: capitalize;
+  background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHBvbHlnb24gY2xhc3M9ImNscy0yIiBwb2ludHM9IjEuNDEgNC42NyAyLjQ4IDMuMTggMy41NCA0LjY3IDEuNDEgNC42NyIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIzLjU0IDUuMzMgMi40OCA2LjgyIDEuNDEgNS4zMyAzLjU0IDUuMzMiLz48L3N2Zz4=) no-repeat 95% 50%;
+  background-color: #eeeeee;
 }
 
 select:focus {

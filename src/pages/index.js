@@ -47,6 +47,7 @@ const Home = ({candidates, textContent}) => {
     >
 
     <section className="guide-intro">
+      <div className="election-day-note">&#x1F6C8; For initial election results <a href="https://wyofile.com/wyoming-primary-results-2024/">go here</a>. WyoFile will also update the election guide with results after the primary.</div>
       <MarkdownExternalLinks>{textContent.guideIntro}</MarkdownExternalLinks>
     </section>
 
