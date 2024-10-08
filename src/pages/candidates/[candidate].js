@@ -8,6 +8,7 @@ import CandidateOpponents from '@/components/CandidateOpponents'
 import CandidatePageSummary from '@/components/CandidatePageSummary'
 import CandidateStories from '@/components/CandidateStories'
 import CandidateLinks from '@/components/CandidateLinks'
+import RaceResults from '@/components/RaceResults'
 import Layout from '@/design/Layout'
 import { formatRace } from '@/lib/utils'
 
@@ -26,7 +27,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const candidate = candidateData.find(c => c.slug === params.candidate)
   const activeOpponents = candidateData.filter(c => (c.district === candidate.district && c.status ==='active'))
-  // const primaryRaceResults = primaryResults.find(r => r.district === c.district && r.party === c.party)
+  const primaryRaceResults = primaryResults.find(r => r.district === candidate.district && r.party === candidate.party) || null
   const questions = (candidate.district[0] === 'u' ? federalQs : wyoLegQs)
   const questionnaireIntro = textData.questionnaireIntro
   const aboutProject = textData.aboutProject
@@ -34,6 +35,7 @@ export async function getStaticProps({ params }) {
   return {
       props: {
         candidate,
+        primaryRaceResults,
         activeOpponents,
         questions,
         questionnaireIntro,
@@ -42,7 +44,7 @@ export async function getStaticProps({ params }) {
   }
 }
 
-export default function CandidatePage({candidate, questions, questionnaireIntro, aboutProject, activeOpponents}) {
+export default function CandidatePage({candidate, primaryRaceResults, questions, questionnaireIntro, aboutProject, activeOpponents}) {
   const pageDescription = `${candidate.ballotName} (${candidate.party}) is running as a candidate for ${formatRace(candidate.district)} in Wyoming's 2024 election. See biographic details, issue positions and information on how to vote.`
   return (
     <Layout 
@@ -79,13 +81,13 @@ export default function CandidatePage({candidate, questions, questionnaireIntro,
       </div>
     </section>
 
-    {/* <section>
+    <section>
       <a className="link-anchor" id="results"></a>
-      <h2>Election Results</h2>
+      <h2 className='section-header'>Election Results</h2>
       {
-        !primaryResults ? <p>No party primary was conducted.</p> : <PrimaryResults results={primaryRestults} />
+        !primaryRaceResults ? <p> There are no primary results available for this candidate.</p> : <RaceResults results={primaryRaceResults} />
       }
-    </section> */}
+    </section>
 
     <section>
       <a className="link-anchor" id="coverage"></a>

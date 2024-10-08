@@ -1,12 +1,14 @@
 
 import candidateData from '../src/data/candidate-data.json' with {type: 'json'}
-import races from './primary-results.json' with {type: 'json'}
+import nytData from './nyt-primary-results.json' with {type: 'json'}
 import fs from 'fs'
 import path from 'path'
 
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
 const __dirname = path.dirname(__filename);
+
+const races = nytData.races
 
 const primaryResults = races.map(r => {
   let district
@@ -22,17 +24,18 @@ const primaryResults = races.map(r => {
     district = `S${r.seat.slice(9).padStart(2, '0')}`
   }
 
-  if (r.party === 'GOP') {
+  if (r.party.nyt_id === 'GOP') {
     party = 'REP'
   } else {
-    party = r.party
+    party = r.party.nyt_id
   }
 
   const nytWinner = r.outcome.won[0]
 
-  const candidates = r.candidates.map(c => {
-    const nytSlug = c.id
+  const candidates = r.reporting_units[0].candidates.map(c => {
+    const nytSlug = c.nyt_id
     const winner = nytWinner === nytSlug
+    console.log(nytSlug)
     const matchingCandidate = candidateData.find(cd =>  {
       const slugParts = cd.slug.split('-')
       const last = slugParts[1]
@@ -40,13 +43,14 @@ const primaryResults = races.map(r => {
       return (`${last}-${firstInit}` === nytSlug)
     })
     
-    const votes = c.votes
+    const votes = c.votes.total
     const slug = matchingCandidate.slug
     const ballotName = matchingCandidate.ballotName
     return {slug: slug, winner: winner, votes: votes, ballotName: ballotName}
   })
 
-  const totalVotes = r.total_votes
+  const totalVotes = r.reporting_units[0].total_votes
+  console.log(totalVotes)
 
   return {district: district, party: party, candidates: candidates, totalVotes: totalVotes}
 })

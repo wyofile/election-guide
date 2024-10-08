@@ -73,8 +73,6 @@ const Home = ({candidates, textContent}) => {
       <StateRaces candidates={candidates.filter(candidate => candidate.district[0] != 'u' )}/>
     </section>
 
-    <ElectionStories />
-
     <section>
       <a className="link-anchor" id="ballot-proposition"></a>
       <h2 className='section-header'>Ballot Proposition</h2>
@@ -86,12 +84,14 @@ const Home = ({candidates, textContent}) => {
       <h2 className='section-header'>Judge Retention</h2>
       <MarkdownExternalLinks>{textContent.judgeRetentionIntro}</MarkdownExternalLinks>
       {textContent.judgeRetentionContent.map((court, i) => (
-        <div key={`court-${i}`}c lassName="faq-question">
+        <div key={`court-${i}`} className="faq-question">
           <h3 className='race-header'>{court.section}</h3>
           <MarkdownExternalLinks>{court.content}</MarkdownExternalLinks>
         </div>
       ))}
     </section>
+
+    <ElectionStories />
 
     <section>
       <a className="link-anchor" id="voter-faq"></a>

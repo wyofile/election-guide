@@ -1,7 +1,10 @@
 import { timeFormat } from 'd3-time-format'
+import { format } from 'd3-format'
 import { useRouter } from 'next/router'
 
 export const formatDate = timeFormat('%b %-d, %Y')
+export const numberFormat = format(',.0f')
+export const percentFormat = format('.1%')
 
 export const pluralize = (text, value) => value === 1 ? text : `${text}s`
 

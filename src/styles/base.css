@@ -157,6 +157,21 @@ h4 {
     margin-top: 0.3em;
 }
 
+table {
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 468px) {
+    table {
+        font-size: 13px;
+    }
+}
+
+th {
+    text-align: left;
+}
+
 hr {
     border-top: 1px solid #666;
     height: 0;
