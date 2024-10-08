@@ -80,6 +80,7 @@ const PrimaryResults = ({results}) => {
             }</tbody>
         </table>
     </div>
+
 }
 
 export default PrimaryResults
