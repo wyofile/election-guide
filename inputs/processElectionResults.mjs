@@ -1,41 +1,56 @@
-import fetch from 'node-fetch';
-import { parse } from 'csv-parse/sync';
+
 import candidateData from '../src/data/candidate-data.json' with {type: 'json'}
+import races from './primary-results.json' with {type: 'json'}
+import fs from 'fs'
+import path from 'path'
 
-const response = await fetch('http://projects.wyofile.com.s3-website.us-east-2.amazonaws.com/primary-results.json');
-const data = await response.json();
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
+const __dirname = path.dirname(__filename);
 
-candidateData.map(c => {
-  let seat
-  let office
+const primaryResults = races.map(r => {
+  let district
   let party
 
-  if (c.district === 'us-house'){
-    seat = 'District 1'
-    office = 'U.S. House'
-  } else if (c.district === 'us-sen') {
-    seat = 'Class I'
-    office = 'U.S. Senate'
-  } else {
-    const districtNumber = parseInt(c.district.slice(-2))
-    const chamberIdentifier = c.district[0]
-    seat = `District ${districtNumber}`
-    if (chamberIdentifier === 'H') {
-      office = "State House"
-    } else {
-      seat = "State Senate"
-    }
+  if (r.office === 'U.S. House'){
+    district = 'us-house'
+  } else if (r.office === 'U.S. Senate') {
+    district = 'us-sen'
+  } else if (r.office === 'State House') {
+    district = `H${r.seat.slice(9).padStart(2, '0')}`
+  } else if (r.office ==='State Senate') {
+    district = `S${r.seat.slice(9).padStart(2, '0')}`
   }
 
-  if (c.party === 'REP') {
-    party = 'GOP'
+  if (r.party === 'GOP') {
+    party = 'REP'
   } else {
-    party = c.party
+    party = r.party
   }
 
-  if (party === 'IND') return c
-  const result = data.find(race => race.seat === seat && race.office === office && race.party === party)
+  const nytWinner = r.outcome.won[0]
 
-  
+  const candidates = r.candidates.map(c => {
+    const nytSlug = c.id
+    const winner = nytWinner === nytSlug
+    const matchingCandidate = candidateData.find(cd =>  {
+      const slugParts = cd.slug.split('-')
+      const last = slugParts[1]
+      const firstInit = slugParts[0][0]
+      return (`${last}-${firstInit}` === nytSlug)
+    })
+    
+    const votes = c.votes
+    const slug = matchingCandidate.slug
+    const ballotName = matchingCandidate.ballotName
+    return {slug: slug, winner: winner, votes: votes, ballotName: ballotName}
+  })
+
+  const totalVotes = r.total_votes
+
+  return {district: district, party: party, candidates: candidates, totalVotes: totalVotes}
 })
+
+const outputFilePath = path.join(__dirname, '../src/data/primary-results.json')
+fs.writeFileSync(outputFilePath,JSON.stringify(primaryResults, null, 2))
 

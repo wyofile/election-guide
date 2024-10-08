@@ -2,6 +2,7 @@ import candidateData from '@/data/candidate-data.json'
 import textData from '../../data/static-text.json'
 import wyoLegQs from '../../data/wyo-leg-qs.json'
 import federalQs from '../../data/federal-qs.json'
+import primaryResults from '../../data/primary-results.json'
 
 import CandidateOpponents from '@/components/CandidateOpponents'
 import CandidatePageSummary from '@/components/CandidatePageSummary'
@@ -25,10 +26,11 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const candidate = candidateData.find(c => c.slug === params.candidate)
   const activeOpponents = candidateData.filter(c => (c.district === candidate.district && c.status ==='active'))
+  const primaryRaceResults = primaryResults.find(r => r.district === c.district && r.party === c.party)
   const questions = (candidate.district[0] === 'u' ? federalQs : wyoLegQs)
   const questionnaireIntro = textData.questionnaireIntro
   const aboutProject = textData.aboutProject
-  // Populate page props
+
   return {
       props: {
         candidate,
@@ -76,6 +78,14 @@ export default function CandidatePage({candidate, questions, questionnaireIntro,
         })}
       </div>
     </section>
+
+    {/* <section>
+      <a className="link-anchor" id="results"></a>
+      <h2>Election Results</h2>
+      {
+        !primaryResults ? <p>No party primary was conducted.</p> : <PrimaryResults results={primaryRestults} />
+      }
+    </section> */}
 
     <section>
       <a className="link-anchor" id="coverage"></a>

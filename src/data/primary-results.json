@@ -1,0 +1,1482 @@
+[
+  {
+    "district": "us-sen",
+    "party": "DEM",
+    "candidates": [
+      {
+        "slug": "scott-morrow",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "us-sen",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "john-barrasso",
+        "winner": true,
+        "votes": 70473
+      },
+      {
+        "slug": "reid-rasner",
+        "winner": false,
+        "votes": 25424
+      },
+      {
+        "slug": "john-holtz",
+        "winner": false,
+        "votes": 7867
+      }
+    ],
+    "totalVotes": 103764
+  },
+  {
+    "district": "us-house",
+    "party": "DEM",
+    "candidates": [
+      {
+        "slug": "kyle-cameron",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "us-house",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "harriet-hageman",
+        "winner": true,
+        "votes": 82765
+      },
+      {
+        "slug": "steven-helling",
+        "winner": false,
+        "votes": 19738
+      }
+    ],
+    "totalVotes": 102503
+  },
+  {
+    "district": "S02",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "brian-boner",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "S04",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "tara-nethercott",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "S06",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "darin-smith",
+        "winner": true,
+        "votes": 1779
+      },
+      {
+        "slug": "eric-johnston",
+        "winner": false,
+        "votes": 1266
+      },
+      {
+        "slug": "taft-love",
+        "winner": false,
+        "votes": 593
+      },
+      {
+        "slug": "andrei-torriani",
+        "winner": false,
+        "votes": 434
+      },
+      {
+        "slug": "kimberley-withers",
+        "winner": false,
+        "votes": 383
+      },
+      {
+        "slug": "gary-bjorklund",
+        "winner": false,
+        "votes": 264
+      }
+    ],
+    "totalVotes": 4719
+  },
+  {
+    "district": "S08",
+    "party": "DEM",
+    "candidates": [
+      {
+        "slug": "marguerite-herman",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "S08",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "jared-olsen",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "S10",
+    "party": "DEM",
+    "candidates": [
+      {
+        "slug": "michael-selmer",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "S10",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "gary-crum",
+        "winner": true,
+        "votes": 1709
+      },
+      {
+        "slug": "keith-kennedy",
+        "winner": false,
+        "votes": 1129
+      }
+    ],
+    "totalVotes": 2838
+  },
+  {
+    "district": "S12",
+    "party": "DEM",
+    "candidates": [
+      {
+        "slug": "kenilynn-zanetti",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "S12",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "john-kolb",
+        "winner": true,
+        "votes": 1313
+      },
+      {
+        "slug": "jeffrey-ramaj",
+        "winner": false,
+        "votes": 814
+      }
+    ],
+    "totalVotes": 2127
+  },
+  {
+    "district": "S14",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "laura-pearson",
+        "winner": true,
+        "votes": 2211
+      },
+      {
+        "slug": "albert-sommers",
+        "winner": false,
+        "votes": 2025
+      },
+      {
+        "slug": "justin-winney",
+        "winner": false,
+        "votes": 490
+      }
+    ],
+    "totalVotes": 4726
+  },
+  {
+    "district": "S16",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "dan-dockstader",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "S18",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "tim-french",
+        "winner": true,
+        "votes": 3190
+      },
+      {
+        "slug": "landon-greer",
+        "winner": false,
+        "votes": 2311
+      }
+    ],
+    "totalVotes": 5501
+  },
+  {
+    "district": "S20",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "edward-cooper",
+        "winner": true,
+        "votes": 2650
+      },
+      {
+        "slug": "thomas-olmstead",
+        "winner": false,
+        "votes": 2428
+      }
+    ],
+    "totalVotes": 5078
+  },
+  {
+    "district": "S22",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "barry-crago",
+        "winner": true,
+        "votes": 3107
+      },
+      {
+        "slug": "clifford-jennings",
+        "winner": false,
+        "votes": 2500
+      }
+    ],
+    "totalVotes": 5607
+  },
+  {
+    "district": "S24",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "troy-mckeown",
+        "winner": true,
+        "votes": 1602
+      },
+      {
+        "slug": "phillip-christopherson",
+        "winner": false,
+        "votes": 1191
+      }
+    ],
+    "totalVotes": 2793
+  },
+  {
+    "district": "S26",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "tim-salazar",
+        "winner": true,
+        "votes": 2626
+      },
+      {
+        "slug": "elizabeth-philp",
+        "winner": false,
+        "votes": 1726
+      }
+    ],
+    "totalVotes": 4352
+  },
+  {
+    "district": "S28",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "james-anderson",
+        "winner": true,
+        "votes": 1304
+      },
+      {
+        "slug": "bryce-reece",
+        "winner": false,
+        "votes": 1274
+      }
+    ],
+    "totalVotes": 2578
+  },
+  {
+    "district": "S30",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "charles-scott",
+        "winner": true,
+        "votes": 1438
+      },
+      {
+        "slug": "robert-hendry",
+        "winner": false,
+        "votes": 1179
+      },
+      {
+        "slug": "charles-schoenwolf",
+        "winner": false,
+        "votes": 394
+      }
+    ],
+    "totalVotes": 3011
+  },
+  {
+    "district": "H01",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "chip-neiman",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H02",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "jd-williams",
+        "winner": true,
+        "votes": 1527
+      },
+      {
+        "slug": "allen-slagle",
+        "winner": false,
+        "votes": 1259
+      }
+    ],
+    "totalVotes": 2786
+  },
+  {
+    "district": "H03",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "abby-angelos",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H04",
+    "party": "DEM",
+    "candidates": [
+      {
+        "slug": "charles-randolph",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H04",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "jeremy-haroldson",
+        "winner": true,
+        "votes": 1687
+      },
+      {
+        "slug": "jeffery-thomas",
+        "winner": false,
+        "votes": 804
+      }
+    ],
+    "totalVotes": 2491
+  },
+  {
+    "district": "H05",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "scott-smith",
+        "winner": true,
+        "votes": 1554
+      },
+      {
+        "slug": "jackie-van-mark",
+        "winner": false,
+        "votes": 891
+      }
+    ],
+    "totalVotes": 2445
+  },
+  {
+    "district": "H06",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "tomi-strock",
+        "winner": true,
+        "votes": 1278
+      },
+      {
+        "slug": "robert-clausen",
+        "winner": false,
+        "votes": 1162
+      }
+    ],
+    "totalVotes": 2440
+  },
+  {
+    "district": "H07",
+    "party": "DEM",
+    "candidates": [
+      {
+        "slug": "jordan-evans",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H07",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "bob-nicholas",
+        "winner": true,
+        "votes": 1068
+      },
+      {
+        "slug": "kathleen-russell",
+        "winner": false,
+        "votes": 682
+      }
+    ],
+    "totalVotes": 1750
+  },
+  {
+    "district": "H08",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "steve-johnson",
+        "winner": true,
+        "votes": 1183
+      },
+      {
+        "slug": "david-zwonitzer",
+        "winner": false,
+        "votes": 1134
+      },
+      {
+        "slug": "cayd-batchelor",
+        "winner": false,
+        "votes": 78
+      }
+    ],
+    "totalVotes": 2395
+  },
+  {
+    "district": "H09",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "landon-brown",
+        "winner": true,
+        "votes": 725
+      },
+      {
+        "slug": "exie-brown",
+        "winner": false,
+        "votes": 708
+      }
+    ],
+    "totalVotes": 1433
+  },
+  {
+    "district": "H10",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "john-eklund",
+        "winner": true,
+        "votes": 1516
+      },
+      {
+        "slug": "jennifer-james",
+        "winner": false,
+        "votes": 546
+      }
+    ],
+    "totalVotes": 2062
+  },
+  {
+    "district": "H11",
+    "party": "DEM",
+    "candidates": [
+      {
+        "slug": "sara-burlingame",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H11",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "jacob-wasserburger",
+        "winner": true,
+        "votes": 457
+      },
+      {
+        "slug": "seth-ulvestad",
+        "winner": false,
+        "votes": 366
+      }
+    ],
+    "totalVotes": 823
+  },
+  {
+    "district": "H12",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "clarence-styvar",
+        "winner": true,
+        "votes": 418
+      },
+      {
+        "slug": "thomas-lear",
+        "winner": false,
+        "votes": 329
+      }
+    ],
+    "totalVotes": 747
+  },
+  {
+    "district": "H13",
+    "party": "DEM",
+    "candidates": [
+      {
+        "slug": "kenneth-chestek",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H13",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "shane-swett",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H14",
+    "party": "DEM",
+    "candidates": [
+      {
+        "slug": "trey-sherwood",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H14",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "joseph-giustozzi",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H15",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "pamela-thayer",
+        "winner": true,
+        "votes": 748
+      },
+      {
+        "slug": "terry-weickum",
+        "winner": false,
+        "votes": 223
+      },
+      {
+        "slug": "sheryl-foland",
+        "winner": false,
+        "votes": 196
+      }
+    ],
+    "totalVotes": 1167
+  },
+  {
+    "district": "H16",
+    "party": "DEM",
+    "candidates": [
+      {
+        "slug": "michael-yin",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H17",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "joshua-larson",
+        "winner": true,
+        "votes": 562
+      },
+      {
+        "slug": "terry-ellison",
+        "winner": false,
+        "votes": 481
+      }
+    ],
+    "totalVotes": 1043
+  },
+  {
+    "district": "H18",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "scott-heiner",
+        "winner": true,
+        "votes": 1190
+      },
+      {
+        "slug": "thomas-crank",
+        "winner": false,
+        "votes": 733
+      }
+    ],
+    "totalVotes": 1923
+  },
+  {
+    "district": "H19",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "joseph-webb",
+        "winner": true,
+        "votes": 1019
+      },
+      {
+        "slug": "jon-conrad",
+        "winner": false,
+        "votes": 792
+      }
+    ],
+    "totalVotes": 1811
+  },
+  {
+    "district": "H20",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "michael-schmid",
+        "winner": true,
+        "votes": 1755
+      },
+      {
+        "slug": "catherine-urbigkit",
+        "winner": false,
+        "votes": 1029
+      }
+    ],
+    "totalVotes": 2784
+  },
+  {
+    "district": "H21",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "mckay-erickson",
+        "winner": true,
+        "votes": 1811
+      },
+      {
+        "slug": "t-wolfley",
+        "winner": false,
+        "votes": 559
+      }
+    ],
+    "totalVotes": 2370
+  },
+  {
+    "district": "H22",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "andrew-byron",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H23",
+    "party": "DEM",
+    "candidates": [
+      {
+        "slug": "elizabeth-storer",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H24",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "nina-webber",
+        "winner": true,
+        "votes": 1405
+      },
+      {
+        "slug": "matthew-hall",
+        "winner": false,
+        "votes": 1233
+      }
+    ],
+    "totalVotes": 2638
+  },
+  {
+    "district": "H25",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "paul-hoeft",
+        "winner": true,
+        "votes": 1251
+      },
+      {
+        "slug": "david-northrup",
+        "winner": false,
+        "votes": 808
+      }
+    ],
+    "totalVotes": 2059
+  },
+  {
+    "district": "H26",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "dalton-banks",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H27",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "martha-lawley",
+        "winner": true,
+        "votes": 1505
+      },
+      {
+        "slug": "tami-young",
+        "winner": false,
+        "votes": 885
+      }
+    ],
+    "totalVotes": 2390
+  },
+  {
+    "district": "H28",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "john-winter",
+        "winner": true,
+        "votes": 1707
+      },
+      {
+        "slug": "kevin-skates",
+        "winner": false,
+        "votes": 980
+      }
+    ],
+    "totalVotes": 2687
+  },
+  {
+    "district": "H29",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "kenneth-pendergraft",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H30",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "thomas-kelly",
+        "winner": true,
+        "votes": 1313
+      },
+      {
+        "slug": "gail-symons",
+        "winner": false,
+        "votes": 916
+      }
+    ],
+    "totalVotes": 2229
+  },
+  {
+    "district": "H31",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "john-bear",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H32",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "kenneth-clouston",
+        "winner": true,
+        "votes": 1062
+      },
+      {
+        "slug": "george-dunlap",
+        "winner": false,
+        "votes": 706
+      }
+    ],
+    "totalVotes": 1768
+  },
+  {
+    "district": "H33",
+    "party": "DEM",
+    "candidates": [
+      {
+        "slug": "ivan-posey",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H33",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "sarah-penn",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H34",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "pepper-ottman",
+        "winner": true,
+        "votes": 1474
+      },
+      {
+        "slug": "reginald-phillips",
+        "winner": false,
+        "votes": 966
+      }
+    ],
+    "totalVotes": 2440
+  },
+  {
+    "district": "H35",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "tony-locke",
+        "winner": true,
+        "votes": 1082
+      },
+      {
+        "slug": "christopher-dresang",
+        "winner": false,
+        "votes": 945
+      }
+    ],
+    "totalVotes": 2027
+  },
+  {
+    "district": "H36",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "art-washut",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H37",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "steven-harshman",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H38",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "jayme-lien",
+        "winner": true,
+        "votes": 859
+      },
+      {
+        "slug": "thomas-walters",
+        "winner": false,
+        "votes": 715
+      }
+    ],
+    "totalVotes": 1574
+  },
+  {
+    "district": "H39",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "cody-wylie",
+        "winner": true,
+        "votes": 501
+      },
+      {
+        "slug": "laura-mckee",
+        "winner": false,
+        "votes": 457
+      },
+      {
+        "slug": "marshall-burt",
+        "winner": false,
+        "votes": 88
+      }
+    ],
+    "totalVotes": 1046
+  },
+  {
+    "district": "H40",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "marilyn-connolly",
+        "winner": true,
+        "votes": 1573
+      },
+      {
+        "slug": "mark-jones",
+        "winner": false,
+        "votes": 1182
+      },
+      {
+        "slug": "liberty-poley",
+        "winner": false,
+        "votes": 767
+      }
+    ],
+    "totalVotes": 3522
+  },
+  {
+    "district": "H41",
+    "party": "DEM",
+    "candidates": [
+      {
+        "slug": "jennifer-solis",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H41",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "gary-brown",
+        "winner": true,
+        "votes": 719
+      },
+      {
+        "slug": "william-henderson",
+        "winner": false,
+        "votes": 610
+      }
+    ],
+    "totalVotes": 1329
+  },
+  {
+    "district": "H42",
+    "party": "DEM",
+    "candidates": [
+      {
+        "slug": "robert-ray",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H42",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "robert-geringer",
+        "winner": true,
+        "votes": 876
+      },
+      {
+        "slug": "benjamin-hornok",
+        "winner": false,
+        "votes": 844
+      }
+    ],
+    "totalVotes": 1720
+  },
+  {
+    "district": "H43",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "ann-lucas",
+        "winner": true,
+        "votes": 799
+      },
+      {
+        "slug": "david-zwonitzer",
+        "winner": false,
+        "votes": 559
+      }
+    ],
+    "totalVotes": 1358
+  },
+  {
+    "district": "H44",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "lee-filer",
+        "winner": true,
+        "votes": 313
+      },
+      {
+        "slug": "tamara-trujillo",
+        "winner": false,
+        "votes": 190
+      },
+      {
+        "slug": "john-romero",
+        "winner": false,
+        "votes": 71
+      }
+    ],
+    "totalVotes": 574
+  },
+  {
+    "district": "H45",
+    "party": "DEM",
+    "candidates": [
+      {
+        "slug": "karlee-provenza",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H45",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "paul-crouch",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H46",
+    "party": "DEM",
+    "candidates": [
+      {
+        "slug": "chris-lowry",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H46",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "ocean-andrew",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H47",
+    "party": "DEM",
+    "candidates": [
+      {
+        "slug": "james-wilson",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H47",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "bob-davis",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H48",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "darin-mccann",
+        "winner": true,
+        "votes": 617
+      },
+      {
+        "slug": "clark-stith",
+        "winner": false,
+        "votes": 490
+      }
+    ],
+    "totalVotes": 1107
+  },
+  {
+    "district": "H49",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "robert-wharff",
+        "winner": true,
+        "votes": 812
+      },
+      {
+        "slug": "ryan-berger",
+        "winner": false,
+        "votes": 725
+      }
+    ],
+    "totalVotes": 1537
+  },
+  {
+    "district": "H50",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "rachel-rodriguez-williams",
+        "winner": true,
+        "votes": 1778
+      },
+      {
+        "slug": "david-hill",
+        "winner": false,
+        "votes": 1060
+      }
+    ],
+    "totalVotes": 2838
+  },
+  {
+    "district": "H51",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "laurie-schierloh-bratten",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H52",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "reuben-tarver",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H53",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "christopher-knapp",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H54",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "lloyd-larsen",
+        "winner": true,
+        "votes": 1435
+      },
+      {
+        "slug": "tina-clifford",
+        "winner": false,
+        "votes": 1208
+      }
+    ],
+    "totalVotes": 2643
+  },
+  {
+    "district": "H55",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "joel-guggenmos",
+        "winner": true,
+        "votes": 1071
+      },
+      {
+        "slug": "ember-oakley",
+        "winner": false,
+        "votes": 855
+      }
+    ],
+    "totalVotes": 1926
+  },
+  {
+    "district": "H56",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "elissa-campbell",
+        "winner": true,
+        "votes": 806
+      },
+      {
+        "slug": "pete-fox",
+        "winner": false,
+        "votes": 541
+      },
+      {
+        "slug": "pamela-mertens",
+        "winner": false,
+        "votes": 111
+      }
+    ],
+    "totalVotes": 1458
+  },
+  {
+    "district": "H57",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "julie-jarvis",
+        "winner": true,
+        "votes": 623
+      },
+      {
+        "slug": "jeanette-ward",
+        "winner": false,
+        "votes": 485
+      }
+    ],
+    "totalVotes": 1108
+  },
+  {
+    "district": "H58",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "bill-allemand",
+        "winner": true,
+        "votes": 1017
+      },
+      {
+        "slug": "tom-jones",
+        "winner": false,
+        "votes": 424
+      }
+    ],
+    "totalVotes": 1441
+  },
+  {
+    "district": "H59",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "justin-riggins",
+        "winner": true,
+        "votes": 0
+      }
+    ],
+    "totalVotes": 0
+  },
+  {
+    "district": "H60",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "marlene-brady",
+        "winner": true,
+        "votes": 567
+      },
+      {
+        "slug": "anthony-niemiec",
+        "winner": false,
+        "votes": 522
+      }
+    ],
+    "totalVotes": 1089
+  },
+  {
+    "district": "H61",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "daniel-singh",
+        "winner": true,
+        "votes": 506
+      },
+      {
+        "slug": "matthew-malcom",
+        "winner": false,
+        "votes": 353
+      }
+    ],
+    "totalVotes": 859
+  },
+  {
+    "district": "H62",
+    "party": "REP",
+    "candidates": [
+      {
+        "slug": "kevin-campbell",
+        "winner": true,
+        "votes": 794
+      },
+      {
+        "slug": "anthony-allen",
+        "winner": false,
+        "votes": 787
+      }
+    ],
+    "totalVotes": 1581
+  }
+]
