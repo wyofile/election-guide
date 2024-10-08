@@ -20,6 +20,7 @@ BROWN,FALSE,FALSE,Exie Brown,exie-brown,lost-primary,H09,REP,FALSE,freedom,,exie
 BROWN,TRUE,TRUE,Landon J. Brown,landon-brown,active,H09,REP,TRUE,wyoming,https://wyoleg.gov/Legislators/2024/H/2034,landon.brown@gmail.com,https://brownforwyoming.com
 HELGESON,FALSE,FALSE,Perry Helgeson,perry-helgeson,dropout,H09,REP,FALSE,na,,pretty.helgeson@gmail.com,
 EKLUND,FALSE,FALSE,John Eklund,john-eklund,active,H10,REP,TRUE,wyoming,https://wyoleg.gov/Legislators/2024/H/1978,eklund4house@gmail.com,
+FORBIS,TRUE,TRUE,Timothy (Tim) Forbis,timothy-forbis,active,H10,IND,FALSE,na,,,
 JAMES,TRUE,TRUE,Jennifer James,jennifer-james,lost-primary,H10,REP,FALSE,na,,nurseburns2000@gmail.com,
 BURLINGAME,TRUE,TRUE,Sara Burlingame,sara-burlingame,active,H11,DEM,FALSE,dem,,burlingame4house@gmail.com,https://www.burlingame4house.com/
 ULVESTAD,TRUE,TRUE,Seth Ulvestad,seth-ulvestad,lost-primary,H11,REP,FALSE,na,,saulvestad@gmail.com,https://voteulvestad.com
@@ -56,7 +57,9 @@ LAWLEY,TRUE,TRUE,Martha Lawley,martha-lawley,active,H27,REP,TRUE,wyoming,https:/
 YOUNG,FALSE,FALSE,Tami Young,tami-young,lost-primary,H27,REP,FALSE,freedom,,tamiyoung4wyoming@gmail.com,https://www.tamiyoungforwyoming.com
 SKATES,FALSE,FALSE,Kevin Skates,kevin-skates,lost-primary,H28,REP,FALSE,na,,kskates4206@gmail.com,
 WINTER,FALSE,FALSE,John R. Winter,john-winter,active,H28,REP,TRUE,freedom,https://wyoleg.gov/Legislators/2024/H/2056,jrwinter307@gmail.com,
+ALWIN,FALSE,FALSE,Larry Alwin,larry-alwin,active,H28,DEM,FALSE,dem,,larry.alwin17@gmail.com,
 PENDERGRAFT,FALSE,FALSE,Ken Pendergraft,kenneth-pendergraft,active,H29,REP,TRUE,freedom,https://wyoleg.gov/Legislators/2024/H/2103,kpendy62@gmail.com,https://crosscreekmedia.com
+WRIGHT,FALSE,FALSE,Martha J Wright,martha-wright,active,H29,DEM,FALSE,dem,,mjwyo96@gmail.com,
 KELLY,TRUE,TRUE,Tom Kelly,thomas-kelly,active,H30,REP,FALSE,freedom,,drthomasmkelly@gmail.com,https://kellyfor30.com/
 SYMONS,TRUE,TRUE,Gail Symons,gail-symons,lost-primary,H30,REP,FALSE,na,,gailsymons@mac.com,https://symonsforsheridan.com
 BEAR,TRUE,TRUE,John W Bear,john-bear,active,H31,REP,TRUE,freedom,https://wyoleg.gov/Legislators/2024/H/2075,jhnbear@gmail.com,https://johnbearforwy.com
@@ -120,6 +123,7 @@ ALLEMAND,FALSE,FALSE,Bill Allemand,bill-allemand,active,H58,REP,TRUE,freedom,htt
 JONES,TRUE,TRUE,Tom Jones,tom-jones,lost-primary,H58,REP,FALSE,na,,tjforhd58@gmail.com,https://tomjonesforhousedistrict58.com
 RIGGINS,TRUE,TRUE,J.R. Riggins,justin-riggins,active,H59,REP,FALSE,freedom,,jr.riggins@jrforhouse.com,https://www.jrforhouse.com
 BRADY,FALSE,FALSE,Marlene Brady,marlene-brady,active,H60,REP,FALSE,freedom,,marlenebradyforhd60@gmail.com,https://www.brady4wyoming.com/
+WHITEHEAD,TRUE,TRUE,Carmen Whitehead,carmen-whitehead,active,H60,DEM,FALSE,dem,,carmenwhiteheadsd60campaign@gmail.com,
 NIEMIEC,FALSE,FALSE,Tony Niemiec,anthony-niemiec,lost-primary,H60,REP,TRUE,wyoming,https://wyoleg.gov/Legislators/2024/H/2115,tonyniemiechousedistrict60@gmail.com,https://www.facebook.com/TonyNiemiecWyHD60/
 MALCOM,TRUE,TRUE,Matt Malcom,matthew-malcom,lost-primary,H61,REP,FALSE,na,,malcom.matthew@outlook.com,https://www.votemattmalcom.com/
 SINGH,TRUE,TRUE,Daniel J. Singh,daniel-singh,active,H61,REP,TRUE,freedom,https://wyoleg.gov/Legislators/2024/H/2116,singh4wyoming@gmail.com,https://singhforwyoming.com
@@ -160,9 +164,11 @@ ANDERSON,TRUE,TRUE,Jim Anderson,james-anderson,active,S28,REP,TRUE,na,https://wy
 REECE,FALSE,FALSE,Bryce Reece,bryce-reece,lost-primary,S28,REP,FALSE,freedom,,reece4wyoming@gmail.com,https://www.reece4wyoming.com
 HENDRY,TRUE,TRUE,Robert L. Hendry,robert-hendry,lost-primary,S30,REP,FALSE,na,,rhendry76@outlook.com,https://hendry4senate.com/
 SCHOENWOLF,TRUE,TRUE,Charles H Schoenwolf,charles-schoenwolf,lost-primary,S30,REP,FALSE,na,,charles.schoenwolf@yahoo.com,
-SCOTT,TRUE,TRUE,Charles K. Scott,charles-scott,active,S30,REP,TRUE,na,https://wyoleg.gov/Legislators/2024/S/294,not@provided.com,
+SCOTT,TRUE,TRUE,Charles K. Scott,charles-scott,active,S30,REP,TRUE,na,https://wyoleg.gov/Legislators/2024/S/294,,
 CAMERON,TRUE,TRUE,Kyle G. Cameron,kyle-cameron,active,us-house,DEM,FALSE,dem,,candidate@cameronforwyoming.net,https://cameronforwyoming.net
 HAGEMAN,TRUE,FALSE,Harriet Hageman,harriet-hageman,active,us-house,REP,TRUE,na,,info@hagemanforwyoming.com,https://hagemanforwyoming.com
+BRUBAKER,FALSE,FALSE,Richard Brubaker,richard-brubaker,active,us-house,LBR,FALSE,na,,brubakerforwy@gmail.com,
+HAGGIT,TRUE,TRUE,Jeffrey Haggit,jeffrey-haggit,active,us-house,CT,FALSE,na,,haggitforhouse@gmail.com,https://haggitforhouse.com
 HELLING,TRUE,TRUE,Steven R. Helling,steven-helling,lost-primary,us-house,REP,FALSE,na,,fightlikehellingforcongress@outlook.com,
 BARRASSO,TRUE,FALSE,John Barrasso,john-barrasso,active,us-sen,REP,TRUE,na,,contact@teambarrassowy.com,https://www.barrassoforwyoming.com
 HOLTZ,TRUE,TRUE,John Holtz,john-holtz,lost-primary,us-sen,REP,FALSE,na,,herrholtz@bresnan.net,
