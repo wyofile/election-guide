@@ -1,27 +1,30 @@
 
 .nav {
   background-color: #f3f2f1;
-  position: sticky;
   top: 0px;
-  
+  position:sticky;
   z-index: 10;
   box-shadow: 0px 5px 5px -5px #666;
 }
 
 .nav-menu {
-
   list-style-type: none;
   padding: 0;
   margin: 1px;
-  /* display: grid;
-  grid-template-rows: auto;
-  grid-auto-rows: auto;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
-  display: flex;
-  justify-content: center;
-  gap: 1px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
+@media screen and (min-width: 525px) {
+  .nav-menu {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .nav-menu {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
 }
 
 .nav-menu-item {
@@ -34,8 +37,6 @@
 }
 
 .nav-menu a {
-  min-width: 150px;
-  flex: 1 1 150px;
   text-decoration: none;
   font-weight: 500;
   color: #000;

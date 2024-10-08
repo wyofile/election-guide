@@ -132,16 +132,19 @@ h4 {
 .link-anchor {
     display: block;
     position: relative;
-    top: -65px;
+    top: -90px;
     visibility: hidden;
 }
 
-@media screen and (min-width: 468px) {
+@media screen and (min-width: 525px) {
     .link-anchor {
-        display: block;
-        position: relative;
+        top: -65px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .link-anchor {
         top: -40px;
-        visibility: hidden;
     }
 }
 
