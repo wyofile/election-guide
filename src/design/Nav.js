@@ -6,7 +6,7 @@ const PAGE_LINKS = [
     { path: '/#federal-delegation', label: 'Federal Delegation' },
     { path: '/#legislature', label: 'Wyoming Legislature' },
     { path: '/#ballot-proposition', label: 'Ballot Proposition' },
-    // { path: '/#judge-retention', label: 'Judge Retention'},
+    { path: '/#judge-retention', label: 'Judge Retention'},
     { path: '/#voter-faq', label: 'Voting Info' }
 ]
 

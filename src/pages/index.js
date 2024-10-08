@@ -78,14 +78,26 @@ const Home = ({candidates, textContent}) => {
     <section>
       <a className="link-anchor" id="ballot-proposition"></a>
       <h2 className='section-header'>Ballot Proposition</h2>
-        <MarkdownExternalLinks>{textContent.ballotProposition}</MarkdownExternalLinks>
+      <MarkdownExternalLinks>{textContent.ballotProposition}</MarkdownExternalLinks>
+    </section>
+
+    <section>
+      <a className="link-anchor" id="judge-retention"></a>
+      <h2 className='section-header'>Judge Retention</h2>
+      <MarkdownExternalLinks>{textContent.judgeRetentionIntro}</MarkdownExternalLinks>
+      {textContent.judgeRetentionContent.map((court, i) => (
+        <div key={`court-${i}`}c lassName="faq-question">
+          <h3 className='race-header'>{court.section}</h3>
+          <MarkdownExternalLinks>{court.content}</MarkdownExternalLinks>
+        </div>
+      ))}
     </section>
 
     <section>
       <a className="link-anchor" id="voter-faq"></a>
       <h2 className='section-header'>Common Voting Questions</h2>
       {textContent.voterFAQ.map((faq, i) => (
-          <div key={i} className="faq-question">
+          <div key={`faq-${i}`} className="faq-question">
             <h3 className='race-header'>{faq.question}</h3>
             <MarkdownExternalLinks>{faq.answer}</MarkdownExternalLinks>
           </div>
