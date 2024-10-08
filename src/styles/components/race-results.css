@@ -1,0 +1,62 @@
+.race-results {
+  padding: 0.5em;
+}
+
+.race-title {
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+
+table {
+  width: 100%;
+}
+
+thead > .result-row {
+  border-left: 5px solid white;
+}
+.result-row {
+  display: flex;
+  padding: 0.2em 0;
+  height: 16px;
+  font-size: 12px;
+
+  border-bottom: 1px solid var(--gray2);
+}
+
+.result_row > th {
+  color: #000000;
+  font-weight: normal;
+}
+
+.winner-icon {
+  background-color: #666;
+  color: white;
+  font-weight: bold;
+  padding: 0.3em 0.5em;
+  margin-right: 0.4em;
+  margin-left: -4px;
+}
+
+.result-row-name {
+  flex: 0 0 12em;
+  color: var(--gray4);
+  margin-right: 0.5em;
+  padding-left: 5px;
+}
+
+.result-row-percent {
+  flex: 0 0 4em;
+  margin-right: 0.5em;
+  text-align: right;
+}
+
+.result-row-bar {
+  flex: 0 0 auto;
+}
+
+.results-source {
+  font-style: italic;
+  font-size: 0.8rem;
+  margin-top: 1em;
+  margin-left: 0.3em;
+}

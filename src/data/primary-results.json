@@ -6,11 +6,11 @@
       {
         "slug": "scott-morrow",
         "winner": true,
-        "votes": 0,
+        "votes": 10088,
         "ballotName": "Scott D Morrow"
       }
     ],
-    "totalVotes": 0
+    "totalVotes": 10088
   },
   {
     "district": "us-sen",
@@ -19,23 +19,23 @@
       {
         "slug": "john-barrasso",
         "winner": true,
-        "votes": 70473,
+        "votes": 70494,
         "ballotName": "John Barrasso"
       },
       {
         "slug": "reid-rasner",
         "winner": false,
-        "votes": 25424,
+        "votes": 25427,
         "ballotName": "Reid Rasner"
       },
       {
         "slug": "john-holtz",
         "winner": false,
-        "votes": 7867,
+        "votes": 7868,
         "ballotName": "John Holtz"
       }
     ],
-    "totalVotes": 103764
+    "totalVotes": 103789
   },
   {
     "district": "us-house",
@@ -44,11 +44,11 @@
       {
         "slug": "kyle-cameron",
         "winner": true,
-        "votes": 0,
+        "votes": 10047,
         "ballotName": "Kyle G. Cameron"
       }
     ],
-    "totalVotes": 0
+    "totalVotes": 10047
   },
   {
     "district": "us-house",
@@ -57,17 +57,17 @@
       {
         "slug": "harriet-hageman",
         "winner": true,
-        "votes": 82765,
+        "votes": 82783,
         "ballotName": "Harriet Hageman"
       },
       {
         "slug": "steven-helling",
         "winner": false,
-        "votes": 19738,
+        "votes": 19743,
         "ballotName": "Steven R. Helling"
       }
     ],
-    "totalVotes": 102503
+    "totalVotes": 102526
   },
   {
     "district": "S02",

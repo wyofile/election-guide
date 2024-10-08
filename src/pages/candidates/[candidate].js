@@ -8,7 +8,7 @@ import CandidateOpponents from '@/components/CandidateOpponents'
 import CandidatePageSummary from '@/components/CandidatePageSummary'
 import CandidateStories from '@/components/CandidateStories'
 import CandidateLinks from '@/components/CandidateLinks'
-import PrimaryResults from '@/components/PrimaryResults'
+import RaceResults from '@/components/RaceResults'
 import Layout from '@/design/Layout'
 import { formatRace } from '@/lib/utils'
 
@@ -83,9 +83,9 @@ export default function CandidatePage({candidate, primaryRaceResults, questions,
 
     <section>
       <a className="link-anchor" id="results"></a>
-      <h2>Election Results</h2>
+      <h2 className='section-header'>Election Results</h2>
       {
-        !primaryRaceResults ? <p>No party primary was conducted.</p> : <PrimaryResults results={primaryRaceResults} />
+        !primaryRaceResults ? <p> There are no primary results available for this candidate.</p> : <RaceResults results={primaryRaceResults} />
       }
     </section>
 
