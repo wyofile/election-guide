@@ -76,6 +76,12 @@ const Home = ({candidates, textContent}) => {
     <ElectionStories />
 
     <section>
+      <a className="link-anchor" id="ballot-proposition"></a>
+      <h2 className='section-header'>Ballot Proposition</h2>
+        <MarkdownExternalLinks>{textContent.ballotProposition}</MarkdownExternalLinks>
+    </section>
+
+    <section>
       <a className="link-anchor" id="voter-faq"></a>
       <h2 className='section-header'>Common Voting Questions</h2>
       {textContent.voterFAQ.map((faq, i) => (

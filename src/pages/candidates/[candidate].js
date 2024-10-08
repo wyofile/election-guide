@@ -26,7 +26,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const candidate = candidateData.find(c => c.slug === params.candidate)
   const activeOpponents = candidateData.filter(c => (c.district === candidate.district && c.status ==='active'))
-  const primaryRaceResults = primaryResults.find(r => r.district === c.district && r.party === c.party)
+  // const primaryRaceResults = primaryResults.find(r => r.district === c.district && r.party === c.party)
   const questions = (candidate.district[0] === 'u' ? federalQs : wyoLegQs)
   const questionnaireIntro = textData.questionnaireIntro
   const aboutProject = textData.aboutProject
