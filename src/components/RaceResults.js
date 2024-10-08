@@ -45,7 +45,7 @@ const Row = ({ ballotName, votes, winner, totalVotes, party, isUncontested }) =>
         <td className="result-row-percent">{isUncontested ? "N/A" : numberFormat(votes)}</td>
         <td className="result-row-bar"><svg width={BAR_RANGE + 50} height={14}>
             <rect fill={partyInfo.color} x={0} y={0} height={18} width={barWidth} />
-            <text x={barWidth + 5} y={11}>{isUncontested ? "N/A" : percentFormat(votePercent)}</text>
+            <text x={barWidth + 5} y={10}>{isUncontested ? "N/A" : percentFormat(votePercent)}</text>
         </svg></td>
     </tr>
 }

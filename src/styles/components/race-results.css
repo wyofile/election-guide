@@ -14,13 +14,13 @@ table {
 thead > .result-row {
   border-left: 5px solid white;
 }
+
 .result-row {
   display: flex;
-  padding: 0.2em 0;
-  height: 16px;
+  /* padding: 4px 0; */
   font-size: 12px;
-
-  border-bottom: 1px solid var(--gray2);
+  height: 25px;
+  border: 0px;
 }
 
 .result_row > th {
@@ -32,26 +32,37 @@ thead > .result-row {
   background-color: #666;
   color: white;
   font-weight: bold;
-  padding: 0.3em 0.5em;
-  margin-right: 0.4em;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding:0 8px;
+  margin-right: 5px;
   margin-left: -4px;
 }
 
 .result-row-name {
   flex: 0 0 12em;
-  color: var(--gray4);
+  display: flex;
+  align-items: center;
+  color: #000000;
+  margin: 0;
+  padding: 0;
   margin-right: 0.5em;
   padding-left: 5px;
 }
 
 .result-row-percent {
   flex: 0 0 4em;
+  display: flex;
+  align-items: center;
   margin-right: 0.5em;
-  text-align: right;
+  justify-content:flex-end;
 }
 
 .result-row-bar {
   flex: 0 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 .results-source {

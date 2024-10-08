@@ -50,7 +50,6 @@ const primaryResults = races.map(r => {
   })
 
   const totalVotes = r.reporting_units[0].total_votes
-  console.log(totalVotes)
 
   return {district: district, party: party, candidates: candidates, totalVotes: totalVotes}
 })

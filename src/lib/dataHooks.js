@@ -18,15 +18,3 @@ export const useStories = (tagId, count) => {
     error
   }
 }
-
-export const useElectionResults = () => {
-  const key = 'http://projects.wyofile.com.s3-website.us-east-2.amazonaws.com/primary-results.json'
-
-  const {data: results, isLoading, error} = useSWRImmutable(key, fetcher)
-
-  return {
-    results,
-    isLoading,
-    error
-  }
-}
