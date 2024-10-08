@@ -1,6 +1,6 @@
 
 import candidateData from '../src/data/candidate-data.json' with {type: 'json'}
-import races from './primary-results.json' with {type: 'json'}
+import races from './nyt-primary-results.json' with {type: 'json'}
 import fs from 'fs'
 import path from 'path'
 

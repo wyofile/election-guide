@@ -6,7 +6,8 @@
       {
         "slug": "scott-morrow",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Scott D Morrow"
       }
     ],
     "totalVotes": 0
@@ -18,17 +19,20 @@
       {
         "slug": "john-barrasso",
         "winner": true,
-        "votes": 70473
+        "votes": 70473,
+        "ballotName": "John Barrasso"
       },
       {
         "slug": "reid-rasner",
         "winner": false,
-        "votes": 25424
+        "votes": 25424,
+        "ballotName": "Reid Rasner"
       },
       {
         "slug": "john-holtz",
         "winner": false,
-        "votes": 7867
+        "votes": 7867,
+        "ballotName": "John Holtz"
       }
     ],
     "totalVotes": 103764
@@ -40,7 +44,8 @@
       {
         "slug": "kyle-cameron",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Kyle G. Cameron"
       }
     ],
     "totalVotes": 0
@@ -52,12 +57,14 @@
       {
         "slug": "harriet-hageman",
         "winner": true,
-        "votes": 82765
+        "votes": 82765,
+        "ballotName": "Harriet Hageman"
       },
       {
         "slug": "steven-helling",
         "winner": false,
-        "votes": 19738
+        "votes": 19738,
+        "ballotName": "Steven R. Helling"
       }
     ],
     "totalVotes": 102503
@@ -69,7 +76,8 @@
       {
         "slug": "brian-boner",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Brian Boner"
       }
     ],
     "totalVotes": 0
@@ -81,7 +89,8 @@
       {
         "slug": "tara-nethercott",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Tara Nethercott"
       }
     ],
     "totalVotes": 0
@@ -93,32 +102,38 @@
       {
         "slug": "darin-smith",
         "winner": true,
-        "votes": 1779
+        "votes": 1779,
+        "ballotName": "Darin Smith"
       },
       {
         "slug": "eric-johnston",
         "winner": false,
-        "votes": 1266
+        "votes": 1266,
+        "ballotName": "Eric D Johnston"
       },
       {
         "slug": "taft-love",
         "winner": false,
-        "votes": 593
+        "votes": 593,
+        "ballotName": "Taft C. Love"
       },
       {
         "slug": "andrei-torriani",
         "winner": false,
-        "votes": 434
+        "votes": 434,
+        "ballotName": "Marc Torriani"
       },
       {
         "slug": "kimberley-withers",
         "winner": false,
-        "votes": 383
+        "votes": 383,
+        "ballotName": "Kim Withers"
       },
       {
         "slug": "gary-bjorklund",
         "winner": false,
-        "votes": 264
+        "votes": 264,
+        "ballotName": "Gary Bjorklund"
       }
     ],
     "totalVotes": 4719
@@ -130,7 +145,8 @@
       {
         "slug": "marguerite-herman",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Marguerite Herman"
       }
     ],
     "totalVotes": 0
@@ -142,7 +158,8 @@
       {
         "slug": "jared-olsen",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Jared Olsen"
       }
     ],
     "totalVotes": 0
@@ -154,7 +171,8 @@
       {
         "slug": "michael-selmer",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Mike Selmer"
       }
     ],
     "totalVotes": 0
@@ -166,12 +184,14 @@
       {
         "slug": "gary-crum",
         "winner": true,
-        "votes": 1709
+        "votes": 1709,
+        "ballotName": "Gary E Crum"
       },
       {
         "slug": "keith-kennedy",
         "winner": false,
-        "votes": 1129
+        "votes": 1129,
+        "ballotName": "Keith Kennedy"
       }
     ],
     "totalVotes": 2838
@@ -183,7 +203,8 @@
       {
         "slug": "kenilynn-zanetti",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Kenilynn S Zanetti"
       }
     ],
     "totalVotes": 0
@@ -195,12 +216,14 @@
       {
         "slug": "john-kolb",
         "winner": true,
-        "votes": 1313
+        "votes": 1313,
+        "ballotName": "John K Kolb"
       },
       {
         "slug": "jeffrey-ramaj",
         "winner": false,
-        "votes": 814
+        "votes": 814,
+        "ballotName": "Jeff Ramaj"
       }
     ],
     "totalVotes": 2127
@@ -212,17 +235,20 @@
       {
         "slug": "laura-pearson",
         "winner": true,
-        "votes": 2211
+        "votes": 2211,
+        "ballotName": "Laura Taliaferro Pearson"
       },
       {
         "slug": "albert-sommers",
         "winner": false,
-        "votes": 2025
+        "votes": 2025,
+        "ballotName": "Albert Sommers"
       },
       {
         "slug": "justin-winney",
         "winner": false,
-        "votes": 490
+        "votes": 490,
+        "ballotName": "Bill Winney"
       }
     ],
     "totalVotes": 4726
@@ -234,7 +260,8 @@
       {
         "slug": "dan-dockstader",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Dan Dockstader"
       }
     ],
     "totalVotes": 0
@@ -246,12 +273,14 @@
       {
         "slug": "tim-french",
         "winner": true,
-        "votes": 3190
+        "votes": 3190,
+        "ballotName": "Tim A. French"
       },
       {
         "slug": "landon-greer",
         "winner": false,
-        "votes": 2311
+        "votes": 2311,
+        "ballotName": "Landon Greer"
       }
     ],
     "totalVotes": 5501
@@ -263,12 +292,14 @@
       {
         "slug": "edward-cooper",
         "winner": true,
-        "votes": 2650
+        "votes": 2650,
+        "ballotName": "Ed Cooper"
       },
       {
         "slug": "thomas-olmstead",
         "winner": false,
-        "votes": 2428
+        "votes": 2428,
+        "ballotName": "Tom Olmstead"
       }
     ],
     "totalVotes": 5078
@@ -280,12 +311,14 @@
       {
         "slug": "barry-crago",
         "winner": true,
-        "votes": 3107
+        "votes": 3107,
+        "ballotName": "Barry Crago"
       },
       {
         "slug": "clifford-jennings",
         "winner": false,
-        "votes": 2500
+        "votes": 2500,
+        "ballotName": "Mark Jennings"
       }
     ],
     "totalVotes": 5607
@@ -297,12 +330,14 @@
       {
         "slug": "troy-mckeown",
         "winner": true,
-        "votes": 1602
+        "votes": 1602,
+        "ballotName": "Troy D McKeown"
       },
       {
         "slug": "phillip-christopherson",
         "winner": false,
-        "votes": 1191
+        "votes": 1191,
+        "ballotName": "Phil Christopherson"
       }
     ],
     "totalVotes": 2793
@@ -314,12 +349,14 @@
       {
         "slug": "tim-salazar",
         "winner": true,
-        "votes": 2626
+        "votes": 2626,
+        "ballotName": "Tim Salazar"
       },
       {
         "slug": "elizabeth-philp",
         "winner": false,
-        "votes": 1726
+        "votes": 1726,
+        "ballotName": "Elizabeth Philp"
       }
     ],
     "totalVotes": 4352
@@ -331,12 +368,14 @@
       {
         "slug": "james-anderson",
         "winner": true,
-        "votes": 1304
+        "votes": 1304,
+        "ballotName": "Jim Anderson"
       },
       {
         "slug": "bryce-reece",
         "winner": false,
-        "votes": 1274
+        "votes": 1274,
+        "ballotName": "Bryce Reece"
       }
     ],
     "totalVotes": 2578
@@ -348,17 +387,20 @@
       {
         "slug": "charles-scott",
         "winner": true,
-        "votes": 1438
+        "votes": 1438,
+        "ballotName": "Charles K. Scott"
       },
       {
         "slug": "robert-hendry",
         "winner": false,
-        "votes": 1179
+        "votes": 1179,
+        "ballotName": "Robert L. Hendry"
       },
       {
         "slug": "charles-schoenwolf",
         "winner": false,
-        "votes": 394
+        "votes": 394,
+        "ballotName": "Charles H Schoenwolf"
       }
     ],
     "totalVotes": 3011
@@ -370,7 +412,8 @@
       {
         "slug": "chip-neiman",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Chip Neiman"
       }
     ],
     "totalVotes": 0
@@ -382,12 +425,14 @@
       {
         "slug": "jd-williams",
         "winner": true,
-        "votes": 1527
+        "votes": 1527,
+        "ballotName": "JD Williams"
       },
       {
         "slug": "allen-slagle",
         "winner": false,
-        "votes": 1259
+        "votes": 1259,
+        "ballotName": "Allen E. Slagle"
       }
     ],
     "totalVotes": 2786
@@ -399,7 +444,8 @@
       {
         "slug": "abby-angelos",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Abby Angelos"
       }
     ],
     "totalVotes": 0
@@ -411,7 +457,8 @@
       {
         "slug": "charles-randolph",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Charles Randolph"
       }
     ],
     "totalVotes": 0
@@ -423,12 +470,14 @@
       {
         "slug": "jeremy-haroldson",
         "winner": true,
-        "votes": 1687
+        "votes": 1687,
+        "ballotName": "Jeremy Haroldson"
       },
       {
         "slug": "jeffery-thomas",
         "winner": false,
-        "votes": 804
+        "votes": 804,
+        "ballotName": "Jeffery Thomas"
       }
     ],
     "totalVotes": 2491
@@ -440,12 +489,14 @@
       {
         "slug": "scott-smith",
         "winner": true,
-        "votes": 1554
+        "votes": 1554,
+        "ballotName": "Scott Smith"
       },
       {
         "slug": "jackie-van-mark",
         "winner": false,
-        "votes": 891
+        "votes": 891,
+        "ballotName": "Jackie Van Mark"
       }
     ],
     "totalVotes": 2445
@@ -457,12 +508,14 @@
       {
         "slug": "tomi-strock",
         "winner": true,
-        "votes": 1278
+        "votes": 1278,
+        "ballotName": "Tomi Strock"
       },
       {
         "slug": "robert-clausen",
         "winner": false,
-        "votes": 1162
+        "votes": 1162,
+        "ballotName": "Aaron Clausen"
       }
     ],
     "totalVotes": 2440
@@ -474,7 +527,8 @@
       {
         "slug": "jordan-evans",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Jordan Evans"
       }
     ],
     "totalVotes": 0
@@ -486,12 +540,14 @@
       {
         "slug": "bob-nicholas",
         "winner": true,
-        "votes": 1068
+        "votes": 1068,
+        "ballotName": "Bob Nicholas"
       },
       {
         "slug": "kathleen-russell",
         "winner": false,
-        "votes": 682
+        "votes": 682,
+        "ballotName": "Kathy Russell"
       }
     ],
     "totalVotes": 1750
@@ -503,17 +559,20 @@
       {
         "slug": "steve-johnson",
         "winner": true,
-        "votes": 1183
+        "votes": 1183,
+        "ballotName": "Steve Johnson"
       },
       {
         "slug": "david-zwonitzer",
         "winner": false,
-        "votes": 1134
+        "votes": 1134,
+        "ballotName": "David Zwonitzer"
       },
       {
         "slug": "cayd-batchelor",
         "winner": false,
-        "votes": 78
+        "votes": 78,
+        "ballotName": "Cayd Batchelor"
       }
     ],
     "totalVotes": 2395
@@ -525,12 +584,14 @@
       {
         "slug": "landon-brown",
         "winner": true,
-        "votes": 725
+        "votes": 725,
+        "ballotName": "Landon J. Brown"
       },
       {
         "slug": "exie-brown",
         "winner": false,
-        "votes": 708
+        "votes": 708,
+        "ballotName": "Exie Brown"
       }
     ],
     "totalVotes": 1433
@@ -542,12 +603,14 @@
       {
         "slug": "john-eklund",
         "winner": true,
-        "votes": 1516
+        "votes": 1516,
+        "ballotName": "John Eklund"
       },
       {
         "slug": "jennifer-james",
         "winner": false,
-        "votes": 546
+        "votes": 546,
+        "ballotName": "Jennifer James"
       }
     ],
     "totalVotes": 2062
@@ -559,7 +622,8 @@
       {
         "slug": "sara-burlingame",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Sara Burlingame"
       }
     ],
     "totalVotes": 0
@@ -571,12 +635,14 @@
       {
         "slug": "jacob-wasserburger",
         "winner": true,
-        "votes": 457
+        "votes": 457,
+        "ballotName": "Jacob Wasserburger"
       },
       {
         "slug": "seth-ulvestad",
         "winner": false,
-        "votes": 366
+        "votes": 366,
+        "ballotName": "Seth Ulvestad"
       }
     ],
     "totalVotes": 823
@@ -588,12 +654,14 @@
       {
         "slug": "clarence-styvar",
         "winner": true,
-        "votes": 418
+        "votes": 418,
+        "ballotName": "Clarence Styvar"
       },
       {
         "slug": "thomas-lear",
         "winner": false,
-        "votes": 329
+        "votes": 329,
+        "ballotName": "Thomas L Lear"
       }
     ],
     "totalVotes": 747
@@ -605,7 +673,8 @@
       {
         "slug": "kenneth-chestek",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Ken Chestek"
       }
     ],
     "totalVotes": 0
@@ -617,7 +686,8 @@
       {
         "slug": "shane-swett",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Shane Swett"
       }
     ],
     "totalVotes": 0
@@ -629,7 +699,8 @@
       {
         "slug": "trey-sherwood",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Trey Sherwood"
       }
     ],
     "totalVotes": 0
@@ -641,7 +712,8 @@
       {
         "slug": "joseph-giustozzi",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Joe Giustozzi"
       }
     ],
     "totalVotes": 0
@@ -653,17 +725,20 @@
       {
         "slug": "pamela-thayer",
         "winner": true,
-        "votes": 748
+        "votes": 748,
+        "ballotName": "Pamela Thayer"
       },
       {
         "slug": "terry-weickum",
         "winner": false,
-        "votes": 223
+        "votes": 223,
+        "ballotName": "Terry Lee Weickum"
       },
       {
         "slug": "sheryl-foland",
         "winner": false,
-        "votes": 196
+        "votes": 196,
+        "ballotName": "Sheryl Foland"
       }
     ],
     "totalVotes": 1167
@@ -675,7 +750,8 @@
       {
         "slug": "michael-yin",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Mike Yin"
       }
     ],
     "totalVotes": 0
@@ -687,12 +763,14 @@
       {
         "slug": "joshua-larson",
         "winner": true,
-        "votes": 562
+        "votes": 562,
+        "ballotName": "J.T. Larson"
       },
       {
         "slug": "terry-ellison",
         "winner": false,
-        "votes": 481
+        "votes": 481,
+        "ballotName": "Terry Ellison"
       }
     ],
     "totalVotes": 1043
@@ -704,12 +782,14 @@
       {
         "slug": "scott-heiner",
         "winner": true,
-        "votes": 1190
+        "votes": 1190,
+        "ballotName": "Scott Heiner"
       },
       {
         "slug": "thomas-crank",
         "winner": false,
-        "votes": 733
+        "votes": 733,
+        "ballotName": "Thomas D. Crank"
       }
     ],
     "totalVotes": 1923
@@ -721,12 +801,14 @@
       {
         "slug": "joseph-webb",
         "winner": true,
-        "votes": 1019
+        "votes": 1019,
+        "ballotName": "Joe Webb"
       },
       {
         "slug": "jon-conrad",
         "winner": false,
-        "votes": 792
+        "votes": 792,
+        "ballotName": "Jon R. Conrad"
       }
     ],
     "totalVotes": 1811
@@ -738,12 +820,14 @@
       {
         "slug": "michael-schmid",
         "winner": true,
-        "votes": 1755
+        "votes": 1755,
+        "ballotName": "Mike Schmid"
       },
       {
         "slug": "catherine-urbigkit",
         "winner": false,
-        "votes": 1029
+        "votes": 1029,
+        "ballotName": "Cat Urbigkit"
       }
     ],
     "totalVotes": 2784
@@ -755,12 +839,14 @@
       {
         "slug": "mckay-erickson",
         "winner": true,
-        "votes": 1811
+        "votes": 1811,
+        "ballotName": "McKay L. Erickson"
       },
       {
         "slug": "t-wolfley",
         "winner": false,
-        "votes": 559
+        "votes": 559,
+        "ballotName": "T. Deb Wolfley"
       }
     ],
     "totalVotes": 2370
@@ -772,7 +858,8 @@
       {
         "slug": "andrew-byron",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Andrew P Byron"
       }
     ],
     "totalVotes": 0
@@ -784,7 +871,8 @@
       {
         "slug": "elizabeth-storer",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Liz Storer"
       }
     ],
     "totalVotes": 0
@@ -796,12 +884,14 @@
       {
         "slug": "nina-webber",
         "winner": true,
-        "votes": 1405
+        "votes": 1405,
+        "ballotName": "Nina Webber"
       },
       {
         "slug": "matthew-hall",
         "winner": false,
-        "votes": 1233
+        "votes": 1233,
+        "ballotName": "Matt Hall"
       }
     ],
     "totalVotes": 2638
@@ -813,12 +903,14 @@
       {
         "slug": "paul-hoeft",
         "winner": true,
-        "votes": 1251
+        "votes": 1251,
+        "ballotName": "Paul Hoeft"
       },
       {
         "slug": "david-northrup",
         "winner": false,
-        "votes": 808
+        "votes": 808,
+        "ballotName": "David Northrup"
       }
     ],
     "totalVotes": 2059
@@ -830,7 +922,8 @@
       {
         "slug": "dalton-banks",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Dalton Banks"
       }
     ],
     "totalVotes": 0
@@ -842,12 +935,14 @@
       {
         "slug": "martha-lawley",
         "winner": true,
-        "votes": 1505
+        "votes": 1505,
+        "ballotName": "Martha Lawley"
       },
       {
         "slug": "tami-young",
         "winner": false,
-        "votes": 885
+        "votes": 885,
+        "ballotName": "Tami Young"
       }
     ],
     "totalVotes": 2390
@@ -859,12 +954,14 @@
       {
         "slug": "john-winter",
         "winner": true,
-        "votes": 1707
+        "votes": 1707,
+        "ballotName": "John R. Winter"
       },
       {
         "slug": "kevin-skates",
         "winner": false,
-        "votes": 980
+        "votes": 980,
+        "ballotName": "Kevin Skates"
       }
     ],
     "totalVotes": 2687
@@ -876,7 +973,8 @@
       {
         "slug": "kenneth-pendergraft",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Ken Pendergraft"
       }
     ],
     "totalVotes": 0
@@ -888,12 +986,14 @@
       {
         "slug": "thomas-kelly",
         "winner": true,
-        "votes": 1313
+        "votes": 1313,
+        "ballotName": "Tom Kelly"
       },
       {
         "slug": "gail-symons",
         "winner": false,
-        "votes": 916
+        "votes": 916,
+        "ballotName": "Gail Symons"
       }
     ],
     "totalVotes": 2229
@@ -905,7 +1005,8 @@
       {
         "slug": "john-bear",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "John W Bear"
       }
     ],
     "totalVotes": 0
@@ -917,12 +1018,14 @@
       {
         "slug": "kenneth-clouston",
         "winner": true,
-        "votes": 1062
+        "votes": 1062,
+        "ballotName": "Ken L. Clouston"
       },
       {
         "slug": "george-dunlap",
         "winner": false,
-        "votes": 706
+        "votes": 706,
+        "ballotName": "George Dunlap"
       }
     ],
     "totalVotes": 1768
@@ -934,7 +1037,8 @@
       {
         "slug": "ivan-posey",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Ivan D. Posey"
       }
     ],
     "totalVotes": 0
@@ -946,7 +1050,8 @@
       {
         "slug": "sarah-penn",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Sarah Penn"
       }
     ],
     "totalVotes": 0
@@ -958,12 +1063,14 @@
       {
         "slug": "pepper-ottman",
         "winner": true,
-        "votes": 1474
+        "votes": 1474,
+        "ballotName": "Pepper L. Ottman"
       },
       {
         "slug": "reginald-phillips",
         "winner": false,
-        "votes": 966
+        "votes": 966,
+        "ballotName": "Reg Phillips"
       }
     ],
     "totalVotes": 2440
@@ -975,12 +1082,14 @@
       {
         "slug": "tony-locke",
         "winner": true,
-        "votes": 1082
+        "votes": 1082,
+        "ballotName": "Tony Locke"
       },
       {
         "slug": "christopher-dresang",
         "winner": false,
-        "votes": 945
+        "votes": 945,
+        "ballotName": "Christopher Dresang"
       }
     ],
     "totalVotes": 2027
@@ -992,7 +1101,8 @@
       {
         "slug": "art-washut",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Art Washut"
       }
     ],
     "totalVotes": 0
@@ -1004,7 +1114,8 @@
       {
         "slug": "steven-harshman",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Steve Harshman"
       }
     ],
     "totalVotes": 0
@@ -1016,12 +1127,14 @@
       {
         "slug": "jayme-lien",
         "winner": true,
-        "votes": 859
+        "votes": 859,
+        "ballotName": "Jayme Lien"
       },
       {
         "slug": "thomas-walters",
         "winner": false,
-        "votes": 715
+        "votes": 715,
+        "ballotName": "Tom Walters"
       }
     ],
     "totalVotes": 1574
@@ -1033,17 +1146,20 @@
       {
         "slug": "cody-wylie",
         "winner": true,
-        "votes": 501
+        "votes": 501,
+        "ballotName": "Cody Wylie"
       },
       {
         "slug": "laura-mckee",
         "winner": false,
-        "votes": 457
+        "votes": 457,
+        "ballotName": "Laura Mckee"
       },
       {
         "slug": "marshall-burt",
         "winner": false,
-        "votes": 88
+        "votes": 88,
+        "ballotName": "Marshall Burt"
       }
     ],
     "totalVotes": 1046
@@ -1055,17 +1171,20 @@
       {
         "slug": "marilyn-connolly",
         "winner": true,
-        "votes": 1573
+        "votes": 1573,
+        "ballotName": "Marilyn Connoly"
       },
       {
         "slug": "mark-jones",
         "winner": false,
-        "votes": 1182
+        "votes": 1182,
+        "ballotName": "Mark Jones"
       },
       {
         "slug": "liberty-poley",
         "winner": false,
-        "votes": 767
+        "votes": 767,
+        "ballotName": "Liberty Poley"
       }
     ],
     "totalVotes": 3522
@@ -1077,7 +1196,8 @@
       {
         "slug": "jennifer-solis",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Jen Solis"
       }
     ],
     "totalVotes": 0
@@ -1089,12 +1209,14 @@
       {
         "slug": "gary-brown",
         "winner": true,
-        "votes": 719
+        "votes": 719,
+        "ballotName": "Gary Brown"
       },
       {
         "slug": "william-henderson",
         "winner": false,
-        "votes": 610
+        "votes": 610,
+        "ballotName": "Bill Henderson"
       }
     ],
     "totalVotes": 1329
@@ -1106,7 +1228,8 @@
       {
         "slug": "robert-ray",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Bob Ray"
       }
     ],
     "totalVotes": 0
@@ -1118,12 +1241,14 @@
       {
         "slug": "robert-geringer",
         "winner": true,
-        "votes": 876
+        "votes": 876,
+        "ballotName": "Rob Geringer"
       },
       {
         "slug": "benjamin-hornok",
         "winner": false,
-        "votes": 844
+        "votes": 844,
+        "ballotName": "Ben Hornok"
       }
     ],
     "totalVotes": 1720
@@ -1135,12 +1260,14 @@
       {
         "slug": "ann-lucas",
         "winner": true,
-        "votes": 799
+        "votes": 799,
+        "ballotName": "Ann Lucas"
       },
       {
         "slug": "david-zwonitzer",
         "winner": false,
-        "votes": 559
+        "votes": 559,
+        "ballotName": "David Zwonitzer"
       }
     ],
     "totalVotes": 1358
@@ -1152,17 +1279,20 @@
       {
         "slug": "lee-filer",
         "winner": true,
-        "votes": 313
+        "votes": 313,
+        "ballotName": "Lee Filer"
       },
       {
         "slug": "tamara-trujillo",
         "winner": false,
-        "votes": 190
+        "votes": 190,
+        "ballotName": "Tamara Trujillo"
       },
       {
         "slug": "john-romero",
         "winner": false,
-        "votes": 71
+        "votes": 71,
+        "ballotName": "John B Romero-Martinez"
       }
     ],
     "totalVotes": 574
@@ -1174,7 +1304,8 @@
       {
         "slug": "karlee-provenza",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Karlee Provenza"
       }
     ],
     "totalVotes": 0
@@ -1186,7 +1317,8 @@
       {
         "slug": "paul-crouch",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Paul Crouch"
       }
     ],
     "totalVotes": 0
@@ -1198,7 +1330,8 @@
       {
         "slug": "chris-lowry",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Chris Lowry"
       }
     ],
     "totalVotes": 0
@@ -1210,7 +1343,8 @@
       {
         "slug": "ocean-andrew",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Ocean Andrew"
       }
     ],
     "totalVotes": 0
@@ -1222,7 +1356,8 @@
       {
         "slug": "james-wilson",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "James A Wilson"
       }
     ],
     "totalVotes": 0
@@ -1234,7 +1369,8 @@
       {
         "slug": "bob-davis",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Bob Davis"
       }
     ],
     "totalVotes": 0
@@ -1246,12 +1382,14 @@
       {
         "slug": "darin-mccann",
         "winner": true,
-        "votes": 617
+        "votes": 617,
+        "ballotName": "Darin M. McCann"
       },
       {
         "slug": "clark-stith",
         "winner": false,
-        "votes": 490
+        "votes": 490,
+        "ballotName": "Clark Stith"
       }
     ],
     "totalVotes": 1107
@@ -1263,12 +1401,14 @@
       {
         "slug": "robert-wharff",
         "winner": true,
-        "votes": 812
+        "votes": 812,
+        "ballotName": "Robert Wharff"
       },
       {
         "slug": "ryan-berger",
         "winner": false,
-        "votes": 725
+        "votes": 725,
+        "ballotName": "Ryan C. Berger"
       }
     ],
     "totalVotes": 1537
@@ -1280,12 +1420,14 @@
       {
         "slug": "rachel-rodriguez-williams",
         "winner": true,
-        "votes": 1778
+        "votes": 1778,
+        "ballotName": "Rachel Rodriguez-Williams"
       },
       {
         "slug": "david-hill",
         "winner": false,
-        "votes": 1060
+        "votes": 1060,
+        "ballotName": "David Hill"
       }
     ],
     "totalVotes": 2838
@@ -1297,7 +1439,8 @@
       {
         "slug": "laurie-schierloh-bratten",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Laurie Bratten"
       }
     ],
     "totalVotes": 0
@@ -1309,7 +1452,8 @@
       {
         "slug": "reuben-tarver",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Reuben Tarver"
       }
     ],
     "totalVotes": 0
@@ -1321,7 +1465,8 @@
       {
         "slug": "christopher-knapp",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "Christopher R. Knapp"
       }
     ],
     "totalVotes": 0
@@ -1333,12 +1478,14 @@
       {
         "slug": "lloyd-larsen",
         "winner": true,
-        "votes": 1435
+        "votes": 1435,
+        "ballotName": "Lloyd Charles Larsen"
       },
       {
         "slug": "tina-clifford",
         "winner": false,
-        "votes": 1208
+        "votes": 1208,
+        "ballotName": "Tina Clifford"
       }
     ],
     "totalVotes": 2643
@@ -1350,12 +1497,14 @@
       {
         "slug": "joel-guggenmos",
         "winner": true,
-        "votes": 1071
+        "votes": 1071,
+        "ballotName": "Joel Guggenmos"
       },
       {
         "slug": "ember-oakley",
         "winner": false,
-        "votes": 855
+        "votes": 855,
+        "ballotName": "Ember Oakley"
       }
     ],
     "totalVotes": 1926
@@ -1367,17 +1516,20 @@
       {
         "slug": "elissa-campbell",
         "winner": true,
-        "votes": 806
+        "votes": 806,
+        "ballotName": "Elissa Campbell"
       },
       {
         "slug": "pete-fox",
         "winner": false,
-        "votes": 541
+        "votes": 541,
+        "ballotName": "Pete Fox"
       },
       {
         "slug": "pamela-mertens",
         "winner": false,
-        "votes": 111
+        "votes": 111,
+        "ballotName": "Pamela Mertens"
       }
     ],
     "totalVotes": 1458
@@ -1389,12 +1541,14 @@
       {
         "slug": "julie-jarvis",
         "winner": true,
-        "votes": 623
+        "votes": 623,
+        "ballotName": "Julie Jarvis"
       },
       {
         "slug": "jeanette-ward",
         "winner": false,
-        "votes": 485
+        "votes": 485,
+        "ballotName": "Jeanette Ward"
       }
     ],
     "totalVotes": 1108
@@ -1406,12 +1560,14 @@
       {
         "slug": "bill-allemand",
         "winner": true,
-        "votes": 1017
+        "votes": 1017,
+        "ballotName": "Bill Allemand"
       },
       {
         "slug": "tom-jones",
         "winner": false,
-        "votes": 424
+        "votes": 424,
+        "ballotName": "Tom Jones"
       }
     ],
     "totalVotes": 1441
@@ -1423,7 +1579,8 @@
       {
         "slug": "justin-riggins",
         "winner": true,
-        "votes": 0
+        "votes": 0,
+        "ballotName": "J.R. Riggins"
       }
     ],
     "totalVotes": 0
@@ -1435,12 +1592,14 @@
       {
         "slug": "marlene-brady",
         "winner": true,
-        "votes": 567
+        "votes": 567,
+        "ballotName": "Marlene Brady"
       },
       {
         "slug": "anthony-niemiec",
         "winner": false,
-        "votes": 522
+        "votes": 522,
+        "ballotName": "Tony Niemiec"
       }
     ],
     "totalVotes": 1089
@@ -1452,12 +1611,14 @@
       {
         "slug": "daniel-singh",
         "winner": true,
-        "votes": 506
+        "votes": 506,
+        "ballotName": "Daniel J. Singh"
       },
       {
         "slug": "matthew-malcom",
         "winner": false,
-        "votes": 353
+        "votes": 353,
+        "ballotName": "Matt Malcom"
       }
     ],
     "totalVotes": 859
@@ -1469,12 +1630,14 @@
       {
         "slug": "kevin-campbell",
         "winner": true,
-        "votes": 794
+        "votes": 794,
+        "ballotName": "Kevin Campbell"
       },
       {
         "slug": "anthony-allen",
         "winner": false,
-        "votes": 787
+        "votes": 787,
+        "ballotName": "Edis Allen"
       }
     ],
     "totalVotes": 1581
