@@ -17,14 +17,14 @@ const StateRaces = ({ candidates }) => {
         <div className={`selector ${chamber === 'senate' ? 'active' : ''}`} onClick={() => setChamber('senate')}>WY State Senate</div>
       </div>
       <div className="state-race-container">
-        <div className={`chamber-container ${chamber ==='house' ? 'visible' : ''}`}>
+        <div className={`chamber-container ${chamber ==='house' && 'visible'}`}>
           <h3 className='race-header'>{activeHouseDistrict ? `State House District ${parseInt(activeHouseDistrict.substring(1))}` : "Select a house district to view candidates"}</h3>
           <Suspense fallback={<div className="map-container">Loading...</div>}>
             <DistrictMap chamber='house' activeDistrict={activeHouseDistrict} setActiveDistrict={setActiveHouseDistrict} />
           </Suspense>
           <RaceCandidates chamber='house' district={activeSenateDistrict} candidates={candidates.filter((candidate)=>candidate.district === `H${activeHouseDistrict.substring(1)}`)} />
         </div>
-        <div className={`chamber-container ${chamber ==='senate' ? 'visible' : ''}`}>
+        <div className={`chamber-container ${chamber ==='senate' && 'visible'}`}>
           <h3 className='race-header'>{activeSenateDistrict ? `State Senate District ${parseInt(activeSenateDistrict)}` : "Select a senate district to view candidates"}</h3>
           <Suspense fallback={<div className="map-container">Loading...</div>}>
             <DistrictMap chamber='senate' activeDistrict={activeSenateDistrict} setActiveDistrict={setActiveSenateDistrict} />
