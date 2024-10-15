@@ -11,6 +11,8 @@ import ElectionStories from '@/components/ElectionStories';
 import textData from '@/data/static-text.json'
 import candidateData from '@/data/candidate-data.json'
 
+import { usePath } from '@/lib/utils'
+
 // decrease build index.html size
 const getCandidateDataNoResponses = () => {
   const candidates = candidateData.map(c => {
@@ -73,6 +75,8 @@ const Home = ({candidates, textContent}) => {
       <StateRaces candidates={candidates.filter(candidate => candidate.district[0] != 'u' )}/>
     </section>
 
+    <ElectionStories />
+    
     <section>
       <a className="link-anchor" id="ballot-proposition"></a>
       <h2 className='section-header'>Ballot Proposition</h2>
@@ -83,15 +87,41 @@ const Home = ({candidates, textContent}) => {
       <a className="link-anchor" id="judge-retention"></a>
       <h2 className='section-header'>Judge Retention</h2>
       <MarkdownExternalLinks>{textContent.judgeRetentionIntro}</MarkdownExternalLinks>
-      {textContent.judgeRetentionContent.map((court, i) => (
-        <div key={`court-${i}`} className="faq-question">
-          <h3 className='race-header'>{court.section}</h3>
-          <MarkdownExternalLinks>{court.content}</MarkdownExternalLinks>
+      <div className='faq-question'>
+        <div className='judge-districts'>
+        {textContent.judgeContentNew.districts.map((district,i) => {
+            return <div key={`d-${i}`} className='judge-district-card'>
+              <img className='jd-img' src={usePath(`/judicial-districts/d-${(i+1)}.svg`)} alt={`${district.title} Map`}/>
+              <h3 className='jd-title'>{district.title}</h3>
+              <h4 className='jd-counties'>{district.counties}</h4>
+              <h4 className='court-title'>Supreme Court Justices</h4>
+              <ul className='sup-judge-list'>
+                {textContent.judgeContentNew.supremeCourt.judges.map(judge => {
+                  return (<li className='sup-judge'><a href={judge.link}>Justice {judge.name} <img src={usePath('/external.svg')}/></a></li>)
+                })}
+              </ul>
+              {district.districtJudges.length> 0 && <>
+                <h4 className='court-title'>District Judges</h4>
+                <ul className='sup-judge-list'>
+                  {district.districtJudges.map((judge, i) => {
+                    return <li key={`judge-${i}`} className='sup-judge'><a href={judge.link}>{judge.name} <img src={usePath('/external.svg')}/></a></li>
+                  })}
+                </ul>
+              </>}
+              {district.circuitJudges.length > 0 && <>
+                <h4 className='court-title'>Circuit Judges</h4>
+                <ul className='sup-judge-list'>
+                  {district.circuitJudges.map((judge, i) => {
+                    return <li key={`judge-${i}`}className='sup-judge'><a href={judge.link}>{judge.name} <img src={usePath('/external.svg')}/></a></li>
+                  })}
+                </ul>
+              </>}
+            </div>
+          })}
         </div>
-      ))}
+      </div>
     </section>
 
-    <ElectionStories />
 
     <section>
       <a className="link-anchor" id="voter-faq"></a>
