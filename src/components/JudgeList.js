@@ -10,8 +10,8 @@ const JudgeList = () => {
           <h3 className='jd-title'>Statewide</h3>
           <h4 className='court-title'>Supreme Court Justices</h4>
           <ul className='sup-judge-list'>
-            {judgeData.supremeCourt.judges.map(judge => {
-              return (<li className='sup-judge'><a href={judge.link}>Justice {judge.name} <img src={usePath('/external.svg')}/></a></li>)
+            {judgeData.supremeCourt.judges.map((judge, i) => {
+              return (<li key={`judge-${i}`} className='sup-judge'><a href={judge.link} target="_blank">Justice {judge.name} <img src={usePath('/external.svg')}/></a></li>)
             })}
           </ul>
         </div>
@@ -26,7 +26,7 @@ const JudgeList = () => {
                 <h4 className='court-title'>District Judges</h4>
                 <ul className='sup-judge-list'>
                   {district.districtJudges.map((judge, i) => {
-                    return <li key={`judge-${i}`} className='sup-judge'><a href={judge.link}>{judge.name} <img src={usePath('/external.svg')}/></a></li>
+                    return <li key={`judge-${i}`} className='sup-judge'><a href={judge.link} target="_blank">{judge.name} <img src={usePath('/external.svg')}/></a></li>
                   })}
                 </ul>
               </>}
@@ -34,7 +34,7 @@ const JudgeList = () => {
                 <h4 className='court-title'>Circuit Judges</h4>
                 <ul className='sup-judge-list'>
                   {district.circuitJudges.map((judge, i) => {
-                    return <li key={`judge-${i}`}className='sup-judge'><a href={judge.link}>Judge {judge.name} <img src={usePath('/external.svg')}/></a></li>
+                    return <li key={`judge-${i}`}className='sup-judge'><a href={judge.link} target="_blank">Judge {judge.name} <img src={usePath('/external.svg')}/></a></li>
                   })}
                 </ul>
               </>}

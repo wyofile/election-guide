@@ -13,7 +13,7 @@ const PAGE_LINKS = [
 const Nav = () => {
     
     const links = PAGE_LINKS.map(l => {
-        return (<Link key={l.path} href={l.path}><li className="nav-menu-item" key={l.path}>{l.label}</li></Link>)
+        return (<Link key={l.path} href={l.path}><li key={l.path}>{l.label}</li></Link>)
     })
 
     return (

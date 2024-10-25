@@ -26,21 +26,17 @@
     grid-template-columns: repeat(6, 1fr);
   }
 }
-
-.nav-menu-item {
+.nav-menu a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+  font-family: 'Roboto', 'sans-serif';
 
   background-color: var(--wheat);
   margin: 1px;
   padding-left: 5px;
   padding-right: 5px;
   text-align: center;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  font-weight: 500;
-  color: #000;
-  font-family: 'Roboto', 'sans-serif';
 }
 
 .nav-menu a:hover {
