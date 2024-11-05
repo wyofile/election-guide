@@ -30,30 +30,55 @@ const Candidate = ({ slug, ballotName, party, hasPhoto, isCurrentPage }) => {
   )
 }
 
-const CandidateOpponents = ({opponents, race, currentSlug}) => {
+const CandidateOpponents = ({candidatesInDistrict, race, currentSlug}) => {
 
   const order = {
     "REP": 1,
     "DEM": 2,
-    "IND": 3
+    "LBR": 3,
+    "CTR": 4,
+    "IND": 5
   }
 
-  opponents.sort((a, b) => a.lastName - b.lastName)
-  opponents.sort((a, b) => order[a.party] - order[b.party])
+  const activeCandidates = candidatesInDistrict.filter(c => c.status === 'active' || c.status ==='won-general' || c.status === 'lost-general')
+  const inactiveCandidates = candidatesInDistrict.filter(c => c.status !== 'active' && c.status !== 'won-general' && c.status !== 'lost-general')
+
+  activeCandidates.sort((a, b) => a.lastName - b.lastName)
+  activeCandidates.sort((a, b) => order[a.party] - order[b.party])
 
   let prevParty
-  opponents.forEach(opp => {
+  activeCandidates.forEach(opp => {
     opp["label"] = opp.party != prevParty
     prevParty = opp.party
   })
 
+  inactiveCandidates.sort((a, b) => a.lastName - b.lastName)
+  inactiveCandidates.sort((a, b) => order[a.party] - order[b.party])
+
+  let prevInactiveParty
+  inactiveCandidates.forEach(opp => {
+    opp["label"] = opp.party != prevInactiveParty
+    prevInactiveParty = opp.party
+  })
+
   return (
     <div className='opponents-container'>
-      <h4 className='opponents-title'>Active candidates for {race}</h4>
+      <h4 className='opponents-title'>Active Candidates for {race}</h4>
       <div className="opp-grid">
-        { opponents.map(c => {
+        { activeCandidates.map(c => {
           const party = PARTIES.find(p => p.key === c.party)
-          const partyCount = opponents.filter(opp => opp.party === party.key).length
+          const partyCount = activeCandidates.filter(opp => opp.party === party.key).length
+          return <div className="opp-tile" key={c.slug}>
+            {c.label && <h4 className="bucket-label" style={{color: party.color}}>{pluralize(party.noun, partyCount)}</h4>}
+            <Candidate key={c.slug} isCurrentPage={c.slug === currentSlug} {...c} />
+          </div>
+        })}
+      </div><br />
+      <h4 className='opponents-title'>Inactive Candidates</h4>
+      <div className="opp-grid">
+        { inactiveCandidates.map(c => {
+          const party = PARTIES.find(p => p.key === c.party)
+          const partyCount = inactiveCandidates.filter(opp => opp.party === party.key).length
           return <div className="opp-tile" key={c.slug}>
             {c.label && <h4 className="bucket-label" style={{color: party.color}}>{pluralize(party.noun, partyCount)}</h4>}
             <Candidate key={c.slug} isCurrentPage={c.slug === currentSlug} {...c} />

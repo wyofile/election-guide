@@ -1,7 +1,7 @@
 import { PARTIES } from '../lib/styles'
 import { numberFormat, percentFormat } from '../lib/utils'
 
-const RaceResults = ({results, isUncontested, raceTitle, color}) => {
+const RaceResults = ({results, isUncontested, raceTitle, voteType}) => {
 
 
     return <div className="race-results">
@@ -9,7 +9,7 @@ const RaceResults = ({results, isUncontested, raceTitle, color}) => {
         <table>
             <thead>
                 <tr className="result-row">
-                    <th className="result-row-name">Candidate</th>
+                    <th className="result-row-name">{voteType}</th>
                     <th className="result-row-percent">Votes</th>
                     <th className="result-row-bar">Percentage</th>
                 </tr>
@@ -29,7 +29,7 @@ export default RaceResults
 const BAR_RANGE = 60
 const Row = ({ ballotName, votes, winner, totalVotes, party, isUncontested }) => {
     const partyInfo = PARTIES.find(d => d.key === party)
-    const votePercent = isUncontested ? 0.0 : (votes / totalVotes)
+    const votePercent = isUncontested || totalVotes === 0 ? 0.0 : (votes / totalVotes)
     const barWidth = votePercent * BAR_RANGE
     return <tr className="result-row" style={{
         backgroundColor: winner ? '#e3e3e3' : 'none',
