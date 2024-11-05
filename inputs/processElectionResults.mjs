@@ -1,6 +1,6 @@
 
 import candidateData from '../src/data/candidate-data.json' with {type: 'json'}
-import nytData from './nyt-primary-results.json' with {type: 'json'}
+import nytData from './results-wyoming-primary.json' with {type: 'json'}
 import fs from 'fs'
 import path from 'path'
 
@@ -36,12 +36,7 @@ const primaryResults = races.map(r => {
     const nytSlug = c.nyt_id
     const winner = nytWinner === nytSlug
     console.log(nytSlug)
-    const matchingCandidate = candidateData.find(cd =>  {
-      const slugParts = cd.slug.split('-')
-      const last = slugParts[1]
-      const firstInit = slugParts[0][0]
-      return (`${last}-${firstInit}` === nytSlug)
-    })
+    const matchingCandidate = candidateData.find(cd => cd.nytId === nytSlug)
     
     const votes = c.votes.total
     const slug = matchingCandidate.slug
