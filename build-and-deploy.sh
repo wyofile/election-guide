@@ -12,6 +12,7 @@
 # node process/main.js
 
 # Build
+node ./inputs/processGeneralResults.mjs
 node ./inputs/processData.js
 
 npm run build
