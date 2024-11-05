@@ -1,0 +1,14 @@
+[
+  {
+    "district": "us-sen",
+    "candidates": [
+      {
+        "slug": "john-barrasso",
+        "winner": true,
+        "votes": 10088,
+        "ballotName": "John Barrasso"
+      }
+    ],
+    "totalVotes": 10088
+  }
+]

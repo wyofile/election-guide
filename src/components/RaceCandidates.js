@@ -7,7 +7,9 @@ import { PARTIES } from '../lib/styles'
 
 import Candidate from './Candidate'
 
-const ELECTION_CYCLE = 'general'
+// ELECTION_CYCLE Options:
+// primary, general, post-election
+const ELECTION_CYCLE = 'post-election'
 
 const OutOfCycleBox = ({holdover}) => {
   const holdoverPartyInfo = PARTIES.find(party => party.key === holdover.party)
@@ -34,7 +36,7 @@ const OutOfCycleBox = ({holdover}) => {
 
 const RaceCandidates = ({district, candidates, chamber}) => {
 
-  const activeCandidates = candidates.filter(c => c.status === 'active' )
+  const activeCandidates = candidates.filter(c => c.status === 'active' || c.status === 'won-general' || c.status === 'lost-general' )
   const lostPrimaryCandidates = candidates.filter(c => c.status === 'lost-primary' )
   const withdrawnCandidates = candidates.filter(c => c.status === 'dropout' )
 
@@ -55,7 +57,7 @@ const RaceCandidates = ({district, candidates, chamber}) => {
                       <h4 style={{
                           color: party.color
                       }}>{pluralize(party.noun, candidatesInBucket.length)}</h4>
-                      {candidatesInBucket.length === 0 && <div className="party-note">No {party.adjective} candidates are running in this district.</div>}
+                      {candidatesInBucket.length === 0 && <div className="party-note">No {party.adjective} candidates {ELECTION_CYCLE === 'post-election' ? 'ran' : 'are running'} in this district.</div>}
                       <div>{candidatesInBucket.map(candidate => <Candidate key={candidate.slug} color={party.color} {...candidate} />)}</div>
                       {(isUncontestedPrimary && ELECTION_CYCLE === 'primary') && <div className="party-note">This candidate is running uncontested in the {party.adjective} primary.</div>}
                       {(isUncontestedGeneral && ELECTION_CYCLE === 'general') && <div className="party-note">This candidate is running uncontested in the general election.</div>}
