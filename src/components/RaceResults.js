@@ -20,7 +20,6 @@ const RaceResults = ({results, isUncontested, raceTitle, color}) => {
                     .map((c, i) => <Row key={i} {...c} totalVotes={results.totalVotes} isUncontested={isUncontested}/>)
             }</tbody>
         </table>
-        <div className="results-source">Election results provided by the Associated Press.</div>
     </div>
 
 }
@@ -28,21 +27,22 @@ const RaceResults = ({results, isUncontested, raceTitle, color}) => {
 export default RaceResults
 
 const BAR_RANGE = 60
-const Row = ({ ballotName, votes, winner, totalVotes, isUncontested}) => {
+const Row = ({ ballotName, votes, winner, totalVotes, party, isUncontested }) => {
+    const partyInfo = PARTIES.find(d => d.key === party)
     const votePercent = isUncontested ? 0.0 : (votes / totalVotes)
     const barWidth = votePercent * BAR_RANGE
     return <tr className="result-row" style={{
         backgroundColor: winner ? '#e3e3e3' : 'none',
-        borderLeft: `5px solid ${"#000000"}`,
+        borderLeft: `5px solid ${partyInfo.color}`,
         fontWeight: winner ? 'bold' : 'normal',
     }}>
         <td className="result-row-name">
-            {winner ? <span className="winner-icon" style={{ backgroundColor: "#000000" }}>✓</span> : ''}
+            {winner ? <span className="winner-icon" style={{ backgroundColor: partyInfo.color }}>✓</span> : ''}
             {ballotName}
         </td>
         <td className="result-row-percent">{isUncontested ? "N/A" : numberFormat(votes)}</td>
         <td className="result-row-bar"><svg width={BAR_RANGE + 50} height={14}>
-            <rect fill={"#000000"} x={0} y={0} height={18} width={barWidth} />
+            <rect fill={partyInfo.color} x={0} y={0} height={18} width={barWidth} />
             <text x={barWidth + 5} y={10}>{isUncontested ? "N/A" : percentFormat(votePercent)}</text>
         </svg></td>
     </tr>

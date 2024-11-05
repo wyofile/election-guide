@@ -41,7 +41,7 @@ const primaryResults = races.map(r => {
     const votes = c.votes.total
     const slug = matchingCandidate.slug
     const ballotName = matchingCandidate.ballotName
-    return {slug: slug, winner: winner, votes: votes, ballotName: ballotName}
+    return {slug: slug, winner: winner, votes: votes, ballotName: ballotName, party: party}
   })
 
   const totalVotes = r.reporting_units[0].total_votes

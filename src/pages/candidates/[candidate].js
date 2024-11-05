@@ -50,11 +50,6 @@ export async function getStaticProps({ params }) {
 
 export default function CandidatePage({candidate, primaryRaceResults, generalRaceResults, questions, questionnaireIntro, aboutProject, activeOpponents}) {
   const pageDescription = `${candidate.ballotName} (${candidate.party}) is running as a candidate for ${formatRace(candidate.district)} in Wyoming's 2024 election. See biographic details, issue positions and information on how to vote.`
-
-  const primaryPartyLabel = PARTIES.find(d => d.key === primaryRaceResults.party).adjective
-  const isUncontestedPrimary = primaryRaceResults.candidates.length === 1
-  const isUncontestedGeneral = generalRaceResults.candidates.length === 1
-  const primaryTitle = `August 20 Primary – ${primaryPartyLabel} candidates${isUncontestedPrimary && " (uncontested)"}`
   
   return (
     <Layout 
@@ -95,11 +90,12 @@ export default function CandidatePage({candidate, primaryRaceResults, generalRac
       <a className="link-anchor" id="results"></a>
       <h2 className='section-header'>Election Results</h2>
       {
-        generalRaceResults && <RaceResults results={generalRaceResults} raceTitle="Nov 5th General Election" isUncontested={isUncontestedGeneral}/> 
+        generalRaceResults && <RaceResults results={generalRaceResults} raceTitle="November 5 General Election" isUncontested={generalRaceResults.candidates.length === 1}/> 
       }
       {
-        primaryRaceResults ? <RaceResults results={primaryRaceResults} raceTitle={primaryTitle} isUncontested={isUncontestedPrimary} /> : <p> There are no primary results available for this candidate.</p>
+        primaryRaceResults ? <RaceResults results={primaryRaceResults} raceTitle={`August 20 Primary – ${PARTIES.find(d=> d.key === candidate.party)} candidates${primaryRaceResults.candidates.length === 1 ? " (uncontested)" : "" }`} isUncontested={primaryRaceResults.candidates.length === 1} /> : <p> There are no primary results available for this candidate.</p>
       }
+      <div className="results-source">Election results provided by the Associated Press.</div>
     </section>
 
     <section>

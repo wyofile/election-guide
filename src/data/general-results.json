@@ -4,11 +4,19 @@
     "candidates": [
       {
         "slug": "john-barrasso",
+        "winner": false,
+        "votes": 550,
+        "ballotName": "John Barrasso",
+        "party": "REP"
+      },
+      {
+        "slug": "scott-morrow",
         "winner": true,
-        "votes": 10088,
-        "ballotName": "John Barrasso"
+        "votes": 551,
+        "ballotName": "Scott D Morrow",
+        "party": "DEM"
       }
     ],
-    "totalVotes": 10088
+    "totalVotes": 1101
   }
 ]
