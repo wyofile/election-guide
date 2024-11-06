@@ -14,7 +14,7 @@ import RaceResults from '@/components/RaceResults'
 import Layout from '@/design/Layout'
 import { formatRace } from '@/lib/utils'
 import { PARTIES } from '@/lib/styles'
-import { formatDate } from '@/lib/utils'
+import { formatDateTime } from '@/lib/utils'
 
 import Markdown from 'react-markdown'
 import Link from 'next/link'
@@ -97,7 +97,7 @@ export default function CandidatePage({candidate, primaryRaceResults, generalRac
       {
         primaryRaceResults ? <RaceResults results={primaryRaceResults} voteType='Candidate' raceTitle={`August 20 Primary – ${PARTIES.find(d=> d.key === candidate.party).adjective} candidates${primaryRaceResults.candidates.length === 1 ? " (uncontested)" : "" }`} isUncontested={primaryRaceResults.candidates.length === 1} /> : <p> There are no primary results available for this candidate.</p>
       }
-      <div className="results-source">Election results provided by the Associated Press. Last updated {formatDate(new Date(updateTime.updateTime))}</div>
+      <div className="results-source">Election results provided by the Associated Press. Last updated {formatDateTime(new Date(updateTime.updateTime))}</div>
     </section>
 
     <section>

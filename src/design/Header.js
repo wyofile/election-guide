@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import updateTime from '../data/update-time.json'
-import { formatDate } from '../lib/utils'
+import { formatDateTime } from '../lib/utils'
 import { metaData } from '../config'
 
 import Script from 'next/script'
@@ -21,7 +21,7 @@ const Header = () => {
         
         <Link target="_blank" href={ DONATE_LINK }><div className="button">Support this work</div></Link>
         <div className="update">
-          Last update: {formatDate(new Date(updateTime.updateTime))}
+          Last update: {formatDateTime(new Date(updateTime.updateTime))}
         </div>
       </div>
     </div>

@@ -5,53 +5,53 @@
       {
         "slug": "john-barrasso",
         "winner": true,
-        "votes": 16166,
+        "votes": 198366,
         "ballotName": "John Barrasso",
         "party": "REP"
       },
       {
         "slug": "scott-morrow",
         "winner": false,
-        "votes": 7066,
+        "votes": 63706,
         "ballotName": "Scott D Morrow",
         "party": "DEM"
       }
     ],
-    "totalVotes": 23232
+    "totalVotes": 262072
   },
   {
     "district": "us-house",
     "candidates": [
       {
         "slug": "harriet-hageman",
-        "winner": false,
-        "votes": 15101,
+        "winner": true,
+        "votes": 184626,
         "ballotName": "Harriet Hageman",
         "party": "REP"
       },
       {
         "slug": "kyle-cameron",
         "winner": false,
-        "votes": 6963,
+        "votes": 60763,
         "ballotName": "Kyle G. Cameron",
         "party": "DEM"
       },
       {
         "slug": "richard-brubaker",
         "winner": false,
-        "votes": 673,
+        "votes": 9219,
         "ballotName": "Richard Brubaker",
         "party": "LBR"
       },
       {
         "slug": "jeffrey-haggit",
         "winner": false,
-        "votes": 334,
+        "votes": 5360,
         "ballotName": "Jeffrey Haggit",
         "party": "CT"
       }
     ],
-    "totalVotes": 23071
+    "totalVotes": 259968
   },
   {
     "district": "S02",
@@ -96,61 +96,61 @@
     "district": "S08",
     "candidates": [
       {
-        "slug": "marguerite-herman",
-        "winner": false,
-        "votes": 0,
-        "ballotName": "Marguerite Herman",
-        "party": "DEM"
-      },
-      {
         "slug": "jared-olsen",
-        "winner": false,
-        "votes": 0,
+        "winner": true,
+        "votes": 3441,
         "ballotName": "Jared Olsen",
         "party": "REP"
+      },
+      {
+        "slug": "marguerite-herman",
+        "winner": false,
+        "votes": 2463,
+        "ballotName": "Marguerite Herman",
+        "party": "DEM"
       }
     ],
-    "totalVotes": 0
+    "totalVotes": 5904
   },
   {
     "district": "S10",
     "candidates": [
       {
-        "slug": "michael-selmer",
-        "winner": false,
-        "votes": 0,
-        "ballotName": "Mike Selmer",
-        "party": "DEM"
-      },
-      {
         "slug": "gary-crum",
-        "winner": false,
-        "votes": 0,
+        "winner": true,
+        "votes": 6324,
         "ballotName": "Gary E Crum",
         "party": "REP"
+      },
+      {
+        "slug": "michael-selmer",
+        "winner": false,
+        "votes": 3403,
+        "ballotName": "Mike Selmer",
+        "party": "DEM"
       }
     ],
-    "totalVotes": 0
+    "totalVotes": 9727
   },
   {
     "district": "S12",
     "candidates": [
       {
         "slug": "john-kolb",
-        "winner": false,
-        "votes": 0,
+        "winner": true,
+        "votes": 4359,
         "ballotName": "John K Kolb",
         "party": "REP"
       },
       {
         "slug": "kenilynn-zanetti",
         "winner": false,
-        "votes": 0,
+        "votes": 1873,
         "ballotName": "Kenilynn S Zanetti",
         "party": "DEM"
       }
     ],
-    "totalVotes": 0
+    "totalVotes": 6232
   },
   {
     "district": "S14",
@@ -314,19 +314,19 @@
       {
         "slug": "jeremy-haroldson",
         "winner": true,
-        "votes": 2618,
+        "votes": 3515,
         "ballotName": "Jeremy Haroldson",
         "party": "REP"
       },
       {
         "slug": "charles-randolph",
         "winner": false,
-        "votes": 824,
+        "votes": 1014,
         "ballotName": "Charles Randolph",
         "party": "DEM"
       }
     ],
-    "totalVotes": 3442
+    "totalVotes": 4529
   },
   {
     "district": "H05",
@@ -359,20 +359,20 @@
     "candidates": [
       {
         "slug": "bob-nicholas",
-        "winner": false,
-        "votes": 0,
+        "winner": true,
+        "votes": 2791,
         "ballotName": "Bob Nicholas",
         "party": "REP"
       },
       {
         "slug": "jordan-evans",
         "winner": false,
-        "votes": 0,
+        "votes": 1456,
         "ballotName": "Jordan Evans",
         "party": "DEM"
       }
     ],
-    "totalVotes": 0
+    "totalVotes": 4247
   },
   {
     "district": "H08",
@@ -405,40 +405,40 @@
     "candidates": [
       {
         "slug": "john-eklund",
-        "winner": false,
-        "votes": 0,
+        "winner": true,
+        "votes": 3956,
         "ballotName": "John Eklund",
         "party": "REP"
       },
       {
         "slug": "timothy-forbis",
         "winner": false,
-        "votes": 0,
+        "votes": 865,
         "ballotName": "Timothy (Tim) Forbis",
         "party": "IND"
       }
     ],
-    "totalVotes": 0
+    "totalVotes": 4821
   },
   {
     "district": "H11",
     "candidates": [
       {
-        "slug": "sara-burlingame",
-        "winner": false,
-        "votes": 0,
-        "ballotName": "Sara Burlingame",
-        "party": "DEM"
-      },
-      {
         "slug": "jacob-wasserburger",
         "winner": false,
-        "votes": 0,
+        "votes": 1774,
         "ballotName": "Jacob Wasserburger",
         "party": "REP"
+      },
+      {
+        "slug": "sara-burlingame",
+        "winner": false,
+        "votes": 1481,
+        "ballotName": "Sara Burlingame",
+        "party": "DEM"
       }
     ],
-    "totalVotes": 0
+    "totalVotes": 3255
   },
   {
     "district": "H12",
@@ -459,19 +459,19 @@
       {
         "slug": "kenneth-chestek",
         "winner": false,
-        "votes": 0,
+        "votes": 1937,
         "ballotName": "Ken Chestek",
         "party": "DEM"
       },
       {
         "slug": "shane-swett",
         "winner": false,
-        "votes": 0,
+        "votes": 1711,
         "ballotName": "Shane Swett",
         "party": "REP"
       }
     ],
-    "totalVotes": 0
+    "totalVotes": 3648
   },
   {
     "district": "H14",
@@ -479,19 +479,19 @@
       {
         "slug": "trey-sherwood",
         "winner": false,
-        "votes": 0,
+        "votes": 2472,
         "ballotName": "Trey Sherwood",
         "party": "DEM"
       },
       {
         "slug": "joseph-giustozzi",
         "winner": false,
-        "votes": 0,
+        "votes": 2277,
         "ballotName": "Joe Giustozzi",
         "party": "REP"
       }
     ],
-    "totalVotes": 0
+    "totalVotes": 4749
   },
   {
     "district": "H15",
@@ -667,40 +667,40 @@
     "candidates": [
       {
         "slug": "john-winter",
-        "winner": false,
-        "votes": 363,
+        "winner": true,
+        "votes": 3986,
         "ballotName": "John R. Winter",
         "party": "REP"
       },
       {
         "slug": "larry-alwin",
         "winner": false,
-        "votes": 94,
+        "votes": 856,
         "ballotName": "Larry Alwin",
         "party": "DEM"
       }
     ],
-    "totalVotes": 457
+    "totalVotes": 4842
   },
   {
     "district": "H29",
     "candidates": [
       {
         "slug": "kenneth-pendergraft",
-        "winner": false,
-        "votes": 0,
+        "winner": true,
+        "votes": 3008,
         "ballotName": "Ken Pendergraft",
         "party": "REP"
       },
       {
         "slug": "martha-wright",
         "winner": false,
-        "votes": 0,
+        "votes": 1325,
         "ballotName": "Martha J Wright",
         "party": "DEM"
       }
     ],
-    "totalVotes": 0
+    "totalVotes": 4333
   },
   {
     "district": "H30",
@@ -745,21 +745,21 @@
     "district": "H33",
     "candidates": [
       {
-        "slug": "sarah-penn",
-        "winner": false,
-        "votes": 0,
-        "ballotName": "Sarah Penn",
-        "party": "REP"
-      },
-      {
         "slug": "ivan-posey",
-        "winner": false,
-        "votes": 0,
+        "winner": true,
+        "votes": 1675,
         "ballotName": "Ivan D. Posey",
         "party": "DEM"
+      },
+      {
+        "slug": "sarah-penn",
+        "winner": false,
+        "votes": 1210,
+        "ballotName": "Sarah Penn",
+        "party": "REP"
       }
     ],
-    "totalVotes": 0
+    "totalVotes": 2885
   },
   {
     "district": "H34",
@@ -856,41 +856,41 @@
     "district": "H41",
     "candidates": [
       {
-        "slug": "jennifer-solis",
-        "winner": false,
-        "votes": 0,
-        "ballotName": "Jen Solis",
-        "party": "DEM"
-      },
-      {
         "slug": "gary-brown",
         "winner": false,
-        "votes": 0,
+        "votes": 2039,
         "ballotName": "Gary Brown",
         "party": "REP"
+      },
+      {
+        "slug": "jennifer-solis",
+        "winner": false,
+        "votes": 1852,
+        "ballotName": "Jen Solis",
+        "party": "DEM"
       }
     ],
-    "totalVotes": 0
+    "totalVotes": 3891
   },
   {
     "district": "H42",
     "candidates": [
       {
-        "slug": "robert-ray",
-        "winner": false,
-        "votes": 0,
-        "ballotName": "Bob Ray",
-        "party": "DEM"
-      },
-      {
         "slug": "robert-geringer",
-        "winner": false,
-        "votes": 0,
+        "winner": true,
+        "votes": 3269,
         "ballotName": "Rob Geringer",
         "party": "REP"
+      },
+      {
+        "slug": "robert-ray",
+        "winner": false,
+        "votes": 853,
+        "ballotName": "Bob Ray",
+        "party": "DEM"
       }
     ],
-    "totalVotes": 0
+    "totalVotes": 4122
   },
   {
     "district": "H43",
@@ -923,60 +923,60 @@
     "candidates": [
       {
         "slug": "karlee-provenza",
-        "winner": false,
-        "votes": 0,
+        "winner": true,
+        "votes": 2493,
         "ballotName": "Karlee Provenza",
         "party": "DEM"
       },
       {
         "slug": "paul-crouch",
         "winner": false,
-        "votes": 0,
+        "votes": 1477,
         "ballotName": "Paul Crouch",
         "party": "REP"
       }
     ],
-    "totalVotes": 0
+    "totalVotes": 3970
   },
   {
     "district": "H46",
     "candidates": [
       {
         "slug": "ocean-andrew",
-        "winner": false,
-        "votes": 0,
+        "winner": true,
+        "votes": 3406,
         "ballotName": "Ocean Andrew",
         "party": "REP"
       },
       {
         "slug": "chris-lowry",
         "winner": false,
-        "votes": 0,
+        "votes": 1479,
         "ballotName": "Chris Lowry",
         "party": "DEM"
       }
     ],
-    "totalVotes": 0
+    "totalVotes": 4885
   },
   {
     "district": "H47",
     "candidates": [
       {
         "slug": "bob-davis",
-        "winner": false,
-        "votes": 0,
+        "winner": true,
+        "votes": 3487,
         "ballotName": "Bob Davis",
         "party": "REP"
       },
       {
         "slug": "james-wilson",
         "winner": false,
-        "votes": 0,
+        "votes": 666,
         "ballotName": "James A Wilson",
         "party": "DEM"
       }
     ],
-    "totalVotes": 0
+    "totalVotes": 4153
   },
   {
     "district": "H48",
@@ -1138,21 +1138,21 @@
     "district": "H60",
     "candidates": [
       {
-        "slug": "carmen-whitehead",
-        "winner": false,
-        "votes": 0,
-        "ballotName": "Carmen Whitehead",
-        "party": "DEM"
-      },
-      {
         "slug": "marlene-brady",
-        "winner": false,
-        "votes": 0,
+        "winner": true,
+        "votes": 2482,
         "ballotName": "Marlene Brady",
         "party": "REP"
+      },
+      {
+        "slug": "carmen-whitehead",
+        "winner": false,
+        "votes": 951,
+        "ballotName": "Carmen Whitehead",
+        "party": "DEM"
       }
     ],
-    "totalVotes": 0
+    "totalVotes": 3433
   },
   {
     "district": "H61",

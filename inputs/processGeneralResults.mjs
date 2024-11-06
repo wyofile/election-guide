@@ -18,7 +18,7 @@ const ballotMeasure = ballotMeasuresRaw.map(r => {
   const nytWinner = r.outcome.won[0]
   const candidates = r. reporting_units[0].candidates.map(c => {
     const nytSlug = c.nyt_id
-    const winner = nytWinner === nytSlug
+    const winner = nytSlug === 'for'
     const votes = c.votes.total
     return {slug: nytSlug, winner: winner, votes: votes, ballotName: nytSlug.charAt(0).toUpperCase() + nytSlug.slice(1), party: 'IND' }
   })

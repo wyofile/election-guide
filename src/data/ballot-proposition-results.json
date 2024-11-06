@@ -3,18 +3,18 @@
   "candidates": [
     {
       "slug": "for",
-      "winner": false,
-      "votes": 14270,
+      "winner": true,
+      "votes": 146134,
       "ballotName": "For",
       "party": "IND"
     },
     {
       "slug": "against",
       "winner": false,
-      "votes": 7640,
+      "votes": 100340,
       "ballotName": "Against",
       "party": "IND"
     }
   ],
-  "totalVotes": 21910
+  "totalVotes": 246474
 }

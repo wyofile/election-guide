@@ -2,7 +2,8 @@ import { timeFormat } from 'd3-time-format'
 import { format } from 'd3-format'
 import { useRouter } from 'next/router'
 
-export const formatDate = timeFormat('%b %-d, %Y - %I:%M %p')
+export const formatDate = timeFormat('%b %-d, %Y')
+export const formatDateTime = timeFormat('%b %-d, %Y - %I:%M %p')
 export const numberFormat = format(',.0f')
 export const percentFormat = format('.1%')
 

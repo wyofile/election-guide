@@ -15,7 +15,7 @@ import candidateData from '@/data/candidate-data.json'
 import ballotPropositionData from '@/data/ballot-proposition-results.json'
 import updateTime from '../data/update-time.json'
 
-import { formatDate } from '../lib/utils'
+import { formatDateTime } from '../lib/utils'
 import { usePath } from '@/lib/utils'
 
 // decrease build index.html size
@@ -90,7 +90,7 @@ const Home = ({candidates, textContent, ballotPropositionResults}) => {
       <h2 className='section-header'>Ballot Proposition</h2>
       <MarkdownExternalLinks>{textContent.ballotProposition}</MarkdownExternalLinks>
       <RaceResults results={ballotPropositionResults} raceTitle="Results - Constitutional Amendment A" isUncontested={false} voteType='Position'/>
-      <div className="results-source">Election results provided by the Associated Press. Last updated {formatDate(new Date(updateTime.updateTime))}</div>
+      <div className="results-source">Election results provided by the Associated Press. Last updated {formatDateTime(new Date(updateTime.updateTime))}</div>
     </section>
 
     <section>
