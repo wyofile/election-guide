@@ -54,6 +54,7 @@ details .candidate {
 
 .portrait-col {
     flex: 0 0 100px;
+    position: relative;
 }
 
 .portrait-container {
@@ -63,6 +64,34 @@ details .candidate {
     justify-content: center;
     align-items: center;
     color: white;
+
+}
+
+.winner-label {
+  position:absolute;
+  bottom: -9px;
+  left: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: #f3f3f3;
+  border-radius: 15px;
+  border: 2px solid #e8e8e8;
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  box-shadow: 2px 2px 3px -2px #aaa;
+  z-index: 10;
+}
+
+.winner-label-text {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.winner-checkmark {
+  color: #f3f3f3;
+  font-weight: 700;
+  overflow: visible;
 }
 
 .info-col {

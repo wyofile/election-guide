@@ -1,0 +1,20 @@
+{
+  "district": "Ballot Proposition",
+  "candidates": [
+    {
+      "slug": "for",
+      "winner": false,
+      "votes": 0,
+      "ballotName": "For",
+      "party": "IND"
+    },
+    {
+      "slug": "against",
+      "winner": false,
+      "votes": 0,
+      "ballotName": "Against",
+      "party": "IND"
+    }
+  ],
+  "totalVotes": 0
+}

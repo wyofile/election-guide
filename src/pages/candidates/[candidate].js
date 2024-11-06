@@ -3,6 +3,8 @@ import textData from '../../data/static-text.json'
 import wyoLegQs from '../../data/wyo-leg-qs.json'
 import federalQs from '../../data/federal-qs.json'
 import primaryResults from '../../data/primary-results.json'
+import generalResults from '../../data/general-results.json'
+import updateTime from '@/data/update-time.json'
 
 import CandidateOpponents from '@/components/CandidateOpponents'
 import CandidatePageSummary from '@/components/CandidatePageSummary'
@@ -11,6 +13,8 @@ import CandidateLinks from '@/components/CandidateLinks'
 import RaceResults from '@/components/RaceResults'
 import Layout from '@/design/Layout'
 import { formatRace } from '@/lib/utils'
+import { PARTIES } from '@/lib/styles'
+import { formatDate } from '@/lib/utils'
 
 import Markdown from 'react-markdown'
 import Link from 'next/link'
@@ -26,8 +30,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const candidate = candidateData.find(c => c.slug === params.candidate)
-  const activeOpponents = candidateData.filter(c => (c.district === candidate.district && c.status ==='active'))
+  const candidatesInDistrict = candidateData.filter(c => (c.district === candidate.district))
   const primaryRaceResults = primaryResults.find(r => r.district === candidate.district && r.party === candidate.party) || null
+  const generalRaceResults = generalResults.find(r => r.district === candidate.district && (candidate.status === 'active' || candidate.status === 'won-general' || candidate.status ==='lost-general')) || null
   const questions = (candidate.district[0] === 'u' ? federalQs : wyoLegQs)
   const questionnaireIntro = textData.questionnaireIntro
   const aboutProject = textData.aboutProject
@@ -36,7 +41,8 @@ export async function getStaticProps({ params }) {
       props: {
         candidate,
         primaryRaceResults,
-        activeOpponents,
+        generalRaceResults,
+        candidatesInDistrict,
         questions,
         questionnaireIntro,
         aboutProject
@@ -44,8 +50,9 @@ export async function getStaticProps({ params }) {
   }
 }
 
-export default function CandidatePage({candidate, primaryRaceResults, questions, questionnaireIntro, aboutProject, activeOpponents}) {
+export default function CandidatePage({candidate, primaryRaceResults, generalRaceResults, questions, questionnaireIntro, aboutProject, candidatesInDistrict}) {
   const pageDescription = `${candidate.ballotName} (${candidate.party}) is running as a candidate for ${formatRace(candidate.district)} in Wyoming's 2024 election. See biographic details, issue positions and information on how to vote.`
+  
   return (
     <Layout 
       relativePath={candidate.slug}
@@ -60,7 +67,7 @@ export default function CandidatePage({candidate, primaryRaceResults, questions,
 
     <CandidateLinks wyoleg={candidate.wyoleg} website={candidate.website} email={candidate.email}/>
 
-    <CandidateOpponents opponents={activeOpponents} currentSlug={candidate.slug} race={formatRace(candidate.district)} />
+    <CandidateOpponents candidatesInDistrict={candidatesInDistrict} currentSlug={candidate.slug} race={formatRace(candidate.district)} />
 
     <section>
       <a className="link-anchor" id="questionnaire"></a>
@@ -85,8 +92,12 @@ export default function CandidatePage({candidate, primaryRaceResults, questions,
       <a className="link-anchor" id="results"></a>
       <h2 className='section-header'>Election Results</h2>
       {
-        !primaryRaceResults ? <p> There are no primary results available for this candidate.</p> : <RaceResults results={primaryRaceResults} />
+        generalRaceResults && <RaceResults results={generalRaceResults} voteType='Candidate' raceTitle={`November 5 General Election${generalRaceResults.candidates.length === 1 ? " (uncontested)" : "" }`} isUncontested={generalRaceResults.candidates.length === 1}/> 
       }
+      {
+        primaryRaceResults ? <RaceResults results={primaryRaceResults} voteType='Candidate' raceTitle={`August 20 Primary – ${PARTIES.find(d=> d.key === candidate.party).adjective} candidates${primaryRaceResults.candidates.length === 1 ? " (uncontested)" : "" }`} isUncontested={primaryRaceResults.candidates.length === 1} /> : <p> There are no primary results available for this candidate.</p>
+      }
+      <div className="results-source">Election results provided by the Associated Press. Last updated {formatDate(new Date(updateTime.updateTime))}</div>
     </section>
 
     <section>

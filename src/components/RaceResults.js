@@ -1,16 +1,15 @@
 import { PARTIES } from '../lib/styles'
 import { numberFormat, percentFormat } from '../lib/utils'
 
-const RaceResults = ({results}) => {
-    const primaryPartyLabel = PARTIES.find(d => d.key === results.party).adjective
-    const isUncontested = results.candidates.length === 1
+const RaceResults = ({results, isUncontested, raceTitle, voteType}) => {
+
 
     return <div className="race-results">
-        <div className="race-title">August 20 Primary{` – ${primaryPartyLabel} candidates `}{isUncontested && " (uncontested)"}</div>
+        <div className="race-title">{raceTitle}</div>
         <table>
             <thead>
                 <tr className="result-row">
-                    <th className="result-row-name">Candidate</th>
+                    <th className="result-row-name">{voteType}</th>
                     <th className="result-row-percent">Votes</th>
                     <th className="result-row-bar">Percentage</th>
                 </tr>
@@ -18,10 +17,9 @@ const RaceResults = ({results}) => {
             <tbody>{
                 results.candidates
                     .sort((a, b) => b.votes - a.votes)
-                    .map((c, i) => <Row key={i} {...c} totalVotes={results.totalVotes} party={results.party} isUncontested={isUncontested}/>)
+                    .map((c, i) => <Row key={i} {...c} totalVotes={results.totalVotes} isUncontested={isUncontested}/>)
             }</tbody>
         </table>
-        <div className="results-source">Election results provided by the Associated Press.</div>
     </div>
 
 }
@@ -31,7 +29,7 @@ export default RaceResults
 const BAR_RANGE = 60
 const Row = ({ ballotName, votes, winner, totalVotes, party, isUncontested }) => {
     const partyInfo = PARTIES.find(d => d.key === party)
-    const votePercent = isUncontested ? 0.0 : (votes / totalVotes)
+    const votePercent = isUncontested || totalVotes === 0 ? 0.0 : (votes / totalVotes)
     const barWidth = votePercent * BAR_RANGE
     return <tr className="result-row" style={{
         backgroundColor: winner ? '#e3e3e3' : 'none',

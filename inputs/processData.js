@@ -3,6 +3,7 @@ const path = require('path')
 const { parse } = require('csv-parse/sync')
 
 const candidateTags = require('./candidate-tags.json')
+const generalResults = require('../src/data/general-results.json')
 
 const candidateDataPath = path.join(__dirname, './candidate-data.csv')
 // const candidateDataPath = path.join(__dirname, './mock-post-primary-candidate-data.csv')
@@ -48,6 +49,18 @@ const canDataWithResponses = candidateData.map((candidate) => {
   }
 
   const getTag = candidateTags.find(tag => candidate.slug === tag.slug)
+
+  const getGeneralResults = generalResults.find(r => r.district === candidate.district) || null
+  if (candidate.status === 'active' && getGeneralResults) {
+    const raceWinner = getGeneralResults.candidates.find(c => c.winner) || null
+    if (raceWinner) {
+      if (raceWinner.slug === candidate.slug) {
+        candidate.status = 'won-general'
+      } else {
+        candidate.status = 'lost-general'
+      }
+    }
+  }
 
   return({ ...candidate, "responses": candidateResponses, "tagId": getTag.id})
 })
