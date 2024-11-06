@@ -1,7 +1,7 @@
 lastName,hasPhoto,hasResponses,ballotName,slug,nytId,status,district,party,incumbent,caucus,wyoleg,email,website
 NEIMAN,FALSE,FALSE,Chip Neiman,chip-neiman,neiman-c,active,H01,REP,TRUE,freedom,https://wyoleg.gov/Legislators/2024/H/2070,cneiman66@gmail.com,https://neiman4wy.com
-SLAGLE,FALSE,FALSE,Allen E. Slagle,allen-slagle,slagle-a,active,H02,REP,TRUE,freedom,https://wyoleg.gov/Legislators/2024/H/2092,aeslagle@rtconnect.net,https://allenslagleforhd2.com
-WILLIAMS,TRUE,TRUE,JD Williams,jd-williams,williams-j,lost-primary,H02,REP,FALSE,na,,jdlw1074@gmail.com,https://jdforstatehouse.com
+SLAGLE,FALSE,FALSE,Allen E. Slagle,allen-slagle,slagle-a,lost-primary,H02,REP,TRUE,freedom,https://wyoleg.gov/Legislators/2024/H/2092,aeslagle@rtconnect.net,https://allenslagleforhd2.com
+WILLIAMS,TRUE,TRUE,JD Williams,jd-williams,williams-j,active,H02,REP,FALSE,na,,jdlw1074@gmail.com,https://jdforstatehouse.com
 ANGELOS,FALSE,FALSE,Abby Angelos,abby-angelos,angelos-a,active,H03,REP,TRUE,freedom,https://wyoleg.gov/Legislators/2024/H/2091,abby@voteforabby.com,https://www.voteforabby.com
 HAROLDSON,TRUE,TRUE,Jeremy Haroldson,jeremy-haroldson,haroldson-j,active,H04,REP,TRUE,freedom,https://wyoleg.gov/Legislators/2024/H/2071,jharoldson.impact@hotmail.com,https://haroldsonforhouse.com
 RANDOLPH,FALSE,TRUE,Charles Randolph,charles-randolph,randolph-c,active,H04,DEM,FALSE,dem,,cwrailroad@mac.com,

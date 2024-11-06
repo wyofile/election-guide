@@ -4,20 +4,20 @@
     "candidates": [
       {
         "slug": "john-barrasso",
-        "winner": false,
-        "votes": 0,
+        "winner": true,
+        "votes": 16166,
         "ballotName": "John Barrasso",
         "party": "REP"
       },
       {
         "slug": "scott-morrow",
         "winner": false,
-        "votes": 0,
+        "votes": 7066,
         "ballotName": "Scott D Morrow",
         "party": "DEM"
       }
     ],
-    "totalVotes": 0
+    "totalVotes": 23232
   },
   {
     "district": "us-house",
@@ -25,40 +25,40 @@
       {
         "slug": "harriet-hageman",
         "winner": false,
-        "votes": 0,
+        "votes": 15101,
         "ballotName": "Harriet Hageman",
         "party": "REP"
       },
       {
         "slug": "kyle-cameron",
         "winner": false,
-        "votes": 0,
+        "votes": 6963,
         "ballotName": "Kyle G. Cameron",
         "party": "DEM"
       },
       {
         "slug": "richard-brubaker",
         "winner": false,
-        "votes": 0,
+        "votes": 673,
         "ballotName": "Richard Brubaker",
         "party": "LBR"
       },
       {
         "slug": "jeffrey-haggit",
         "winner": false,
-        "votes": 0,
+        "votes": 334,
         "ballotName": "Jeffrey Haggit",
         "party": "CT"
       }
     ],
-    "totalVotes": 0
+    "totalVotes": 23071
   },
   {
     "district": "S02",
     "candidates": [
       {
         "slug": "brian-boner",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Brian Boner",
         "party": "REP"
@@ -71,7 +71,7 @@
     "candidates": [
       {
         "slug": "tara-nethercott",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Tara Nethercott",
         "party": "REP"
@@ -84,7 +84,7 @@
     "candidates": [
       {
         "slug": "darin-smith",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Darin Smith",
         "party": "REP"
@@ -157,7 +157,7 @@
     "candidates": [
       {
         "slug": "laura-pearson",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Laura Taliaferro Pearson",
         "party": "REP"
@@ -170,7 +170,7 @@
     "candidates": [
       {
         "slug": "dan-dockstader",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Dan Dockstader",
         "party": "REP"
@@ -183,7 +183,7 @@
     "candidates": [
       {
         "slug": "tim-french",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Tim A. French",
         "party": "REP"
@@ -196,7 +196,7 @@
     "candidates": [
       {
         "slug": "edward-cooper",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Ed Cooper",
         "party": "REP"
@@ -209,7 +209,7 @@
     "candidates": [
       {
         "slug": "barry-crago",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Barry Crago",
         "party": "REP"
@@ -222,7 +222,7 @@
     "candidates": [
       {
         "slug": "troy-mckeown",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Troy D McKeown",
         "party": "REP"
@@ -235,7 +235,7 @@
     "candidates": [
       {
         "slug": "tim-salazar",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Tim Salazar",
         "party": "REP"
@@ -248,7 +248,7 @@
     "candidates": [
       {
         "slug": "james-anderson",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Jim Anderson",
         "party": "REP"
@@ -261,7 +261,7 @@
     "candidates": [
       {
         "slug": "charles-scott",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Charles K. Scott",
         "party": "REP"
@@ -274,7 +274,7 @@
     "candidates": [
       {
         "slug": "chip-neiman",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Chip Neiman",
         "party": "REP"
@@ -287,7 +287,7 @@
     "candidates": [
       {
         "slug": "jd-williams",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "JD Williams",
         "party": "REP"
@@ -300,7 +300,7 @@
     "candidates": [
       {
         "slug": "abby-angelos",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Abby Angelos",
         "party": "REP"
@@ -313,27 +313,27 @@
     "candidates": [
       {
         "slug": "jeremy-haroldson",
-        "winner": false,
-        "votes": 0,
+        "winner": true,
+        "votes": 2618,
         "ballotName": "Jeremy Haroldson",
         "party": "REP"
       },
       {
         "slug": "charles-randolph",
         "winner": false,
-        "votes": 0,
+        "votes": 824,
         "ballotName": "Charles Randolph",
         "party": "DEM"
       }
     ],
-    "totalVotes": 0
+    "totalVotes": 3442
   },
   {
     "district": "H05",
     "candidates": [
       {
         "slug": "scott-smith",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Scott Smith",
         "party": "REP"
@@ -346,7 +346,7 @@
     "candidates": [
       {
         "slug": "tomi-strock",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Tomi Strock",
         "party": "REP"
@@ -379,7 +379,7 @@
     "candidates": [
       {
         "slug": "steve-johnson",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Steve Johnson",
         "party": "REP"
@@ -392,7 +392,7 @@
     "candidates": [
       {
         "slug": "landon-brown",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Landon J. Brown",
         "party": "REP"
@@ -445,7 +445,7 @@
     "candidates": [
       {
         "slug": "clarence-styvar",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Clarence Styvar",
         "party": "REP"
@@ -498,7 +498,7 @@
     "candidates": [
       {
         "slug": "pamela-thayer",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Pamela Thayer",
         "party": "REP"
@@ -511,7 +511,7 @@
     "candidates": [
       {
         "slug": "michael-yin",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Mike Yin",
         "party": "DEM"
@@ -524,7 +524,7 @@
     "candidates": [
       {
         "slug": "joshua-larson",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "J.T. Larson",
         "party": "REP"
@@ -537,7 +537,7 @@
     "candidates": [
       {
         "slug": "scott-heiner",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Scott Heiner",
         "party": "REP"
@@ -550,7 +550,7 @@
     "candidates": [
       {
         "slug": "joseph-webb",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Joe Webb",
         "party": "REP"
@@ -563,7 +563,7 @@
     "candidates": [
       {
         "slug": "michael-schmid",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Mike Schmid",
         "party": "REP"
@@ -576,7 +576,7 @@
     "candidates": [
       {
         "slug": "mckay-erickson",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "McKay L. Erickson",
         "party": "REP"
@@ -589,7 +589,7 @@
     "candidates": [
       {
         "slug": "andrew-byron",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Andrew P Byron",
         "party": "REP"
@@ -602,7 +602,7 @@
     "candidates": [
       {
         "slug": "elizabeth-storer",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Liz Storer",
         "party": "DEM"
@@ -615,7 +615,7 @@
     "candidates": [
       {
         "slug": "nina-webber",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Nina Webber",
         "party": "REP"
@@ -628,7 +628,7 @@
     "candidates": [
       {
         "slug": "paul-hoeft",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Paul Hoeft",
         "party": "REP"
@@ -641,7 +641,7 @@
     "candidates": [
       {
         "slug": "dalton-banks",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Dalton Banks",
         "party": "REP"
@@ -654,7 +654,7 @@
     "candidates": [
       {
         "slug": "martha-lawley",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Martha Lawley",
         "party": "REP"
@@ -668,19 +668,19 @@
       {
         "slug": "john-winter",
         "winner": false,
-        "votes": 0,
+        "votes": 363,
         "ballotName": "John R. Winter",
         "party": "REP"
       },
       {
         "slug": "larry-alwin",
         "winner": false,
-        "votes": 0,
+        "votes": 94,
         "ballotName": "Larry Alwin",
         "party": "DEM"
       }
     ],
-    "totalVotes": 0
+    "totalVotes": 457
   },
   {
     "district": "H29",
@@ -707,7 +707,7 @@
     "candidates": [
       {
         "slug": "thomas-kelly",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Tom Kelly",
         "party": "REP"
@@ -720,7 +720,7 @@
     "candidates": [
       {
         "slug": "john-bear",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "John W Bear",
         "party": "REP"
@@ -733,7 +733,7 @@
     "candidates": [
       {
         "slug": "kenneth-clouston",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Ken L. Clouston",
         "party": "REP"
@@ -766,7 +766,7 @@
     "candidates": [
       {
         "slug": "pepper-ottman",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Pepper L. Ottman",
         "party": "REP"
@@ -779,7 +779,7 @@
     "candidates": [
       {
         "slug": "tony-locke",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Tony Locke",
         "party": "REP"
@@ -792,7 +792,7 @@
     "candidates": [
       {
         "slug": "art-washut",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Art Washut",
         "party": "REP"
@@ -805,7 +805,7 @@
     "candidates": [
       {
         "slug": "steven-harshman",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Steve Harshman",
         "party": "REP"
@@ -818,7 +818,7 @@
     "candidates": [
       {
         "slug": "jayme-lien",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Jayme Lien",
         "party": "REP"
@@ -831,7 +831,7 @@
     "candidates": [
       {
         "slug": "cody-wylie",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Cody Wylie",
         "party": "REP"
@@ -844,7 +844,7 @@
     "candidates": [
       {
         "slug": "marilyn-connoly",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Marilyn Connoly",
         "party": "REP"
@@ -897,7 +897,7 @@
     "candidates": [
       {
         "slug": "ann-lucas",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Ann Lucas",
         "party": "REP"
@@ -910,7 +910,7 @@
     "candidates": [
       {
         "slug": "lee-filer",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Lee Filer",
         "party": "REP"
@@ -983,7 +983,7 @@
     "candidates": [
       {
         "slug": "darin-mccann",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Darin M. McCann",
         "party": "REP"
@@ -996,7 +996,7 @@
     "candidates": [
       {
         "slug": "robert-wharff",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Robert Wharff",
         "party": "REP"
@@ -1009,7 +1009,7 @@
     "candidates": [
       {
         "slug": "rachel-rodriguez-williams",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Rachel Rodriguez-Williams",
         "party": "REP"
@@ -1022,7 +1022,7 @@
     "candidates": [
       {
         "slug": "laurie-schierloh-bratten",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Laurie Bratten",
         "party": "REP"
@@ -1035,7 +1035,7 @@
     "candidates": [
       {
         "slug": "reuben-tarver",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Reuben Tarver",
         "party": "REP"
@@ -1048,7 +1048,7 @@
     "candidates": [
       {
         "slug": "christopher-knapp",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Christopher R. Knapp",
         "party": "REP"
@@ -1061,7 +1061,7 @@
     "candidates": [
       {
         "slug": "lloyd-larsen",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Lloyd Charles Larsen",
         "party": "REP"
@@ -1074,7 +1074,7 @@
     "candidates": [
       {
         "slug": "joel-guggenmos",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Joel Guggenmos",
         "party": "REP"
@@ -1087,7 +1087,7 @@
     "candidates": [
       {
         "slug": "elissa-campbell",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Elissa Campbell",
         "party": "REP"
@@ -1100,7 +1100,7 @@
     "candidates": [
       {
         "slug": "julie-jarvis",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Julie Jarvis",
         "party": "REP"
@@ -1113,7 +1113,7 @@
     "candidates": [
       {
         "slug": "bill-allemand",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Bill Allemand",
         "party": "REP"
@@ -1126,7 +1126,7 @@
     "candidates": [
       {
         "slug": "justin-riggins",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "J.R. Riggins",
         "party": "REP"
@@ -1159,7 +1159,7 @@
     "candidates": [
       {
         "slug": "daniel-singh",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Daniel J. Singh",
         "party": "REP"
@@ -1172,7 +1172,7 @@
     "candidates": [
       {
         "slug": "kevin-campbell",
-        "winner": false,
+        "winner": true,
         "votes": 0,
         "ballotName": "Kevin Campbell",
         "party": "REP"

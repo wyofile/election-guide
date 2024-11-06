@@ -4,17 +4,17 @@
     {
       "slug": "for",
       "winner": false,
-      "votes": 0,
+      "votes": 14270,
       "ballotName": "For",
       "party": "IND"
     },
     {
       "slug": "against",
       "winner": false,
-      "votes": 0,
+      "votes": 7640,
       "ballotName": "Against",
       "party": "IND"
     }
   ],
-  "totalVotes": 0
+  "totalVotes": 21910
 }
