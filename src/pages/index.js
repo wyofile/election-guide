@@ -56,7 +56,7 @@ const Home = ({candidates, textContent, ballotPropositionResults}) => {
     >
 
     <section className="guide-intro">
-      <div className="election-day-note"><img src='/election-guide-2024/info.svg' /><span>For live general election results <a href="https://wyofile.com/wyoming-general-election-results-2024/">go here</a>. WyoFile will also update the election guide with results periodically after the polls close.</span></div>
+      <div className="election-day-note"><img src='/election-guide-2024/info.svg' /><span>For live general election results <a href="https://wyofile.com/wyoming-general-election-results-2024/">go here</a>. The election guide will periodically updated with results after the polls close.</span></div>
       <MarkdownExternalLinks>{textContent.guideIntro}</MarkdownExternalLinks>
     </section>
 
