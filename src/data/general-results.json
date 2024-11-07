@@ -425,7 +425,7 @@
     "candidates": [
       {
         "slug": "jacob-wasserburger",
-        "winner": false,
+        "winner": true,
         "votes": 1774,
         "ballotName": "Jacob Wasserburger",
         "party": "REP"
@@ -458,7 +458,7 @@
     "candidates": [
       {
         "slug": "kenneth-chestek",
-        "winner": false,
+        "winner": true,
         "votes": 1937,
         "ballotName": "Ken Chestek",
         "party": "DEM"
@@ -478,7 +478,7 @@
     "candidates": [
       {
         "slug": "trey-sherwood",
-        "winner": false,
+        "winner": true,
         "votes": 2472,
         "ballotName": "Trey Sherwood",
         "party": "DEM"
@@ -857,7 +857,7 @@
     "candidates": [
       {
         "slug": "gary-brown",
-        "winner": false,
+        "winner": true,
         "votes": 2039,
         "ballotName": "Gary Brown",
         "party": "REP"
